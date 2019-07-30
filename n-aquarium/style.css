@@ -1,0 +1,272 @@
+body{
+  font-family: sans-serif;
+  /* background: url("niconico_bg_blue.png") top center / 100px 100px no-repeat; ショートハンドによる背景画像のデザイン*/
+}
+
+.contactButton{
+  /* text-align: center; */
+  background: skyblue;
+  color: #fff;
+  width:150px;
+  height:50px;
+  display:inline-block;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 24px;
+  box-shadow: 3px 3px 0px rgba(13, 18, 49, 0.3);
+  /* transition:  700ms ; */
+}
+.contactButton:hover {
+    background: orange ;
+    box-shadow: 0px 0px 0px rgba(13, 18, 49, 0.3);
+  }
+
+
+.keyVisual{
+  text-align: center;
+}
+
+.headerInner, .mainInner {
+  max-width: 650px;
+  margin:auto;
+  padding: 0 20px;
+}
+
+.headerInner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  background: #eeeeee;
+}
+
+.footerInner {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+}
+
+h2{
+  /* 
+  border-left: solid red 5px;
+  padding-left: 8px ;
+   */
+  background-image: url("img/niconico_bg_blue.png");
+  line-height: 50px;
+  padding: 0 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.aboutWrapper img{
+  float: left;
+  margin-right: 10px;
+}
+
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.priceWrapper table,
+.priceWrapper th,
+.priceWrapper td{
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.priceWrapper th,
+.priceWrapper td{
+  padding: 7px;
+}
+
+.priceWrapper table{
+  width: 100%;
+}
+
+.priceWrapper th{
+  width: 150px;
+  background: #eeeeee;
+}
+
+/* ここからcontact.html */
+main h1 {
+  text-align: center
+}
+
+.contactForm {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 20px;
+  border-spacing: 0;
+}
+
+.contactForm th,
+.contactForm td{
+  padding: 2rem 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.contactForm th{
+  text-align: left;
+  color: #606c76;
+}
+
+input[type="text"],textarea{
+  background-color: transparent; /*transparent=透明（初期値） */
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  box-shadow: none;
+  box-sizing: border-box;
+  min-height: 1rem;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+input[type="text"]::placeholder{
+  color: rgb(224, 168, 168);
+  
+}
+
+input[type="text"]:focus,
+textarea:focus{
+  border-color: #41487e;
+  outline: 0;
+}
+
+input[type="text"]:focus::placeholder{
+  transition: 300ms;
+  transform: translateX(30px);
+  opacity: 0;
+}
+
+/* ラジオボタンの装飾 */
+input[type="radio"]{
+  display: none;
+}
+
+input[type="radio"] + label{
+  padding-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+input[type="radio"] + label:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 9px;
+  height: 9px;
+  background: #41487e;
+  border-radius: 50%;
+}
+
+/* チェックボックスの装飾 */
+input[type="checkbox"]{
+  display: none;
+}
+
+input[type="checkbox"] + label{
+  padding-left: 25px;
+  position: relative;
+}
+
+input[type="checkbox"] + label:before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+}
+
+input[type="checkbox"]:checked + label:after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 15px;
+  transform: rotate(45deg);
+  border-bottom: 3px solid #41487e;
+  border-right: 3px solid #41487e;
+}
+
+.text-center{
+  text-align: center;
+  padding: 10px;
+}
+
+.selectBox{
+  color: #41487e;
+  border: solid 2px #41487e;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+}
+
+.selectBox:after{
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-25%);
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid #41487e;
+  z-index: -1;
+}
+
+select{
+  padding: 2px 5px;
+  border-radius: 0;
+  outline: none;
+  border: 0;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-size: 16px;
+}
+
+input[type="submit"]{
+  border-style:none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  background: #41487e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 300ms;
+}
+
+input[type="submit"]:hover{
+  background: #1f275e;
+}
