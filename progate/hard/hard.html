@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Progate</title>
-    <link rel="stylesheet" href="hard.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="hard.css"> <!-- 先に読み込むとレスポンシブできないから。それと↑、こんなふうにhttpsつければCDNすぐ使える -->
     <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
@@ -14,6 +14,8 @@
         <div class="header-left">
           <img class="logo" src="https://prog-8.com/images/html/advanced/main_logo.png">
         </div>
+        <!-- ここにメニューアイコンを追加してください -->
+        <span class="fa fa-bars menu-icon"></span>
         <div class="header-right">
           <a href="#">レッスン</a>
           <a href="#">新規登録</a>
@@ -69,11 +71,7 @@
             </div>
             <p class="text-contents">HTMLだけではページの内容を変えることはできません。PHPはHTMLにプログラムを埋め込み、それを可能にします。</p>
           </div>
-          <!-- clearクラスをもつ<div>タグを追加してください -->
-          <div class="clear">
-            
-          </div>
-          
+          <div class="clear"></div>
         </div>
       </div>
     </div>

@@ -11,13 +11,12 @@ a {
   text-decoration: none;
 }
 
-/* clearクラスにfloatを解除するためのCSSを記述してください */
 .clear {
   clear: left;
 }
 
-
 .container {
+  max-width: 1170px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -116,8 +115,17 @@ header {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+/* menu-iconのCSSを貼り付けてください */
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  /* displayをnoneに指定してください */
+  display: none;
+}
+
 .lesson-wrapper {
-  /* heightを削除してください */
   padding-bottom: 80px;
   padding-left: 5%;
   padding-right: 5%;
