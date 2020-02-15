@@ -144,6 +144,7 @@ header {
   position: relative;
 }
 
+/* z-index設定しなくても良いらしい */
 .lesson-icon p {
   position: absolute;
   top: 40%; /*margin:0px;なら、50%で良い*/
