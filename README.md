@@ -24,4 +24,4 @@
 - [初心者向け！Chromeの検証機能（デベロッパーツール）の使い方](https://saruwakakun.com/html-css/basic/chrome-dev-tool#section3)だいたいのことわかる
 - 変更したあとsourceタブのファイルを「save as」すれば、変更点をそのまま保存可能。[ツイ](https://twitter.com/kazutaka_dev/status/1078956017893830657?s=20)
 - 要素を選択 > html部右クリック > Copy > Copy selector でcssのセレクタを保存できる。[ツイ](https://twitter.com/showheyohtaki/status/1086091827319427072?s=20)
-- 
+- Edit as HTMLの内容は、⌘＋Enterで内容が反映される
