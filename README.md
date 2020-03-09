@@ -5,6 +5,7 @@
 3. Markdown All in One：マークダウン記法のエメットを使いたくて
 4. Text Tables：同様に
 5. Scala Syntax (official)：大規模コースの時に入れた
+6. 2020/03/09）Markdown PDF：便利。[日本語readme](https://github.com/yzane/vscode-markdown-pdf/blob/master/README.ja.md)
 
 ### 以下は30DAYSトライアルで追加したもの
 1. Auto Rename Tag：なるほど、タグを直した時に勝手に閉じタグも直してくれる。評価はよくない
