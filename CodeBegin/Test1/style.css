@@ -1,0 +1,46 @@
+h1,h2,h3,ul,li {
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  color: #666;
+}
+
+header{
+  text-align: center;
+}
+img{
+  max-width: 100%;
+}
+.container{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.logo{
+  width: 400px;
+  margin: 30px auto;
+}
+.mainimg{
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline;
+}
+nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+nav li a{
+  padding: 15px 30px;
+  text-decoration: none;
+  color: #666;
+}
+nav li a:hover{
+  color: #d08047;
+  border-bottom: 4px solid #d08047;
+  transition: 0.3s;
+}
