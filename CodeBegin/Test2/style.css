@@ -18,9 +18,73 @@ body{
   transform: translateY(-50%);
   width: 300px;
 }
-.header{
-  /* background: red; */
+.h-nav{
+  border-top: 1px solid #D2D2D2;
 }
+.h-menu{
+  letter-spacing: -.4em;
+}
+.h-list{
+  position: relative;
+  display: inline-block;
+  width: calc(100%/6);
+  letter-spacing: normal;
+  height: 64px;
+  border-right: 1px solid #D2D2D2;
+  box-sizing: border-box;
+  vertical-align: bottom;
+}
+.h-list:hover .h-l-top{
+  color: #0e36ca;
+}
+.h-list:hover {
+  background-color: #e6ebfa;
+}
+.h-list:hover .h-l-box:before{
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #0e36ca;
+  position: absolute;
+  left: 4px;
+}
+.h-l-box{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  text-align: center;
+}
+.h-l-top{
+  font-size: 15px;
+  color: #666666;
+  margin-bottom: 4px;
+}
+.h-l-bottom{
+  font-size: 10px;
+  color: #bababa;
+  text-align: center;
+}
+.active .h-l-top{
+  color: #0e36ca;
+}
+.active {
+  background-color: #e6ebfa;
+}
+.active .h-l-box:before{
+  content: "";
+  width: 3px;
+  height: 100%;
+  background-color: #0e36ca;
+  position: absolute;
+  left: 4px;
+}
+.h-image{
+  max-width: 100%;
+  height: auto;
+}
+
 .main{
   background: blue;
   float: left;
