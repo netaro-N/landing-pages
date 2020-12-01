@@ -1,6 +1,9 @@
+/* ワイヤーフレームの大別は「ヘッダー」「メイン」「サイドバー」「フッター」 */
 body{
   background: #C3C3C3;
 }
+
+/* 以下より「ヘッダー」 */
 .container{
   width: 1200px;
   background: #fff;
@@ -85,14 +88,69 @@ body{
   height: auto;
 }
 
+/* 「メイン」＋「サイドバー」に適用 */
+.contents{
+  padding: 24px;
+}
+
+/* 「メイン」 */
 .main{
-  background: blue;
   float: left;
   width: 70%;
 }
-.side{
-  background: green;
+.m-section{
+  color: #666666;
+  padding-bottom: 24px;
 }
+.m-h2::first-letter{
+  border-left: 3px solid #8e9eef;
+  padding-left: 16px;
+}
+.m-h2{
+  background: #0f3bda;
+  color: #fff;
+  padding: 14px 12px 14px 24px;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+.m-info{
+  margin-left: 12px;
+  margin-right: 12px;
+  font-size: 15px;
+  
+}
+.m-info-date{
+  float: left;
+  padding: 8px 32px 8px 0;
+  color: blue;
+}
+.m-info-content {
+ padding: 8px;
+ border-bottom: 1px solid #ccc;
+}
+.m-info-new{
+  background: red;
+  font-size: 11px;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+.m-log {
+  text-align: right;
+  padding-top: 24px;
+}
+.m-log a{
+  color: #666666;
+}
+
+/* 「サイドバー」 */
+.side{
+  /* background: green; */
+}
+
+/* 以下より「フッター」 */
 .footer{
+  clear: both;
   background: yellow;
 }
