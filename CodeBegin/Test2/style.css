@@ -1,7 +1,10 @@
 /* ワイヤーフレームの大別は「ヘッダー」「メイン」「サイドバー」「フッター」 */
 body{
   background: #C3C3C3;
+  line-height: 2;
 }
+
+/* コンテンツ全体 */
 
 /* 以下より「ヘッダー」 */
 .container{
@@ -42,6 +45,7 @@ body{
 }
 .h-list:hover {
   background-color: #e6ebfa;
+  transition: 0.5s;
 }
 .h-list:hover .h-l-box:before{
   content: "";
@@ -102,6 +106,14 @@ body{
   color: #666666;
   padding-bottom: 24px;
 }
+.m-section a{
+  color: #666666;
+}
+.m-section a:hover{
+  color: blue;
+  text-decoration: none;
+  transition: 0.5s;
+}
 .m-h2::first-letter{
   border-left: 3px solid #8e9eef;
   padding-left: 16px;
@@ -113,6 +125,14 @@ body{
   border-radius: 4px;
   font-size: 18px;
   margin-bottom: 24px;
+}
+.m-h3{
+  background: #f6f6f6;
+  color: #666666;
+  padding: 14px 12px 14px 24px;
+  border-radius: 4px;
+  font-size: 17px;
+  border: #ccc 1px solid;
 }
 .m-info{
   margin-left: 12px;
@@ -140,13 +160,59 @@ body{
   text-align: right;
   padding-top: 24px;
 }
-.m-log a{
+
+.m-p{
+  font-size: 15px;
   color: #666666;
+  margin: 24px 16px;
+  line-height: 2;
+}
+.m-point{
+  color: red;
 }
 
 /* 「サイドバー」 */
 .side{
-  /* background: green; */
+  float: right;
+  width: 25%;
+}
+.s-framebox{
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: #f4f4f4;
+  margin-bottom: 24px;
+  color: #666666;
+}
+.s-box{
+  margin-bottom: 24px;
+  color: #666666;
+}
+.s-h4{
+  padding: 28px 10px;
+  border-top: 5px solid blue;
+  border-bottom: 1px solid #D2D2D2;
+  background: #eee;
+  /* color: #666; 親要素から引き継げるので記述不要。
+    他の引き継ぎ可能な要素は「font-size,font-style,letter-spacing,line-height,text-align」 */
+}
+.s-list{
+  border-bottom: 1px solid #D2D2D2;
+  /* padding: 15px; */
+  display: list-item;
+}
+.s-list:hover{
+  background: white;
+}
+.s-list a{
+  line-height: 2;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #666;
+}
+.s-list:hover a{
+  color: blue;
+  transition: 0.5s;
 }
 
 /* 以下より「フッター」 */
