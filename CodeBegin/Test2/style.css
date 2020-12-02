@@ -199,6 +199,7 @@ body{
   border-bottom: 1px solid #D2D2D2;
   /* padding: 15px; */
   display: list-item;
+  overflow: hidden;
 }
 .s-list:hover{
   background: white;
@@ -213,6 +214,22 @@ body{
 .s-list:hover a{
   color: blue;
   transition: 0.5s;
+}
+.s-img{
+  float: left;
+  width: 20%;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.s-l-title{
+  color: blue;
+  font-size: 11px;
+  line-height: normal;
+}
+.s-l-description{
+  font-size: 11px;
+  line-height: 1;
+
 }
 
 /* 以下より「フッター」 */
