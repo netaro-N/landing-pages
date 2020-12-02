@@ -229,11 +229,36 @@ body{
 .s-l-description{
   font-size: 11px;
   line-height: 1;
-
+}
+.s-company-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 0;
+}
+.s-company-info{
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* 以下より「フッター」 */
 .footer{
+  font-size: 13px;
   clear: both;
-  background: yellow;
+  background: #0f3bda;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  line-height: 2;
+}
+.footer-under{
+  font-size: 12px;
+}
+.footer a{
+  text-decoration: none;
+  color: #fff;
+}
+.footer a:hover{
+  color: blue;
 }
