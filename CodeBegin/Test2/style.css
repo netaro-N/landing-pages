@@ -65,6 +65,7 @@ body{
 }
 .h-l-top{
   font-size: 15px;
+  font-weight: bold;
   color: #666666;
   margin-bottom: 4px;
 }
@@ -72,10 +73,10 @@ body{
   font-size: 10px;
   color: #bababa;
   text-align: center;
+  line-height: 2;
+  letter-spacing: 0.2em;
 }
-.active .h-l-top{
-  color: #0e36ca;
-}
+
 .active {
   background-color: #e6ebfa;
 }
