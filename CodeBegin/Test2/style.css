@@ -172,6 +172,19 @@ body{
   color: red;
 }
 
+/* 「company.html」 */
+th,td{
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+th{
+  width: 25%;
+  text-align: center;
+}
+td{
+  text-align: left;
+}
+
 /* 「サイドバー」 */
 .side{
   float: right;
