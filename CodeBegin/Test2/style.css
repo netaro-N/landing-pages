@@ -202,8 +202,49 @@ textarea{
   border-radius: 3px;
   background: linear-gradient(#fff, #eee);
 }
-  /* buttonをtext-align: center;にしないように注意 */
+      /* buttonをtext-align: center;にしないように注意 */
 form{
+  text-align: center;
+}
+/* 「card.html」 */
+.c-link{
+  text-decoration: none;
+}
+.card{
+  box-shadow: 0px 5px 10px #ccc;
+  background: linear-gradient(#fff, #eee);
+  border: 1px solid #ccc;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.card:hover{
+  box-shadow: 0px 10px 20px #ccc;
+  transform: translateY(-5px);
+  transition: .3s;
+  background: #fff;
+}
+.card:hover::before{
+  background: #000;
+  transition: 1s;
+}
+.card img{
+  width: 25%;
+  float: left;
+  margin-right: 10px;
+}
+.card h4{
+  color:blue;
+}
+.card::before{
+  content: "→";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  background: #666;
+  width: 30px;
+  height: 30px;
   text-align: center;
 }
 
