@@ -172,7 +172,10 @@ body{
   color: red;
 }
 
-/* 「company.html」 */
+/* 「company.html」「contact.html」 */
+table{
+  margin-bottom: 24px;
+}
 th,td{
   border: 1px solid #ccc;
   padding: 15px;
@@ -180,9 +183,28 @@ th,td{
 th{
   width: 25%;
   text-align: center;
+  vertical-align: middle;
 }
 td{
   text-align: left;
+}
+input{
+  width: 65%;
+}
+textarea{
+  width: 90%;
+}
+.button{
+  width: 17%;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  border-radius: 3px;
+  background: linear-gradient(#fff, #eee);
+}
+  /* buttonをtext-align: center;にしないように注意 */
+form{
+  text-align: center;
 }
 
 /* 「サイドバー」 */

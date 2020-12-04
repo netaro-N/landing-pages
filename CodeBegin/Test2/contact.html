@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <header class="header">
@@ -95,7 +97,31 @@
     </header>
     <div class="contents">
       <main class="main">
-        お問い合わせ
+        <div class="m-section">
+          <form action="#" method="post">
+            <table>
+              <tr>
+                <th>お名前※</th>
+                <td>
+                  <input type="text" name="お名前" id="" required>
+                </td>
+              </tr>
+              <tr>
+                <th>メールアドレス※</th>
+                <td>
+                  <input type="email" name="メールアドレス" id="" required>
+                </td>
+              </tr>
+              <tr>
+                <th>お問い合わせ詳細※</th>
+                <td>
+                  <textarea name="お問い合わせ詳細" id="" cols="30" rows="10" required></textarea>
+                </td>
+              </tr>
+            </table>
+            <input type="submit" value="内容を確認する" class="button">
+          </form>
+        </div>
       </main>
       <aside class="side">
         <div class="s-framebox">
@@ -189,4 +215,5 @@
     </footer>
   </div>
 </body>
+
 </html>
