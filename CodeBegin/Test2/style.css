@@ -339,3 +339,53 @@ form{
 .footer a:hover{
   color: blue;
 }
+
+/* 以下はレスポンシブデザイン */
+@media screen and (max-width:780px){
+  body{
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .container{
+    width: 98%;
+  }
+  .h-title .h-logo{
+    width: 60%;
+  }
+  .main{
+    float: none;
+    width: auto;
+  }
+  .m-h2, .m-h3{
+    font-size: 16px;
+    padding: 7px 6px 7px 8px;
+  }
+  .m-h2::first-letter{
+    padding-left: 8px;
+  }
+  .m-info-date{
+    font-size: 8px;
+  }
+  .m-info-content{
+    font-size: 8px;
+    line-height: 1.5;
+  }
+  .m-info-new{
+    font-size: 8px;
+    padding: 1px 2px;
+  }
+  .m-log{
+    font-size: 12px;
+  }
+  .m-img{
+    max-width: 100%;
+    width: auto;
+  }
+  .contents{
+    padding: 2px;
+  }
+  .side{
+    float: none;
+    width: auto;
+  }
+}
