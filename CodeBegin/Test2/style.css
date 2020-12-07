@@ -341,6 +341,15 @@ form{
 }
 
 /* 以下はスマホ幅の際にvisibleになるハンバーガーメニュー */
+#nav-box{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 25px;
+  right: 19px;
+  border: 1px solid black;
+  cursor: pointer;
+}
 #nav-open span, #nav-open span:before, #nav-open span:after{
   position: absolute;
   background-color: #666;
