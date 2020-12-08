@@ -342,6 +342,7 @@ form{
 
 /* 以下はスマホ幅の際にvisibleになるハンバーガーメニュー */
 #nav-box{
+  display: none;
   position: absolute;
   height: 50px;
   width: 50px;
@@ -351,6 +352,7 @@ form{
   cursor: pointer;
 }
 #nav-open span, #nav-open span:before, #nav-open span:after{
+  display: none;
   position: absolute;
   background-color: #666;
   height: 3px;
@@ -458,5 +460,8 @@ form{
   /* 以下はナビゲーションバーのハンバーガー化 */
   .h-nav{
     display: none;
+  }
+  #nav-box,#nav-open span, #nav-open span:before, #nav-open span:after{
+    display: block;
   }
 }
