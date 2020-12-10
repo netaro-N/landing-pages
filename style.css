@@ -1,7 +1,7 @@
-.headerInner, .mainInner {
+.headerInner, .main,.side {
   /* max-width: 650px; */
   margin:auto;
-  padding: 0 20px;
+  /* padding: 0 20px; */
 }
 
 .headerInner {
@@ -11,8 +11,42 @@
   align-items: center;
 }
 
+.h-list,.h-list-button{
+  /* text-align: center; */
+  background: skyblue;
+  color: #fff;
+  width:150px;
+  height:50px;
+  display:inline-block;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  font-size: 12px;
+  box-shadow: 3px 3px 0px rgba(13, 18, 49, 0.3);
+  /* transition:  700ms ; */
+}
+.h-list,.h-list-button:hover {
+    background: orange ;
+    box-shadow: 0px 0px 0px rgba(13, 18, 49, 0.3);
+}
+
+/* メイン */
+.main{
+  background-color: brown;
+  float: left;
+  width: 70%;
+}
+/* サイド */
+.side{
+  background-color: blue;
+  float: left;
+  width: 20%;
+}
+
 /* フッター */
 footer {
+  clear: both;
   background: #ECECEC;
 }
 .footerInner {
