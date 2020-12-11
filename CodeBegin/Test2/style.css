@@ -5,13 +5,13 @@ body{
 }
 
 /* コンテンツ全体 */
-
-/* 以下より「ヘッダー」 */
 .container{
   width: 1200px;
   background: #fff;
   margin: 0 auto;
 }
+/* 以下より「ヘッダー」 */
+
 .h-title{
   position: relative;
   height: 100px;
