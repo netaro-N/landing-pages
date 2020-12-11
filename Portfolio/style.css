@@ -5,17 +5,16 @@ body{
 }
 /* コンテナ内 */
 .container{
-  width: 1200px;
+  max-width: 1200px;
   background: #fff;
   margin: 0 auto;
 }
-
 /* 以下よりヘッダー */
- /* ヘッダーロゴ */
- .header{
+    /* ヘッダーロゴ */
+.header{
    background-color: cornsilk;
    height: 100px;
- }
+}
 .h-title{
   position: relative;
   height: 100px;
@@ -30,8 +29,7 @@ body{
   transform: translateY(-50%);
   width: 80px;
 }
-
-/* ナビリスト */
+    /* ヘッダーナビリスト */
 .h-nav{
   float: left;
   width: 50%;
@@ -39,13 +37,12 @@ body{
 .h-menu{
   /* 下のリストをカラム落ちさせないため */
   letter-spacing: -.4em;
-  margin: 5px;
 }
 .h-list{
   display: inline-block;
   width: calc(100%/3);
   letter-spacing: normal;
-  height: 90px;
+  height: 100px;
   border: 1px solid #D2D2D2;
   /* 下のリストをカラム落ちさせないため */
   box-sizing: border-box;
@@ -56,47 +53,24 @@ body{
 /* divで囲ったためにaタグ全体がリンクボタンのようになる！ */
 .h-l-box{
   text-align: center;
-  line-height: 90px;
+  line-height: 100px;
 }
 
-/* .headerInner {
-  background-color: cornsilk;
-  height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-} */
-/* 
-.h-list,.h-list-button{
-  background: skyblue;
-  color: #fff;
-  width:130px;
-  height:50px;
-  display:inline-block;
-  border-radius: 5px;
-  text-align: center;
-  text-decoration: none;
-  line-height: 50px;
-  font-size: 12px;
-  box-shadow: 3px 3px 0px rgba(13, 18, 49, 0.3);
-} */
-/* 
-.h-list,.h-list-button:hover {
-    background: orange ;
-    box-shadow: 0px 0px 0px rgba(13, 18, 49, 0.3);
-} */
-
-/* メイン */
+/* コンテンツ */
+.contents{
+  padding: 24px;
+}
+    /* メイン */
 .main{
   background-color: brown;
   float: left;
   width: 70%;
 }
-/* サイド */
+    /* サイド */
 .side{
-  background-color: blue;
-  float: left;
-  width: 20%;
+  background-color: darkgrey;
+  float: right;
+  width: 25%;
 }
 
 /* フッター */
