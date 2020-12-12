@@ -1,3 +1,18 @@
+/* 基本設定 */
+  /* フォントサイズ */
+  html {
+    font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+  }
+  body {
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+  h2{
+    font-size: 2.0rem;
+  }
+  h4{
+    font-size: 1.8rem;
+  }
 /* 全体 */
 body{
   background: #C3C3C3;
@@ -59,27 +74,33 @@ body{
 /* コンテンツ */
 .contents{
   padding: 24px;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+.m-section , .s-box{
+  padding-bottom: 2.4rem;
 }
     /* メイン */
 .main{
-  background-color: brown;
+  background-color: rgb(233, 217, 217);
   float: left;
   width: 70%;
 }
     /* サイド */
 .side{
-  background-color: darkgrey;
+  background-color: rgb(240, 237, 237);
   float: right;
   width: 25%;
 }
 
+
 /* フッター */
 footer {
   clear: both;
-  background: #ECECEC;
+  background: cornsilk;
 }
 .footerInner {
   text-align: center;
-  margin-top: 50px;
   padding: 30px;
 }
