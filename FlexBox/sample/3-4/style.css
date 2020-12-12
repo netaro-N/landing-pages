@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* ページ全体の設定 */
+body {
+	margin: 0;
+	font-family: sans-serif;
+}
+
+/* 「ヘッダー」ブロック */
+header {
+	padding: 25px 15px;
+}
+
+
+/* 「コンテンツ」ブロック */
+div {
+	background-color: #29abe2;
+	padding: 40px 15px;
+}
+
+/* 記事 */
+article {
+	background-color: #ffffff;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+p {
+	line-height: 2;
+}
+
+/* 画像 */
+img {
+	width: 100%;
+	height: auto;
+}
+
+figure {
+	margin: 0;
+}
+
+/* 投稿日 */
+time {
+	color: #666666;
+	margin-bottom: 15px;
+	display: block;
+}
+
+
+/* 「フッター」ブロック */
+footer {
+	background-color: #6ac4eb;
+	padding: 25px 15px;
+}
+
