@@ -17,3 +17,11 @@
   height: 750px;
   position: relative;
 }
+.header-form{
+  position:absolute;
+  top: 160px;
+  right: 80px;
+  width: 450px;
+  height: 450px;
+  border-radius: 10px;
+}

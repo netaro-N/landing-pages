@@ -17,7 +17,7 @@
 <body>
   <header>
     <div class="header-cover">
-      <nav class="navbar navbar-expand-lg bg-white">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top">
         <a class="navbar-brand" href="#"><i class="fab fa-airbnb fa-2x"></i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,6 +45,37 @@
           </form>
         </div>
       </nav>
+      <div class="container d-md-block d-none">
+        <div class="bg-white p-4 border-light header-form">
+          <form>
+            <div class="form-group">
+              <div class="h1">Airbnbホストになって、暮らしをレベルアップ</div>
+              <label for="formGroupExampleInput">どれくらいの収入が見込めるかチェック</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="大阪">
+            </div>
+          </form>
+          <form>
+            <div class="form-row">
+              <div class="col-7">
+                <select type="text" class="form-control">
+                  <option value="">まるまる貸し切り</option>
+                  <option value="">個室</option>
+                  <option value="">シェアルーム</option>
+                </select>
+              </div>
+              <div class="col">
+                <select type="text" class="form-control">
+                  <option value="">1人</option>
+                  <option value="">2人</option>
+                  <option value="">3人</option>
+                </select>
+              </div>
+            </div>
+            <p><span class="font-weight-bold h2">¥ 145,228</span>月あたり</p>
+            <button class="btn btn-danger w-100" type="button" name="button">はじめる</button>
+          </form>
+        </div>
+      </div>
     </div>
   </header>
 
