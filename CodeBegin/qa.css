@@ -1,0 +1,28 @@
+.img--1{
+  margin-top: 100px;
+  height: 65%;
+}
+.img--1 img {
+  border-radius: 0%;
+  width: 100%;
+  position: relative;
+}
+.img--1 .p--1 {
+  position: absolute;
+  color:white;
+  font-size: 50px;
+  font-weight: bold;
+  top: 90%;
+  left: 70px;
+}
+.img--1 .p--2{
+  position: absolute;
+  color: black;
+  padding: 10px 15px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  top: 92%;
+  left: 70px;
+}
