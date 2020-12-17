@@ -25,3 +25,35 @@
   height: 450px;
   border-radius: 10px;
 }
+
+.bottomBar{
+  display: none;
+}
+.temp{
+  height: auto;
+}
+.m-temp{
+  height: 500px;
+}
+.tomato{
+  background-color: tomato;
+}
+.orchid{
+  background-color:orchid;
+}
+
+/* モバイル用固定バー */
+@media screen and (max-width:780px){
+  .bottomBar{
+    position: sticky;
+    bottom: 0;
+    z-index: 99;
+    text-align: right;
+    background-color: white;
+    padding: 20px;
+    display: block;
+  }
+  .bottomBarForm{
+    display: inline-block;
+  }
+}

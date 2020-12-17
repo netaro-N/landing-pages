@@ -1,0 +1,46 @@
+/* リセット */
+*{
+  margin: 0;
+  padding: 0;
+}
+.video{
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  top: 0;
+  z-index: -100;
+  background-size: cover;
+}
+.header{
+  position: relative;
+}
+.header:after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.navbar{
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+.navbar a{
+  color: #fff;
+}
+.nav-item{
+  padding: 10px;
+}
+.nav-item:hover {
+  border-bottom: 1px solid #fff;
+}
