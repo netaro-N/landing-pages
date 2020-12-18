@@ -7,12 +7,13 @@
   position: relative;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   top: 0;
   z-index: -100;
   background-size: cover;
 }
+ 
 .header{
   position: relative;
 }
@@ -25,8 +26,8 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.5);
-  z-index: 1;
-}
+  z-index: -50;
+} 
 .navbar{
   position: absolute;
   top: 0;
@@ -43,4 +44,52 @@
 }
 .nav-item:hover {
   border-bottom: 1px solid #fff;
+}
+
+/* ヘッダーコンテンツ */
+.contents{
+  position:absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -30%);
+  color: #fff;
+  padding: 20px;
+  width: 500px;
+  height: 500px;
+}
+.contents a{
+  color: #ffffff;
+  font-weight: bold;
+}
+.p{
+  padding: 20px 0;
+}
+.p:after{
+  content: "▶";
+  padding-left: 10px;
+}
+.input-button{
+  background: #ffffff;
+  padding: 5px 20px;
+  margin: auto;
+  height: 3em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.input-button button{
+  background: #bbdadc;
+  color: #ffffff;
+}
+.input-button button:hover{
+  background: #bbdadc;
+  color: #ffffff;
+}
+.input-mail{
+  height: 3em;
+  border: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.input-mail:valid ~ .input-button button{
+  background: #008489;
 }
