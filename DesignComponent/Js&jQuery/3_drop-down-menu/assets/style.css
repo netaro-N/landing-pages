@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+nav{
+  margin: 30px;
+}
+
+ul,li{
+  list-style: none;
+}
+
+li{
+  width: 150px;
+  border-right: #ddd solid 2px;
+  border-bottom: #999 solid 2px;
+  line-height: 2;
+}
+
+a{
+  color:#fff;
+  background-color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 0 5px;
+}
+
+a:hover{
+  background: #333;
+}
+
+.main li{
+  float: left;
+}
+
+.sub{
+  display: none;
+  border-top: #999 solid 2px;
+}
+
+.sub li:last-child{
+  border-bottom: 0;
+}

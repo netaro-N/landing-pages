@@ -1,0 +1,31 @@
+body{
+  background: #000561;
+}
+
+.imagebox{
+  clear: both;
+}
+
+.pictures{
+  width: 250px;
+  margin: auto;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.box{
+  width: 250px;
+  margin: auto;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  margin-right: 100px;
+}
