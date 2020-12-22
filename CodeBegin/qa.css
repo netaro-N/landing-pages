@@ -1,28 +1,298 @@
-.img--1{
-  margin-top: 100px;
-  height: 65%;
+body{
+  background-color: #d3d3d3;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;;
 }
-.img--1 img {
-  border-radius: 0%;
-  width: 100%;
+​
+.container{
+  width: 1200px;
+  background-color: white;
+  margin: 0 auto;
+}
+.container{
+  width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+​
+.h-title{
+  height: 100px;
+  border-top: solid 5px #0F36CA;
   position: relative;
 }
-.img--1 .p--1 {
+​
+.h-logo{
+  width: 300px;
   position: absolute;
-  color:white;
-  font-size: 50px;
-  font-weight: bold;
-  top: 90%;
-  left: 70px;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
 }
-.img--1 .p--2{
+​
+.h-nav{
+  border-top: 1px solid #d2d2d2;
+}
+​
+.h-menu{
+  letter-spacing: -.4em;
+}
+​
+.h-list{
+  display: inline-block;
+  position: relative;
+  width: calc(100%/6);
+  letter-spacing: normal;
+  height: 64px;
+  border-right: 1px solid #d2d2d2;
+  box-sizing: border-box;
+  vertical-align: bottom;
+}
+​
+.h-1-box{
   position: absolute;
-  color: black;
-  padding: 10px 15px;
-  border: 1px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+​
+.h-1-top{
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 4px;
+}
+​
+.h-1-bottom{
+  font-size: 10px;
+  color: #bababa;
+  text-align: center;
+}
+​
+.h-list:hover .h-1-top{
+  color: #0F36CA
+}
+​
+.h-list:hover{
+  background-color: #e6ebfa;
+}
+​
+.h-list:hover .h-1-box:before{
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color: #0F36CA;
+  left: 4px;
+}
+​
+.active{
+  background-color: #e6ebfa;
+}
+​
+.active .h-1-box:before{
+  content: "";
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  background-color: #0F36CA;
+  left: 4px;
+}
+​
+.active .h-1-top{
+  color: #0F36CA;
+}
+​
+.h-image{
+  max-width: 100%;
+  height: auto;
+}
+​
+.main{
   background-color: white;
-  border-radius: 5px;
-  font-size: 20px;
-  top: 92%;
-  left: 70px;
+  float: left;
+  width: 70%;
+}
+​
+.contents{
+  padding: 24px;
+}
+​
+.m-title{
+  background: linear-gradient(#1342ef, #0e37cb) fixed;
+  color: white;
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 0 5px gray;
+  margin-bottom: 24px;
+}
+​
+.m-title h2{
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  border-left: 3px solid #8c8beb;
+  padding-left: 10px;
+}
+​
+.m-table, .main p{
+  line-height: 2;
+  color: #7e7e7e;
+  font-size: 15px;
+}
+​
+.m-table{
+  margin-bottom: 10px;
+}
+​
+.m-table li{
+  border-bottom: 1px solid #cccccc;
+}
+​
+.new{
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 5px;
+}
+​
+.log{
+  text-align: right;
+  margin-bottom: 20px;
+}
+​
+.main h3{
+  background: linear-gradient(#fefefe, #eeeeee) fixed;
+  color: #666666;
+  font-size: 18px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+​
+.date{
+  color: #273DCE;
+  padding: 8px 32px 8px ;
+}
+​
+.main a{
+  color: #666666;
+}
+​
+.main p{
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+​
+.note{
+  color: red;
+}
+​
+.side{
+  float: right;
+  width: 25%;
+}
+​
+.s-framebox{
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  margin-bottom: 24px;
+  color: #666666;
+}
+​
+.s-box{
+  margin-bottom: 24px;
+  color: #666666;
+}
+​
+.s-h4{
+  padding: 28px 10px;
+  border-top: 3px solid blue;
+  background: #eee;
+  border-bottom: 1px solid #d2d2d2;
+}
+​
+.s-list{
+  border-bottom: 1px solid #d2d2d2;
+  padding: 15px;
+  overflow: hidden;
+}
+​
+.s-list:hover{
+  background-color: white;
+}
+
+.s-list a{
+  text-decoration: none;
+  color: #666666;}
+
+.s-list:hover a{
+  color: blue;
+}
+​
+.s-img{
+  float: left;
+  width: 25%;
+  margin-right: 5px;
+}
+​
+.s-l-title{
+  color: blue;
+  font-size: 11px;
+}
+​
+.s-l-description{
+  font-size: 11px;
+}
+​
+.s-company-title{
+  font-weight: normal;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 0;
+}
+​
+.s-company-info{
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.5;
+}
+​
+.footer{
+  text-align: center;
+  font-size: 13px;
+  clear: both;
+  color: white;
+  background-color: blue;
+  padding: 16px 0;
+  line-height: 2;
+}
+​
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+​
+.footer-under{
+  font-size: 12px;
+}
+​
+.footer a:hover{
+  color: blue;
+}
+
+@media screen and (max-width:780px){
+  .main{
+    float: none;
+    width: auto;
+  }
+  .side{
+    float: none;
+    width: auto;
+  }
 }

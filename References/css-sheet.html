@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style/css-sheet.css">
+  <title>css のチートシート</title>
+</head>
+<body>
+
+    <div class="view">
+        <h2>Title1</h2>
+        <p id="red" class="para red">paragraph1</p>
+        <input type="text">
+        <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+        <h2>Title2</h2>
+        <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+          <span>hogehoge</span><strong><span>hugahuga</span></strong>
+        </p>
+        <p class="para green">paragraph3-2<a href="#">link3</a></p>
+        <ul>
+          <li>The first child of ul</li>
+          <li>2nd</li>
+          <li>3rd</li>
+          <li>The last child of ul</li>
+        </ul>
+      </div>
+    <div id="source1" class="source">
+      <pre>
+      <code>
+          &lt;h2>Title1&lt;/h2>
+          &lt;p id="red" class="para red">paragraph1&lt;/p>
+          &lt;input type="text">
+          &lt;p class="para blue">paragraph２&lt;a href="#">link1&lt;/a>hogehoge&lt;/p>
+          &lt;h2>Title2&lt;/h2>
+          &lt;p class="para green">paragraph3&lt;a href="https://youtu.be/ayjyN-9uwQU">link2&lt;/a>
+            &lt;span>hogehoge&lt;/span>&lt;strong>&lt;span>hugahuga&lt;/span>&lt;/strong>
+          &lt;/p>
+          &lt;p class="para green">paragraph3-2&lt;a href="#">link3&lt;/a>&lt;/p>
+          &lt;ul>
+            &lt;li>The first child of ul&lt;/li>
+            &lt;li>2nd&lt;/li>
+            &lt;li>3rd&lt;/li>
+            &lt;li>The last child of ul&lt;/li>
+          &lt;/ul>
+    </code>
+  </pre>
+    </div>
+
+  
+  <div id="div2" class="box">
+  <div class="source">
+    <pre>
+    <code>
+        #red {
+          color: red;
+        }
+        /*後からclassで指定していますが、上のidの方が優先されます！*/
+        .para {
+          color: blue;
+        }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+      <h2>Title1</h2>
+      <p id="red" class="para red">paragraph1</p>
+      <input type="text">
+      <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+      <h2>Title2</h2>
+      <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+        <span>hogehoge</span><strong><span>hugahuga</span></strong>
+      </p>
+      <p class="para green">paragraph3-2<a href="#">link3</a></p>
+      <ul>
+        <li>The first child of ul</li>
+        <li>2nd</li>
+        <li>3rd</li>
+        <li>The last child of ul</li>
+      </ul>
+    </div>
+</div>
+
+  <div id="div3" class="box">
+  <div class="source">
+    <pre>
+    <code>
+      /*クラスを複数指定しているとできる
+      class="para red"みたいに*/
+         .para {
+          font-weight: bold;
+        }
+         .red{
+          color: red;
+        }
+         .blue{
+          color: blue;
+        }
+         .green{
+          color: green;
+        }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+      <h2>Title1</h2>
+    <p id="red" class="para red">paragraph1</p>
+    <input type="text">
+    <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+    <h2>Title2</h2>
+    <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+      <span>hogehoge</span><strong><span>hugahuga</span></strong>
+    </p>
+    <p class="para green">paragraph3-2<a href="#">link3</a></p>
+    <ul>
+      <li>The first child of ul</li>
+      <li>2nd</li>
+      <li>3rd</li>
+      <li>The last child of ul</li>
+    </ul>
+  </div>
+</div>
+
+<div id="div4" class="box">
+  <div class="source">
+    <pre>
+    <code>
+      /*point!”>”は指定した子要素のみなので、
+      &lt;strong>&lt;span>hugahuga&lt;/span>&lt;/strong>は適用されません！
+      （孫要素にspanあるけど適用されない）*/
+      .green > span{
+        color: green;
+      }
+    /*  ”+”と”~”はややこしい。
+        "+"は指定した隣接する要素のみ
+        （h2の後ろがpならそれだけが背景色黄色、paragraph2と3-2は適用されない） */
+      h2 + p {
+        background-color: yellow;
+      }
+      /* "~"は後ろの兄弟要素全て！（h2の後ろのpは全て斜体になってます） */
+      h2 ~ p {
+        font-style: oblique;
+      }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+    <h2>Title1</h2>
+    <p id="red" class="para red">paragraph1</p>
+    <input type="text">
+    <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+    <h2>Title2</h2>
+    <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+      <span>hogehoge</span><strong><span>hugahuga</span></strong>
+    </p>
+    <p class="para green">paragraph3-2</p>
+    <ul>
+      <li>The first child of ul</li>
+      <li>2nd</li>
+      <li>3rd</li>
+      <li>The last child of ul</li>
+    </ul>
+  </div>
+</div>
+
+<div id="div5" class="box">
+  <div class="source">
+    <pre>
+    <code>
+      /*クラス属性を持っている全ての要素（この場合はp要素）*/
+      [class]{
+        background-color: aqua;
+      }
+      /*a要素のうち、href="#"を持っているもの。
+        link2はyoutubeへのリンクになっているので適用外となる*/
+      a[href="#"]{
+        color: rgb(255, 77, 0);
+      }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+    <h2>Title1</h2>
+    <p id="red" class="para red">paragraph1</p>
+    <input type="text">
+    <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+    <h2>Title2</h2>
+    <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+      <span>hogehoge</span><strong><span>hugahuga</span></strong>
+    </p>
+    <p class="para green">paragraph3-2<a href="#">link3</a></p>
+    <ul>
+      <li>The first child of ul</li>
+      <li>2nd</li>
+      <li>3rd</li>
+      <li>The last child of ul</li>
+    </ul>
+  </div>
+  <div>
+    <p>
+      point!!
+    </p>
+  </div>
+</div>
+
+<div id="div6" class="box">
+  <div class="source">
+    <pre>
+    <code>
+      /*インプットをフォーカスしてみてください*/
+      #div6 input:focus{
+        background-color: yellow;
+      }
+      /*link1にマウスを置いてみてください*/
+      #div6 .blue a:hover{
+        color: aquamarine;
+      }
+      /*link2を押して、その後このページに戻ってきてください*/
+      #div6 .green a:visited{
+        color:red;
+      }
+      /*link3訪問前→訪問後*/
+      #div6 .add a:link{
+        background-color: aquamarine;
+      }
+      #div6 .add a:visited{
+        background-color: red;
+      }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+    <h2>Title1</h2>
+    <p id="red" class="para red">paragraph1</p>
+    <input type="text">
+    <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+    <h2>Title2</h2>
+    <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU" target="_blank">link2</a>
+      <span>hogehoge</span><strong><span>hugahuga</span></strong>
+    </p>
+    <p class="para add">paragraph3-2<a href="https://netaro-n.github.io/basic-programming-roadmap/" target="_blank">link3</a></p>
+    <ul>
+      <li>The first child of ul</li>
+      <li>2nd</li>
+      <li>3rd</li>
+      <li>The last child of ul</li>
+    </ul>
+  </div>
+</div>
+
+<div id="div7" class="box">
+  <div class="source">
+    <pre>
+    <code>
+        /*2-7:構造的な擬似要素*/
+        /*兄弟関係の要素のうちの最初の要素*/
+        li:first-child {
+          background-color: #d3d3d3;
+        }
+        /*兄弟関係の要素のうちの最後の要素*/
+        li:last-child {
+          background-color: #fcfc98;
+        }
+        /*『ひとりっ子』要素なら適用
+          link2は、pの子要素だが、他にもspanがいて一人っ子ではない*/
+        a:only-child {
+          background-color: rgb(240, 88, 88);
+        }
+  </code>
+</pre>
+  </div>
+  <div class="view">
+    <h2>Title1</h2>
+    <p id="red" class="para red">paragraph1</p>
+    <input type="text">
+    <p class="para blue">paragraph２<a href="#">link1</a>hogehoge</p>
+    <h2>Title2</h2>
+    <p class="para green">paragraph3<a href="https://youtu.be/ayjyN-9uwQU">link2</a>
+      <span>hogehoge</span><strong><span>hugahuga</span></strong>
+    </p>
+    <p class="para green">paragraph3-2<a href="#">link3</a></p>
+    <ul>
+      <li>The first child of ul</li>
+      <li>2nd</li>
+      <li>3rd</li>
+      <li>The last child of ul</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

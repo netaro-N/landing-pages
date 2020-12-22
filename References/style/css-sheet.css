@@ -1,0 +1,89 @@
+.source , .view {
+  display: inline-block;
+}
+@media screen and (min-width:1060px) {
+#source1 {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+}
+}
+.box {
+  border: 1px solid;
+}
+
+/*classとid*/
+#div2 #red {
+  color: red;
+}
+#div2 .para {
+  color: blue;
+}
+
+/*CSSをまとめる*/
+#div3 .para {
+  font-weight: bold;
+}
+#div3 .red{
+  color: red;
+}
+#div3 .blue{
+  color: blue;
+}
+#div3 .green{
+  color: green;
+}
+
+/*2-4：特殊なセレクタ*/
+#div4 .green > span{
+  color: green;
+}
+
+#div4 h2 + p {
+  background-color: rgba(255, 255, 0, 0.31);
+}
+
+#div4 h2 ~ p {
+  font-style: oblique;
+}
+
+/*2-5：属性セレクタ*/
+#div5 .view [class]{
+  background-color: aqua;
+}
+
+#div5 .view a[href="#"]{
+  color: rgb(255, 77, 0);
+}
+
+/*2-6:擬似要素*/
+#div6 input:focus{
+  background-color: yellow;
+}
+
+#div6 .blue a:hover{
+  color: aquamarine;
+}
+
+#div6 .green a:visited{
+  color:red;
+}
+
+#div6 .add a:link{
+  background-color: aquamarine;
+}
+#div6 .add a:visited{
+  background-color: red;
+}
+
+/*2-7:構造的な擬似要素*/
+#div7 li:first-child {
+  background-color: #d3d3d3;
+}
+#div7 li:last-child {
+  background-color: #fcfc98;
+}
+#div7 a:only-child {
+  background-color: rgb(240, 88, 88);
+}

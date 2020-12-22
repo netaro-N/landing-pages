@@ -1,0 +1,90 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff;
+}
+
+.title{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section{
+  position: relative;
+  min-height: 300px;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+section:nth-child(odd){
+  background: #eee;
+}
+
+.subTitle{
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  background: #fff;
+  border: solid 1px #4169e1;
+  padding: 5px;
+  color: #4169e1;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+/* transitionの練習 */
+
+.transition{
+  width: 200px;
+  line-height: 50px;
+  border-radius: 5px;
+  background: skyblue;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  /* ここからtransitionを追加 */
+  transition: 300ms;
+}
+
+.transition:hover {
+  transform: scale(1.2,1.2);
+}
+
+/* animationの練習 */
+
+.loading{
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  /* ここからanimationを追加 */
+  animation: loading-animation 1s ease-in-out infinite;
+}
+
+@keyframes loading-animation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* animationの練習2 */
+
+.buruburu-text {
+  text-align: center;
+  /* ここからanimationを追加 */
+  animation: buruburu-animation .1s infinite;
+}
+
+@keyframes buruburu-animation {
+  0% {transform: translate(0px, 0px)}
+  25% {transform: translate(3px, 3px)}
+  50% {transform: translate(0px, 3px)}
+  75% {transform: translate(3px, 0px)}
+  100% {transform: translate(0px, 0px)}
+}

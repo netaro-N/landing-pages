@@ -1,0 +1,24 @@
+body {
+  background-color: #DEDEDE;
+  font-size: 0.5em;
+  font-family: '遊ゴシック';
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  background-color: rgb(250, 255, 255);
+  border: 1px solid ;
+}
+
+.header{
+  background-color: #FFC93C ;
+  color: #204495;
+}
+
+.name {
+  color: #204495;
+}

@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+  <title>タグリファレンス</title>
+</head>
+
+<body>
+  <table>
+    <!-- ヘッダー -->
+    <tr class="header">
+      <th class="header">タグ（名称の説明）</th>
+      <th class="header">主な属性値</th>
+      <th class="header">コード例</th>
+      <th class="header">表示</th>
+      <th class="header">補足</th>
+    </tr>
+    <!-- コンテンツ -->
+    <tr>
+      <th class="name">&lt;a&gt;<br>anchorタグ</th>
+      <td class="attribute">href</td>
+      <td class="code">
+        &lt;a href="https://netaro-n.github.io/basic-programming-roadmap/css-sheet.html" target="_blank"&gt;CSSシートへ&lt;/a&gt;
+      </td>
+      <td class="view">
+        <a href="https://netaro-n.github.io/basic-programming-roadmap/css-sheet.html" target="_blank">CSSシートへ</a>
+      </td>
+      <td class="supple"></td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;abbr&gt;<br>abbreviation＝"略語"</th>
+      <td class="attribute">title</td>
+      <td class="code">
+        &lt;abbr title="HyperText Markup Language">HTML&lt;/abbr>
+      </td>
+      <td class="view">
+        <abbr title="HyperText Markup Language">HTML</abbr>
+      </td>
+      <td class="supple">単語にカーソルを置いてしばらく待ってください。<br>title属性を用いることで略語の説明が可能。</td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;b&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+        &lt;b>見かけ上の太字&lt;/b>
+      </td>
+      <td class="view"><b>見かけ上の太字</b></td>
+      <td class="supple">最終手段。見出しはhタグ。意味の強勢はemタグ、さらに重要な強調はstrongタグを使用。</td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;blockquote&gt;</th>
+      <td class="attribute">cite</td>
+      <td class="code">
+        &lt;blockquote cite="https://www.aozora.gr.jp/cards/000148/files/789_14547.html">
+              &lt;p>吾輩わがはいは猫である。名前はまだ無い。どこで生れたかとんと見当けんとうがつかぬ。
+              何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。&lt;/p>
+              &lt;/blockquote>
+      </td>
+      <td class="view">
+        <blockquote cite="https://www.aozora.gr.jp/cards/000148/files/789_14547.html">
+          吾輩わがはいは猫である。名前はまだ無い。どこで生れたかとんと見当けんとうがつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。
+        </blockquote>
+      </td>
+      <td class="supple">pタグで入れ子にし、ブロックボックスでサイトの引用を表す。文章中などでインラインとして引用を表したい場合はqタグを使用</td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;br&gt;<br>breakタグ</th>
+      <td class="attribute"></td>
+      <td class="code">ここで&lt;br>改行&lt;/br>
+      </td>
+      <td class="view">
+        ここで<br>改行
+      </td>
+      <td class="supple"></td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;button&gt;</th>
+      <td class="attribute">type属性<br>submit（送信）,reset（リセット）,button（何もしない）</td>
+      <td class="code">
+          &lt;button type="button" value="ボタンです">valueよりも優先的に表示&lt;/button>
+      </td>
+      <td class="view">
+        <button type="button" value="ボタンです">valueよりも優先的に表示</button>
+      </td>
+      <td class="supple">フォームで用いる。同様の&lt;input type="submit">と違うのは、属性とデザインが自由。</td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;cite&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          夏目漱石は３８歳の時&lt;cite> 吾輩は猫である&lt;/cite>を執筆した。
+      </td>
+      <td class="view">
+        夏目漱石は３８歳の時<cite>吾輩は猫である</cite>を執筆した。
+      </td>
+      <td class="supple">
+        作品のタイトルのみを表す。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;code&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;code>document.write("ソースコードを表示させる")&lt;/code>
+      </td>
+      <td class="view">
+        <code>document.write("ソースコードを表示させる")</code>
+      </td>
+      <td class="supple">
+        改行やインデントを反映させる為にはpreタグの子要素にする<br>preタグを参照
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;dd&gt;<br>description , definition<br>説明や定義</th>
+      <td class="attribute"></td>
+      <td class="code">
+        詳細は&lt;dl>タグで。
+      </td>
+      <td class="view">
+        詳細は&lt;dl>タグで。
+      </td>
+      <td class="supple">
+        詳細は&lt;dl>タグで。
+      </td>
+    </tr>
+  
+
+    <tr>
+      <th class="name">&lt;div&gt;<br>division</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;div>ブロック要素を形成1&lt;/div>
+          &lt;div align="center">ブロック要素を形成2&lt;/div>
+          &lt;div align="right">ブロック要素を形成3&lt;/div>
+      </td>
+      <td class="view">
+        <div>ブロック要素を形成1</div><div align="center">ブロック要素を形成2</div><div align="right">ブロック要素を形成3</div>
+      </td>
+      <td class="supple">
+        特に意味を持たないが、ブロック要素を形成できる。spanタグはインライン要素を形成。
+      </td>
+    </tr>
+
+
+    <tr>
+      <th class="name">&lt;dl&gt;<br>description list</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;dl> <br>
+          &lt;dt>dlタグで「説明リスト」の作成&lt;/dt> <br>&lt;dd>dtタグで「説明される言葉」など&lt;/dd> <br>&lt;dd>ddタグで「説明や定義」を書く&lt;/dd> <br>
+          &lt;/dl>
+      </td>
+      <td class="view">
+        <dl>
+          <dt>dlタグで「説明リスト」の作成</dt>
+          <dd>dtタグで「説明される言葉」など</dd>
+          <dd>ddタグで「説明や定義」を書く</dd>
+        </dl>
+      </td>
+      <td class="supple">
+        dlタグの子要素にdtとdd。デーブルと似た感じ。
+      </td>
+    </tr>
+
+
+    <tr>
+      <th class="name">&lt;dt&gt;<br>description term<br>説明される言葉</th>
+      <td class="attribute"></td>
+      <td class="code">
+        詳細は&lt;dl>タグで。
+      </td>
+      <td class="view">
+        詳細は&lt;dl>タグで。
+      </td>
+      <td class="supple">
+        詳細は&lt;dl>タグで。
+      </td>
+    </tr>
+  
+
+    <tr>
+      <th class="name">&lt;em&gt;<br>emphasis</th>
+      <td class="attribute"></td>
+      <td class="code">
+           HTML5では&lt;em>強勢する&lt;/em>（アクセントを付ける）
+      </td>
+      <td class="view">
+          HTML5では<em>強勢する</em>（アクセントをつける）
+      </td>
+      <td class="supple">
+        意味の強勢（アクセント）。<br>
+        イタリック体（斜傾）なら&lt;i>タグ、意味の強意強調が目的なら&lt;strong>タグを使用
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;fieldset&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;form action="/"><br>
+            &lt;fieldset> <br>
+              &lt;legend>性別&lt;/legend> <br>
+              &lt;p>&lt;label>&lt;input type="radio" name="sex" value="male">男&lt;/label>&lt;/p> <br>
+              &lt;p>&lt;label>&lt;input type="radio" name="sex" value="female">女&lt;/label>&lt;/p> <br>
+            &lt;/fieldset> <br>
+            &lt;fieldset> <br>
+              &lt;legend>国籍&lt;/legend> <br>
+              &lt;p>&lt;label>&lt;input type="radio" name="nation" value="japan">日本&lt;/label>&lt;/p> <br>
+              &lt;p>&lt;label>&lt;input type="radio" name="nation" value="foreign">海外&lt;/label>&lt;/p> <br>
+            &lt;/fieldset> <br>
+            &lt;/form>
+      </td>
+      <td class="view">
+        <form action="/">
+        <fieldset>
+          <legend>性別</legend>
+          <p><label><input type="radio" name="sex" value="male">男</label></p>
+          <p><label><input type="radio" name="sex" value="female">女</label></p>
+        </fieldset>
+        <fieldset>
+          <legend>国籍</legend>
+          <p><label><input type="radio" name="nation" value="japan">日本</label></p>
+          <p><label><input type="radio" name="nation" value="foreign">海外</label></p>
+        </fieldset>
+        </form>
+      </td>
+      <td class="supple">
+        フォーム内の項目をグループ化することができる。
+        legendタグでグループ名をつけることができる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;form&gt;</th>
+      <td class="attribute">method , action</td>
+      <td class="code">
+        &lt;form action="/" method="post"> <br>
+          &lt;p>&lt;input type="radio" name="method" value="post">POST&lt;/p> <br>
+          &lt;p>&lt;input type="radio" name="method" value="get">GET&lt;/p> <br>
+          &lt;p>&lt;input type="reset" value="リセット">&lt;/p> <br>
+          &lt;/form>
+      </td>
+      <td class="view">
+        <form action="/" method="post">
+        <p><input type="radio" name="method" value="post">POST</p>
+        <p><input type="radio" name="method" value="get">GET</p>
+        <p><input type="reset" value="reset"></p>
+        </form>
+      </td>
+      <td class="supple">
+        POSTは内容が暗号化されて送信される（フォームの送信に適している）。<br>GETは内容がURLに付加されて渡される（短いデータやキーワードに適している）。
+      </td>
+    </tr>
+
+
+    <tr>
+      <th class="name">
+        &lt;h●&gt;<br>Headingタグ
+      </th>
+      <td class="attribute"></td>
+      <td class="code">
+        &lt;h1&gt;1大見出し&lt;/h1&gt;<br>&lt;h2&gt;2小見出し&lt;/h2&gt;<br>&lt;h3&gt;3小見出し&lt;/h3&gt;<br>&lt;h4&gt;4小見出し&lt;/h4&gt;<br>&lt;h5&gt;5小見出し&lt;/h5&gt;<br>&lt;h6&gt;6小見出し&lt;/h6&gt;
+      </td>
+      <td class="view">
+        <table>
+          <tr>
+            <td>
+              <h1>1大見出し</h1>
+            </td>
+            <td>
+              <h2>2大見出し</h2>
+            </td>
+            <td>
+              <h3>3大見出し</h3>
+            </td>
+            <td>
+              <h4>4大見出し</h4>
+            </td>
+            <td>
+              <h5>5大見出し</h5>
+            </td>
+            <td>
+              <h6>6大見出し</h6>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td class="supple">
+        ※デザインの都合上、表示は横に並べています。<br>h1 ~ h6の使い方については<a href="">こちら</a>
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;hr&gt;<br>horizontal rule</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;p>horizontal rule&lt;/p>&lt;hr>&lt;p>＝水平線を引ける。&lt;/p>
+      </td>
+      <td class="view">
+        <p>horizontal rule</p><hr><p>＝水平線を引ける。</p>
+      </td>
+      <td class="supple">
+        
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;i&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+        山路やまみちを登りながら、こう考えた。<br>&lt;i>智ちに働けば角かどが立つ。<br> 情じょうに棹さおさせば流される。<br> 意地を通とおせば窮屈きゅうくつだ。<br> とかくに人の世は住みにくい。&lt;/i>
+      </td>
+      <td class="view">
+        山路やまみちを登りながら、こう考えた。<i>智ちに働けば角かどが立つ。情じょうに棹さおさせば流される。意地を通とおせば窮屈きゅうくつだ。とかくに人の世は住みにくい。</i>
+      </td>
+      <td class="supple">
+        心の声など、他と区別したい文や語句に用いる。表示としてはイタリック体（斜傾）になる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;iframe&gt;<br>inline frame</th>
+      <td class="attribute">width（幅）, height（高さ）, src（そのページのURL）</td>
+      <td class="code">
+          &lt;iframe width="280" height="157" src="https://www.youtube.com/embed/wzzD6Y4eqHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>
+      </td>
+      <td class="view">
+          <iframe width="280" height="157" src="https://www.youtube.com/embed/wzzD6Y4eqHc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
+      <td class="supple">
+        他のページを埋め込むことができる。<br>
+        サザンを愛しています。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;img&gt;<br>imageタグ</th>
+      <td class="attribute">src, alt, title</td>
+      <td class="code">
+          &lt;img src="madrid.jpeg" alt="ロゴ" title="レアルのロゴ" width="100px" height="100px">
+      </td>
+      <td class="view">
+        <img src="madrid.jpeg" alt="ロゴ" title="レアルのロゴ" width="100px" height="100px">
+      </td>
+      <td class="supple">
+        src属性に画像のURLやファイル名を記述して表示させる。
+      </td>
+    </tr>
+
+
+    <tr>
+      <th class="name">&lt;input&gt;</th>
+      <td class="attribute">text, password, radio, checkbox, submit</td>
+      <td class="code">
+          &lt;form action="/" method="POST"><br>
+            &lt;p>text：&lt;input type="text" name="name" size="20" maxlength="18" placeholder="一行のテキスト">&lt;/p><br>
+            &lt;p>password：&lt;input type="password" name="pass" size="10" maxlength="8">&lt;/p><br>
+            &lt;p>radio（１個だけ）：<br>
+              &lt;input type="radio" name="size" value="large">大<br>
+              &lt;input type="radio" name="size" value="middle">中<br>
+              &lt;input type="radio" name="size" value="small">小<br>
+            &lt;/p><br>
+            &lt;p>checkbox（複数可）：<br>
+              &lt;input type="checkbox" name="review" value="fun">面白い<br>
+              &lt;input type="checkbox" name="review" value="useful">役に立つ<br>
+              &lt;input type="checkbox" name="review" value="impressed">感動する<br>
+            &lt;/p><br>
+            &lt;input type="submit" value="無効化されてます" disabled><br>
+          &lt;/form>
+      </td>
+      <td class="view">
+        <form action="/" method="POST">
+        <p>text：<input type="text" name="name" size="20" maxlength="18" placeholder="一行のテキスト"></p>
+        <p>password：<input type="password" name="pass" size="10" maxlength="8"></p>
+        <p>radio（１個だけ）：
+          <input type="radio" name="size" value="large">大
+          <input type="radio" name="size" value="middle">中
+          <input type="radio" name="size" value="small">小
+        </p>
+        <p>checkbox（複数可）：
+          <input type="checkbox" name="review" value="fun">面白い
+          <input type="checkbox" name="review" value="useful">役に立つ
+          <input type="checkbox" name="review" value="impressed">感動する
+        </p>
+        <input type="submit" value="無効化されてます" disabled>
+      </form>
+      </td>
+      <td class="supple">
+        formタグ内で利用します。
+        複数行の文章を記入させたい場合はinput:text ではなく、textareaタグを用いる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;label&gt;</th>
+      <td class="attribute">for ,form（詳しくはググって）</td>
+      <td class="code">
+          &lt;form action=""><br>
+              &lt;p>&lt;label for="name">名前：&lt;/label>&lt;input type="text" id="name">&lt;/p> <br>
+              &lt;p>&lt;label>年齢：&lt;input type="text" name="age">&lt;/label>&lt;/p> <br>
+          &lt;/form>
+      </td>
+      <td class="view">
+        <form action="">
+          <p><label for="name">名前：</label><input type="text" id="name"></p>
+          <p><label>年齢：<input type="text" name="age"></label></p>
+        </form>
+      </td>
+      <td class="supple">
+        部品名をクリックしても反応すると思います。<br>
+        以下の方法でフォーム内の部品とラベルを関連づけることができる。<br>
+        ①for属性名と部品のid属性名を一致させる（名前のとこ）<br>
+        ②labelタグにフォーム部品を入れ子にする（年齢）<br>
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;legend&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+        fieldsetタグ内のキャプション（タイトルや説明）ができる。<br>
+        fieldsetタグの説明を参照してください。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;li&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+        リストを作成します。<br>
+        olタグ、liタグを参照してください。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;ol&gt;<br>ordered list</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;ol>
+            &lt;li>松&lt;/li>
+            &lt;li>竹&lt;/li>
+            &lt;li>梅&lt;/li>
+          &lt;/ol>
+      </td>
+      <td class="view">
+        <ol>
+          <li>松</li>
+          <li>竹</li>
+          <li>梅</li>
+        </ol>
+      </td>
+      <td class="supple">
+        「順序のあるリスト」を作成する。<br>「順序のないリスト」はulタグ
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;optgroup&gt;<br> オプショングループタグ</th>
+      <td class="attribute">label ,disabled</td>
+      <td class="code">
+          &lt;p>
+            ※disabled属性によって、「S席＋A席の大人」は売り切れとしています。
+          &lt;/p> <br>
+          &lt;p><br>
+            &lt;label>券種:<br>
+            &lt;select name="ticket"><br>
+            &lt;option selected>▼座席の種類を選んでください&lt;/option><br>
+            &lt;optgroup label="S席" disabled><br>
+            &lt;option value="s01">大人&lt;/option><br>
+            &lt;option value="s02">子ども&lt;/option><br>
+            &lt;/optgroup><br>
+            &lt;optgroup label="A席"><br>
+            &lt;option value="a01" disabled>大人&lt;/option><br>
+            &lt;option value="b02">子ども&lt;/option><br>
+            &lt;/optgroup><br>
+            &lt;optgroup label="自由席"><br>
+            &lt;option value="f01">大人&lt;/option><br>
+            &lt;option value="f02">子ども&lt;/option><br>
+            &lt;/optgroup><br>
+            &lt;/select><br>
+            &lt;/label><br>
+          &lt;/p>
+      </td>
+      <td class="view">
+        <p>
+          ※disabled属性によって、「S席＋A席の大人」は売り切れとしています。
+        </p>
+        <p>
+          <label>券種:
+          <select name="ticket">
+          <option selected>▼座席の種類を選んでください</option>
+          <optgroup label="S席" disabled>
+          <option value="s01">大人</option>
+          <option value="s02">子ども</option>
+          </optgroup>
+          <optgroup label="A席">
+          <option value="a01" disabled>大人</option>
+          <option value="b02">子ども</option>
+          </optgroup>
+          <optgroup label="自由席">
+          <option value="f01">大人</option>
+          <option value="f02">子ども</option>
+          </optgroup>
+          </select>
+          </label>
+          </p>
+      </td>
+      <td class="supple">
+        selectタグとoptionタグによって作成される選択肢を、さらにグループに分けて細分化することができます。<br>
+        label属性は必須でグループの名称を。disabled属性は、そのグループを選択不可にすることができます。
+      </td>
+    </tr>
+  
+
+    <tr>
+      <th class="name">&lt;option&gt;</th>
+      <td class="attribute">value,selected,disabled</td>
+      <td class="code">
+        &lt;p>
+          &lt;label for="team">チームを選択：&lt;/label> <br>
+          &lt;select id="team" name="team"><br>
+          &lt;option value="rm" >レアル・マドリード&lt;/option><br>
+          &lt;option value="bl" disabled>バルセロナ&lt;/option><br>
+          &lt;option value="am">アトレティコ・マドリード&lt;/option><br>
+          &lt;/select>
+        &lt;/p><br>
+        &lt;p>
+          &lt;label for="t">チームを検索：&lt;/label><br>
+          &lt;input type="search" id="t" name="t" autocomplete="on" list="keywords"><br>
+          &lt;datalist id="keywords"><br>
+          &lt;option value="RealMadrid">レアル&lt;/option><br>
+          &lt;option value="Barcelona">バルサ&lt;/option><br>
+          &lt;option value="AtleticoMadrid">アトレティコ&lt;/option><br>
+          &lt;/datalist>
+        &lt;/p>
+      </td>
+      <td class="view">
+          <p>
+            <label for="team">チームを選択：</label>
+            <select id="team" name="team">
+            <option value="rm" >レアル・マドリード</option>
+            <option value="bl" disabled>バルセロナ</option>
+            <option value="am">アトレティコ・マドリード</option>
+            </select>
+          </p>
+          <p>
+            <label for="t">チームを検索：</label>
+            <input type="search" id="t" name="t" autocomplete="on" list="keywords">
+            <datalist id="keywords">
+            <option value="RealMadrid">レアル</option>
+            <option value="Barcelona">バルサ</option>
+            <option value="AtleticoMadrid">アトレティコ</option>
+            </datalist>
+          </p>
+      </td>
+      <td class="supple">
+          selectタグまたはdatalistタグの要素として選択肢を作成できる。<br> formによってvalue属性の値を送信可能。
+      </td>
+    </tr>
+
+
+    <tr>
+        <th class="name">
+          &lt;p&gt;<br>Paragraphタグ
+        </th>
+        <td class="attribute"></td>
+        <td class="code">
+          &lt;p&gt;段落を構成します。&lt;/p&gt;&lt;p&gt;自動的に改行されます。&lt;/p&gt;
+        </td>
+        <td class="view">
+          <p>段落を構成します。</p>
+          <p>自動的に改行されます。</p>
+        </td>
+        <td class="supple">
+  
+        </td>
+      </tr>
+
+    <tr>
+      <th class="name">&lt;pre&gt;<br>preformatted text</th>
+      <td class="attribute"></td>
+      <td class="code">
+        &lt;pre>&lt;code>items配列をcopy配列に入れる動作を、for文とforEach文で実行している。 <br>
+          const items = ['item1', 'item2', 'item3'];<br>
+          const copy = [];<br>
+           //before<br>
+          for (let i=0; i < items.length; i++) {<br>
+            copy.push(items[i])<br>
+          }<br>
+           //after<br>
+          items.forEach(function(item){<br>
+            copy.push(item)<br>
+          });<br>
+          &lt;/code>&lt;/pre>
+      </td>
+      <td class="view">
+        <pre><code>items配列をcopy配列に入れる動作を、for文とforEach文で実行している。
+          const items = ['item1', 'item2', 'item3'];
+          const copy = [];
+           //before
+          for (let i=0; i < items.length; i++) {
+            copy.push(items[i])
+          }
+           //after
+          items.forEach(function(item){
+            copy.push(item)
+          });
+        </code></pre>
+      </td>
+      <td class="supple">
+        半角スペースや改行が、そのまま反映されます。<br>
+        codeタグと組み合わせて用いることで、例えばWordPressなどのブログ記事でソースコードを表示させることができます。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;q&gt;<br>quotationタグ</th>
+      <td class="attribute">cite</td>
+      <td class="code">
+        太宰治の走れメロスの冒頭は<br>
+        &lt;q cite="https://www.aozora.gr.jp/cards/000035/files/1567_14913.html"><br>
+        メロスは激怒した&lt;/q>と始まる。
+      </td>
+      <td class="view">
+        太宰治の走れメロスの冒頭は<q cite="https://www.aozora.gr.jp/cards/000035/files/1567_14913.html">メロスは激怒した</q>と始まる。
+      </td>
+      <td class="supple">
+        引用句、引用文であることを表す。<br>ブラウザでは「 」や”　”で表されることが多いが、その表記を目的に用いることは不適切。<br>
+        cite属性に引用元のURLを指定するが、<strong>作品のタイトルを表すciteタグと混同しないよう注意。</strong>
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;select&gt;</th>
+      <td class="attribute">multiple</td>
+      <td class="code">
+        &lt;p>
+          &lt;label for="language">言語を選択してください：&lt;/label> <br>
+          &lt;select id="language" name="language"><br>
+          &lt;option value="en">英語&lt;/option><br>
+          &lt;option value="de">ドイツ語&lt;/option><br>
+          &lt;option value="fr">フランス語&lt;/option><br>
+          &lt;option value="ja" selected>日本語&lt;/option><br>
+          &lt;option value="zh">中国語&lt;/option><br>
+          &lt;/select>
+        &lt;/p><br>
+        &lt;p>
+          &lt;label for="languages">複数選択可：&lt;/label><br>
+          &lt;select id="languages" name="languages" multiple size="5"><br>
+          &lt;option value="en" selected>英語&lt;/option><br>
+          &lt;option value="de" selected>ドイツ語&lt;/option><br>
+          &lt;option value="fr" selected>フランス語&lt;/option><br>
+          &lt;option value="ja" selected>日本語&lt;/option><br>
+          &lt;option value="zh">中国語&lt;/option><br>
+          &lt;/select>
+        &lt;/p>
+      </td>
+      <td class="view">
+        <p>
+          <label for="language">言語を選択してください：</label>
+          <select id="language" name="language">
+          <option value="en">英語</option>
+          <option value="de">ドイツ語</option>
+          <option value="fr">フランス語</option>
+          <option value="ja" selected>日本語</option>
+          <option value="zh">中国語</option>
+          </select>
+        </p>
+        <p>
+          <label for="languages">複数選択可：</label>
+          <select id="languages" name="languages" multiple size="5">
+          <option value="en" selected>英語</option>
+          <option value="de" selected>ドイツ語</option>
+          <option value="fr" selected>フランス語</option>
+          <option value="ja" selected>日本語</option>
+          <option value="zh">中国語</option>
+          </select>
+        </p>
+      </td>
+      <td class="supple">
+        labelのfor属性とselectのid属性名を一致させることで、対応させることができる。<br>またmultiple属性によって複数の選択を可能にする。Macではcommand＋クリックで複数選択可能。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;span&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;p>光の三原色：&lt;span style="background-color: RED">赤&lt;/span> <br>
+             &lt;span style="background-color:#33CC33">緑&lt;/span> <br>
+              &lt;span style="background-color:#0099FF">青&lt;/span>&lt;/p> 
+      </td>
+      <td class="view">
+        <p>光の三原色：<span style="background-color: RED">赤</span> <span style="background-color:#33CC33">緑</span> <span style="background-color:#0099FF">青</span></p>
+      </td>
+      <td class="supple">
+        divのブロックレベル要素に対して、spanはインライン要素となる。<br>
+        それ自体に意味は持たないが、例のように属性との組み合わせで工夫ができ便利。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;strong&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;strong>※注意※&lt;/strong>
+      </td>
+      <td class="view">
+        <strong>※注意※</strong>
+      </td>
+      <td class="supple">
+        強い重要性を表す。強勢を表すemタグよりも強い強調。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;table&gt;</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;table> <br>
+            &lt;tr>
+              &lt;th>tr&lt;/th>
+              &lt;td>テーブルライン。横一行を作る。よく忘れる。&lt;/td>
+            &lt;/tr><br>
+            &lt;tr>
+              &lt;th>th&lt;/th>
+              &lt;td>見出しのセル。一般的なブラウザでは太字になる。&lt;/td>
+            &lt;/tr><br>
+            &lt;tr>
+              &lt;th>td&lt;/th>
+              &lt;td>データセル&lt;/td>
+            &lt;/tr><br>
+          &lt;/table>
+      </td>
+      <td class="view">
+        <table>
+          <tr>
+            <th>tr</th>
+            <td>テーブルライン。横一行を作る。よく忘れる。</td>
+          </tr>
+          <tr>
+            <th>th</th>
+            <td>見出しのセル。一般的なブラウザでは太字になる。</td>
+          </tr>
+          <tr>
+            <th>td</th>
+            <td>データセル</td>
+          </tr>
+        </table>
+      </td>
+      <td class="supple">
+        tr,th,tdと用いることでテーブル（表）を形成する。<br>このサイト全体も巨大なテーブルである。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;tbody&gt;<br>table body</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;table> <br>
+            &lt;thead> <br>
+              &lt;tr>
+                &lt;th>順位&lt;/th>
+                &lt;th>タイトル&lt;/th>
+                &lt;th>アーティスト名&lt;/th>
+                &lt;th>売上枚数（万枚）&lt;/th>
+              &lt;/tr><br>
+            &lt;/thead><br>
+            &lt;tbody><br>
+              &lt;tr>
+                &lt;th>1位&lt;/th>
+                &lt;td>およげ!たいやきくん&lt;/td>
+                &lt;td>子門真人&lt;/td>
+                &lt;td>457.7&lt;/td>
+              &lt;/tr><br>
+              &lt;tr>
+                &lt;th>2位&lt;/th>
+                &lt;td>女のみち&lt;/td>
+                &lt;td>宮史郎とぴんからトリオ&lt;/td>
+                &lt;td>325.6&lt;/td>
+              &lt;/tr><br>
+              &lt;tr>
+                &lt;th>3位&lt;/th>
+                &lt;td>TSUNAMI&lt;/td>
+                &lt;td>サザンオールスターズ&lt;/td>
+                &lt;td>293.6&lt;/td>
+              &lt;/tr><br>
+            &lt;/tbody><br>
+            &lt;tfoot><br>
+              &lt;tr>&lt;td colspan="4">歴代CDシングル売り上げ枚数ランキング&lt;/td>&lt;/tr><br>
+            &lt;/tfoot><br>
+          &lt;/table>
+      </td>
+      <td class="view">
+        <table>
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>タイトル</th>
+              <th>アーティスト名</th>
+              <th>売上枚数（万枚）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1位</th>
+              <td>およげ!たいやきくん</td>
+              <td>子門真人</td>
+              <td>457.7</td>
+            </tr>
+            <tr>
+              <th>2位</th>
+              <td>女のみち</td>
+              <td>宮史郎とぴんからトリオ</td>
+              <td>325.6</td>
+            </tr>
+            <tr>
+              <th>3位</th>
+              <td>TSUNAMI</td>
+              <td>サザンオールスターズ</td>
+              <td>293.6</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="4">歴代CDシングル売り上げ枚数ランキング</td></tr>
+          </tfoot>
+        </table>
+      </td>
+      <td class="supple">
+        行単位でテーブルの中身（body）を定義することができる。<br>thead,tfootと共に用いて見やすいコードになる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;td&gt;<br>table data</th>
+      <td class="attribute"></td>
+      <td class="code">
+          tableタグを参照
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+        tableタグを参照
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;textarea&gt;</th>
+      <td class="attribute">rows, cols, autofocue, maxlength, placeholder, required</td>
+      <td class="code">
+          &lt;textarea cols="40" rows="4" placeholder="placeholder属性で入力ヒント">&lt;/textarea>
+      </td>
+      <td class="view">
+          <textarea cols="40" rows="4" placeholder="placeholder属性で入力ヒント"></textarea>
+      </td>
+      <td class="supple">
+        &lt;input type="text"> とは異なり、複数行のテキスト入力ができる。<br>
+        cols属性は、一行当たりの最大文字数の目安を指定。初期値２０（半角）。<br>
+        rows属性は、表示行数を指定する際に使用。初期値２。<br>その他maxlength属性など様々な属性があって便利。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;tfoot&gt;<br>table footer</th>
+      <td class="attribute"></td>
+      <td class="code">
+          コードはtbodyタグを参照してください。
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+          行でテーブルのフッタ（footer）を定義することができる。<br>tbody,theadと共に用いて見やすいコードになる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;th&gt;<br>table header cell</th>
+      <td class="attribute"></td>
+      <td class="code">
+          tableタグを参照。
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+        見だしセル。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;thead&gt;<br>table header</th>
+      <td class="attribute"></td>
+      <td class="code">
+          コードはtbodyタグを参照してください。
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+          行でテーブルのヘッダ（body）を定義することができる。<br>tbody,tfootと共に用いて見やすいコードになる。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;tr&gt;<br>table row</th>
+      <td class="attribute"></td>
+      <td class="code">
+          tableタグを参照。
+      </td>
+      <td class="view">
+        
+      </td>
+      <td class="supple">
+        横一行を構成する。これを設定してth,tdを使える。
+      </td>
+    </tr>
+
+    <tr>
+      <th class="name">&lt;ul&gt;<br>unordered list</th>
+      <td class="attribute"></td>
+      <td class="code">
+          &lt;ul>
+            &lt;li>桜&lt;/li>
+            &lt;li>すみれ&lt;/li>
+            &lt;li>ひまわり&lt;/li>
+          &lt;/ul>
+      </td>
+      <td class="view">
+        <ul>
+          <li>桜</li>
+          <li>すみれ</li>
+          <li>ひまわり</li>
+        </ul>
+      </td>
+      <td class="supple">
+        「順序のないリスト」を作る。<br>「順序のあるリスト」はolタグ。
+      </td>
+    </tr>
+
+  </table>
+
+</html>
