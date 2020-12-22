@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #fff;
+}
+
+.title{
+  text-align: center;
+  padding: 1rem 0;
+}
+
+section{
+  position: relative;
+  min-height: 300px;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+section:nth-child(odd){
+  background: #eee;
+}
+
+.subTitle{
+  font-size: 14px;
+  line-height: 1;
+  font-weight: normal;
+  background: #fff;
+  border: solid 1px #4169e1;
+  padding: 5px;
+  color: #4169e1;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+/* positionの練習 */
+
+.position-wrapper{
+  background: red;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  /* ここからpositionプロパティを追加 */
+  position: relative;
+}
+
+.position-inner{
+  background: yellow;
+  width: 300px;
+  height: 300px;
+  /* ここからpositionプロパティを追加 */
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+/* ここからposition1,position2,position3についての記述 */
+
+.position-inner1,
+.position-inner2,
+.position-inner3{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.position-inner1{
+  background: yellow;
+  top: 100px;
+  left: 100px;
+  z-index: 3;
+}
+
+.position-inner2{
+  background: blue;
+  top: 150px;
+  left: 150px;
+  z-index: 2;
+}
+
+.position-inner3{
+  background: green;
+  top: 200px;
+  left: 200px;
+  z-index: 1;
+}
+
+/* 背景・画像・テキストを重ねる */
+
+.position-banner{
+  background: linear-gradient(to right, #b2fefa, #0ed2f7);
+  width: 500px;
+  height: 150px;
+  margin: auto;
+  position: relative;
+}
+
+.position-image{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+
+.position-image img{
+  border-radius: 50px;
+}
+
+.position-text{
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0,0,0,0.8);
+}
+
+/* rotateの練習 */
+
+.transform-rotate{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  /* ここからrotateを追加 */
+  transform: rotate(45deg);
+}
+
+/* translateの練習 */
+
+.transform-translate{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #acb6e5, #86fde8);
+  /* ここからtranslateを追加 */
+  transform: translate(100px, 50px);
+}
+
+/* skewの練習 */
+
+.transform-skew{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #ffe000, #799f0c);
+  /* ここからskewを追加 */
+  transform: skew(20deg,30deg);
+}
+
+/* scaleの練習 */
+
+.transform-scale{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #654ea3, #eaafc8);
+  /* ここからscaleを追加 */
+  transform: scale(0.5,0.5);
+}
+
+/* originの練習 */
+
+.transform-origin{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  /* ここからoriginを追加 */
+  transform-origin: right bottom;
+  transform: scale(0.5,0.5);
+}
+
+/* transformをまとめて指定する練習 */
+
+.transform-matrix{
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background: linear-gradient(to right, #ff0099, #493240);
+  /* ここからtransformを追加 */
+  /* 参考：https://developer.mozilla.org/ja/docs/Web/SVG/Attribute/transform
+  transform: matrix( a , b , c , d , e , f );
+  a：水平方向のscale 
+  b：垂直方向のskew c：水平方向のskew 
+  d：垂直方向のscale 
+  e：水平方向のtranslate f：垂直方向のtranslate */
+  transform: matrix(1.5,0,-0.2,1.5,30,30); 
+}
+
+/* transitionの練習 */
+
+.transition{
+  width: 200px;
+  line-height: 50px;
+  border-radius: 5px;
+  background: skyblue;
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  /* ここからtransitionを追加 */
+  transition: 300ms;
+}
+
+.transition:hover {
+  transform: scale(1.2,1.2);
+}
+
+/* animationの練習 */
+
+.loading{
+  width: 50px;
+  height: 50px;
+  margin: 30px auto;
+  /* ここからanimationを追加 */
+  animation: loading-animation 1s ease-in-out infinite;
+}
+
+@keyframes loading-animation {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* animationの練習2 */
+
+.buruburu-text {
+  text-align: center;
+  /* ここからanimationを追加 */
+  animation: buruburu-animation .1s infinite;
+}
+
+@keyframes buruburu-animation {
+  0% {transform: translate(0px, 0px)}
+  25% {transform: translate(3px, 3px)}
+  50% {transform: translate(0px, 3px)}
+  75% {transform: translate(3px, 0px)}
+  100% {transform: translate(0px, 0px)}
+}
