@@ -1,298 +1,59 @@
-body{
-  background-color: #d3d3d3;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;;
-}
-​
-.container{
-  width: 1200px;
-  background-color: white;
-  margin: 0 auto;
-}
-.container{
-  width: 1200px;
-  background-color: #fff;
-  margin: 0 auto;
-}
-​
-.h-title{
-  height: 100px;
-  border-top: solid 5px #0F36CA;
-  position: relative;
-}
-​
-.h-logo{
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  left: 4%;
-  transform: translateY(-50%);
-}
-​
-.h-nav{
-  border-top: 1px solid #d2d2d2;
-}
-​
-.h-menu{
-  letter-spacing: -.4em;
-}
-​
-.h-list{
+.menu, .menu span {
   display: inline-block;
-  position: relative;
-  width: calc(100%/6);
-  letter-spacing: normal;
-  height: 64px;
-  border-right: 1px solid #d2d2d2;
   box-sizing: border-box;
-  vertical-align: bottom;
 }
-​
-.h-1-box{
+.menu {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  text-align: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background: white;
+  top: 25px;
+  right: 20px;
 }
-​
-.h-1-top{
-  font-size: 15px;
-  color: #666;
-  margin-bottom: 4px;
-}
-​
-.h-1-bottom{
-  font-size: 10px;
-  color: #bababa;
-  text-align: center;
-}
-​
-.h-list:hover .h-1-top{
-  color: #0F36CA
-}
-​
-.h-list:hover{
-  background-color: #e6ebfa;
-}
-​
-.h-list:hover .h-1-box:before{
-  content: "";
-  width: 3px;
-  height: 100%;
+.menu span {
   position: absolute;
-  background-color: #0F36CA;
-  left: 4px;
+  left: 9px;
+  width: 30px;
+  height: 4px;
+  background: black;
 }
-​
-.active{
-  background-color: #e6ebfa;
+.menu span:nth-last-of-type(1){
+  top: 12px;
 }
-​
-.active .h-1-box:before{
-  content: "";
-  width: 3px;
-  height: 100%;
+.menu span:nth-last-of-type(2){
+  top: 22px;
+}
+.menu span {
+  bottom: 13px;
+}
+.opacity {
   position: absolute;
-  background-color: #0F36CA;
-  left: 4px;
+  top: 105px;
+  z-index: 1;
+  width: 100%;
+  display: none;
+  opacity: 0;
 }
-​
-.active .h-1-top{
-  color: #0F36CA;
-}
-​
-.h-image{
-  max-width: 100%;
-  height: auto;
-}
-​
-.main{
-  background-color: white;
-  float: left;
-  width: 70%;
-}
-​
-.contents{
-  padding: 24px;
-}
-​
-.m-title{
-  background: linear-gradient(#1342ef, #0e37cb) fixed;
+.opacity a {
+  display: block;
+  background: hsla(0, 0%, 10%, 0.9);
   color: white;
-  font-size: 18px;
-  border-radius: 4px;
-  padding: 25px;
-  position: relative;
-  box-shadow: 0 0 5px gray;
-  margin-bottom: 24px;
-}
-​
-.m-title h2{
-  position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translateY(-50%);
-  border-left: 3px solid #8c8beb;
-  padding-left: 10px;
-}
-​
-.m-table, .main p{
-  line-height: 2;
-  color: #7e7e7e;
-  font-size: 15px;
-}
-​
-.m-table{
-  margin-bottom: 10px;
-}
-​
-.m-table li{
-  border-bottom: 1px solid #cccccc;
-}
-​
-.new{
-  background-color: red;
-  color: white;
-  font-size: 11px;
-  padding: 2px 5px;
-}
-​
-.log{
-  text-align: right;
-  margin-bottom: 20px;
-}
-​
-.main h3{
-  background: linear-gradient(#fefefe, #eeeeee) fixed;
-  color: #666666;
-  font-size: 18px;
-  border-radius: 4px;
-  border: 1px solid #cccccc;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-​
-.date{
-  color: #273DCE;
-  padding: 8px 32px 8px ;
-}
-​
-.main a{
-  color: #666666;
-}
-​
-.main p{
-  width: 98%;
-  margin: 0 auto;
-  margin-bottom: 15px;
-}
-​
-.note{
-  color: red;
-}
-​
-.side{
-  float: right;
-  width: 25%;
-}
-​
-.s-framebox{
-  padding: 10px;
-  border: 1px solid #ccc;
-  background-color: #f4f4f4;
-  margin-bottom: 24px;
-  color: #666666;
-}
-​
-.s-box{
-  margin-bottom: 24px;
-  color: #666666;
-}
-​
-.s-h4{
-  padding: 28px 10px;
-  border-top: 3px solid blue;
-  background: #eee;
-  border-bottom: 1px solid #d2d2d2;
-}
-​
-.s-list{
-  border-bottom: 1px solid #d2d2d2;
-  padding: 15px;
-  overflow: hidden;
-}
-​
-.s-list:hover{
-  background-color: white;
-}
-
-.s-list a{
+  height: 95px;
+  padding-left: 20px;
+  border-bottom: 1px solid white;
   text-decoration: none;
-  color: #666666;}
-
-.s-list:hover a{
-  color: blue;
 }
-​
-.s-img{
-  float: left;
-  width: 25%;
-  margin-right: 5px;
-}
-​
-.s-l-title{
-  color: blue;
-  font-size: 11px;
-}
-​
-.s-l-description{
-  font-size: 11px;
-}
-​
-.s-company-title{
+.opacity h2 {
   font-weight: normal;
-  text-align: center;
-  font-size: 15px;
-  padding: 10px 0;
+  font-size: 20px;
+  padding-top: 20px;
 }
-​
-.s-company-info{
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.5;
-}
-​
-.footer{
-  text-align: center;
-  font-size: 13px;
-  clear: both;
-  color: white;
-  background-color: blue;
-  padding: 16px 0;
-  line-height: 2;
-}
-​
-.footer a{
-  text-decoration: none;
-  color: white;
-}
-​
-.footer-under{
+.opacity p {
   font-size: 12px;
+  padding-top: 5px;
 }
-​
-.footer a:hover{
-  color: blue;
-}
-
-@media screen and (max-width:780px){
-  .main{
-    float: none;
-    width: auto;
-  }
-  .side{
-    float: none;
-    width: auto;
-  }
+#disp-btn:checked ~ .opacity {
+  display: block;
+  opacity: 1;
 }
