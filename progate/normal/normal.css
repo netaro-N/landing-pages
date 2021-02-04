@@ -1,3 +1,4 @@
+/* CSSのリセット（消さないでください） */
 html, body,
 ul, ol, li,
 h1, h2, h3, h4, h5, h6, p, div {
@@ -6,26 +7,29 @@ h1, h2, h3, h4, h5, h6, p, div {
 }
 
 body {
-  margin: 0;
-  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: 'Hiragino Kaku Gothic ProN W3', sans-serif;
+}
+
+li {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-.container {
-  width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
+/* ここからCSSを書いていきましょう */
 .top-wrapper {
   padding: 180px 0 100px 0;
   background-image: url(https://prog-8.com/images/html/advanced/top.png);
   background-size: cover;
   color: white;
   text-align: center;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
 }
 
 .top-wrapper h1 {
@@ -36,18 +40,13 @@ a {
 
 .top-wrapper p {
   opacity: 0.7;
-}
-
-.btn-wrapper {
-  margin: 20px 0;
-}
-
-.btn-wrapper p {
-  margin: 10px 0;
+  margin-bottom: 15px;
 }
 
 .signup {
   background-color: #239b76;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .facebook {
@@ -79,10 +78,8 @@ header {
   height: 65px;
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
-  /* positionプロパティをfixedに、topを0に指定してください */
   position: fixed;
   top: 0;
-  /* z-indexを10に指定してください */
   z-index: 10;
 }
 
@@ -113,15 +110,14 @@ header {
 }
 
 .lesson-wrapper {
-  height: 500px;
-  padding-bottom: 80px;
+  height: 580px;
   background-color: #f7f7f7;
   text-align: center;
 }
 
 .heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   color: #5f5d60;
 }
 
@@ -140,25 +136,20 @@ header {
 
 .lesson-icon p {
   position: absolute;
-  top: 90px;
+  top: 44%;
   width: 100%;
   color: white;
 }
 
-.txt-contents {
+.text-contents {
   width: 80%;
   display: inline-block;
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 15px;
+  font-size: 13px;
   color: #b3aeb5;
 }
 
-.heading h3 {
-  font-weight: normal;
-}
-
 .message-wrapper {
-  border-bottom: 1px solid #eee;
   padding-bottom: 80px;
   text-align: center;
 }
@@ -177,7 +168,7 @@ header {
 }
 
 footer img {
-  width: 125px;
+  width: 124px;
 }
 
 footer p {
@@ -186,5 +177,6 @@ footer p {
 }
 
 footer {
-  padding-top: 30px;
+  padding: 30px 0;
+  border-top: 1px solid #eee;
 }
