@@ -4,9 +4,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>モーダルウィンドウ</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 2021年2月FontAwesomeは登録制 -->
+  <script src="https://kit.fontawesome.com/940545e56d.js" crossorigin="anonymous"></script>
+
+  <!-- 2021/02/13【Ver3.5.1】、CDNはGoogleのものが早く安定して良い -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 <body>
-  
+  <header>
+    <div class="container"></div>
+  </header>
+
+  <!-- モーダル・ウィンドウ -->
+  <div class="signup-modal-wrapper" id="signup-modal">
+    <div class="modal">
+      <div id="close-modal">
+        <!-- fa-2xを追加するとサイズが2倍に -->
+        <i class="fas fa-times fa-2x"></i>
+      </div>
+      <div id="signup-form">
+        <h2>Emailで新規登録</h2>
+        <form action="#">
+          <input class="form-control" type="text" placeholder="メールアドレス">
+          <input class="form-control" type="password" placeholder="パスワード">
+          <div id="submit-btn">新規登録</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ボタンエリア -->
+  <div class="contents-wrapper">
+    <div class="container">
+      <div class="signup signup-show">新規登録はこちら</div>
+      <div class="signup signup-show">さっそく開発する</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container"></div>
+  </footer>
+
+  <!-- bodyタグの直前で読み込むことで、高速化 -->
+  <script src="./modal.js"></script>
 </body>
 </html>
