@@ -1,0 +1,43 @@
+/* 共通 */
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+ul{
+  list-style: none;
+}
+/*  */
+.contents-wrapper {
+  height: 500px;
+  padding: 80px 0;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.items{
+  display: flex;
+}
+.item{
+  flex: auto;
+  width: 25%;
+  background-color: #ffc562;
+  margin: 0px 10px;
+  padding: 60px 0px;
+}
+.hover-area{
+  background-color: #88e7ce;
+  display: inline-block;
+  padding: 20px;
+}
+.text-contents {
+  margin: 3% auto;
+  width: 80%;
+  font-size: 12px;
+  color: #b3aeb5;
+  display: none;
+}
+
+.text-active {
+  display: block;
+}

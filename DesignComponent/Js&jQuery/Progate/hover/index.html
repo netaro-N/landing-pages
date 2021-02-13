@@ -4,9 +4,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ホバーによる出現</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="bootstrap-reboot.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  
+  <header>
+    <div class="container">ヘッダー</div>
+  </header>
+
+  <div class="contents-wrapper">
+    <div class="container">
+      <ul class="items">
+        <li class="item">
+          <div class="hover-area">エリア１</div>
+          <p class="text-contents">マウスを載せている間だけ表示されています</p>
+        </li>
+        <li class="item">
+          <div class="hover-area">エリア２</div>
+          <p class="text-contents">マウスを載せている間だけ表示されています</p>
+        </li>
+        <li class="item">
+          <div class="hover-area">エリア3</div>
+          <p class="text-contents">マウスを載せている間だけ表示されています</p>
+        </li>
+        <li class="item">
+          <div class="hover-area">エリア4</div>
+          <p class="text-contents">マウスを載せている間だけ表示されています</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">フッター</div>
+  </footer>
+
+  <script src="./hover.js"></script>
 </body>
 </html>
