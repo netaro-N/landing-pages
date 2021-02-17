@@ -18,7 +18,6 @@ $(function(){
   $('#back-to-top').hide();
   // スクロールが十分されたら#back-to-topを表示、スクロールが戻ったら非表示
   $(window).scroll(function() {
-      $('#pos').text($(this).scrollTop());
       if ($(this).scrollTop() > 500) {
           $('#back-to-top').slideDown();
       } else {
