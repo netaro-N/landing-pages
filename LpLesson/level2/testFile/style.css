@@ -1,65 +1,24 @@
 /* 【A Modern CSS Reset】最終更新：21/1/18（https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.min.css） */
 *,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
 
-/* 共通コンテナ */
+/* コンテナ */
 .container{
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  padding: 50px;
 }
 
-/* ヘッダー */
-header .container{
-  position: relative;
-  justify-content: space-between;
-}
-.nav-logo{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-.nav-left,.nav-right{
-  width: 40%;
-}
-ul{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-/* トップラッパー */
-.top-wrapper{
-  background-color: #f1dfc8;
+/* trimming */
+.ellipse-box{
+  background-color: yellow;
   height: 710px;
+  width: 1600px;
 }
-.circle{
+.ellipse{
   height: 710px;
   width: 388px;
   background-color: #f4f4f4;
   /* 上から550px下ったところを中心にして、横幅は左右50%（全体に）、縦は上に491pxのところまで引き伸ばす。中心が真ん中より下にあるので、楕円の下方あたりは存在しない。 */
   clip-path: ellipse(50% 491px at 50% 550px);
   cursor: pointer;
-}
-
-/* 2020 */
-.c20-wrapper{
-  height: 800px;
-}
-.img-box{
-  position: relative;
-  width: 730px;
-}
-.top-img{
-  position: absolute;
-  left: 30px;
-  z-index: 5;
-  width: 700px;
-  height: 700px;
-}
-.back-img{
-  position: absolute;
-  top: 50px;
-  width: 700px;
-  height: 700px;
 }
