@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>コンポーネントのテスト</title>
   <link rel="stylesheet" href="./style.css">
+  <!-- Google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
+
 <body>
   <div class="container">
-    <div class="ellipse-box">
-      <div class="model-box">
-        <div class="ellipse"></div>
+    <div class="carouselWrap">
+      <p class="carouselPrev"><img src="./img/prev.jpg" alt="前へ"></p>
+      <p class="carouselNext"><img src="./img/next.jpg" alt="次へ"></p>
+      <div class="carousel">
+        <div class="carouselInner">
+          <ul class="column">
+            <li><a href="#">カルーセルパネル１</a></li>
+          </ul>
+          <ul class="column">
+            <li><a href="#">カルーセルパネル２</a></li>
+          </ul>
+          <ul class="column">
+            <li><a href="#">カルーセルパネル３</a></li>
+          </ul>
+          
+        </div>
       </div>
     </div>
   </div>
+  <div class="container">
+    <div class="carouselWrap">
+      <p class="carouselPrev"><img src="./img/prev.jpg" alt="前へ"></p>
+      <p class="carouselNext"><img src="./img/next.jpg" alt="次へ"></p>
+      <div class="carousel">
+        <div class="carouselInnerBox">
+          <div class="column">
+            <a href="#">カルーセルパネル１</a>
+          </div>
+          <div class="column">
+            <a href="#">カルーセルパネル２</a>
+          </div>
+          <div class="column">
+            <a href="#">カルーセルパネル３</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./original.js"></script>
+  <!-- <script src="./test.js"></script> -->
 </body>
+
 </html>
