@@ -1,0 +1,49 @@
+*{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+#container{
+	width:650px;
+	margin:100px auto;
+}
+#slideGalley{
+	width:650px;
+	position: relative;
+	overflow:hidden;
+}
+#slide{
+	width:10000px;
+}
+#slide li{
+	float:left;
+}
+#paging{
+	text-align: center;
+	position: absolute;
+	width:100%;
+	bottom:10px;
+}
+#paging li{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	width:20px;
+	height:20px;
+	background: url(./images/page.png);
+}
+#paging li.active{
+	background: url(./images/page_active.png);
+}
+#nav .prev{
+	position: absolute;
+	left:10px;
+	top:50%;
+	margin-top:-50px;
+}
+#nav .next{
+	position: absolute;
+	right:10px;
+	top:50%;
+	margin-top:-50px;
+}
