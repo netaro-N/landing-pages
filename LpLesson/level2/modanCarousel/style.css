@@ -1,0 +1,46 @@
+*, *:before, *:after {
+  box-sizing: border-box; 
+}
+html {
+  font-size: 13px;
+}
+body {
+  font-family: Avenir, "Open Sans", "Helvetica Neue", Helvetica, Arial, Verdana, Roboto, "游ゴシック", "Yu Gothic", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Meiryo UI", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #444;
+  background-color: hsl(0, 0%, 96%);
+  margin: 0px;
+}
+h1 {
+  font-size: 1.8rem;
+}
+
+
+/* 以下カルーセルのデザイン */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  /* 横軸に対して mandatory が効くようになり, 必ず scroll-snap-align で指定した位置までスクロールして止まる */
+  scroll-snap-type: x mandatory;
+}
+
+.carousel img {
+  flex: 1 0 auto;
+  width: 100vw;
+  height: 60vh;
+  object-fit: cover;
+  scroll-snap-align: start;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.btns button {
+  margin: 0px 4px;
+}
