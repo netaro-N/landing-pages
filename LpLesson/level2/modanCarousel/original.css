@@ -14,7 +14,10 @@ h1 {
   font-size: 1.8rem;
 }
 
-
+.carousel-wrapper{
+  /* ボタンやリストボタンのため */
+  position: relative;
+}
 /* 以下カルーセルのデザイン */
 .top-wrapper{
   height: 710px;
@@ -48,13 +51,6 @@ h1 {
   scroll-snap-type: x mandatory;
 }
 
-.carousel img {
-  flex: 1 0 auto;
-  width: 100vw;
-  height: 60vh;
-  object-fit: cover;
-  scroll-snap-align: start;
-}
 .carousel .top-wrapper {
   flex: 1 0 auto;
   width: 100vw;
@@ -66,12 +62,40 @@ h1 {
   display: none;
 }
 
-.btns {
-  display: flex;
-  justify-content: center;
+
+/* prev/nextボタン */
+button {
+  position: absolute;
+  margin: 0px 4px;
   padding: 8px;
 }
+.btn-prev{
+  top: 45%;
+  left: 10px;
+}
+.btn-next{
+  top: 45%;
+  right: 10px;
+}
 
-.btns button {
-  margin: 0px 4px;
+/* インデックスボタン */
+#paging{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+	position: absolute;
+	bottom:10px;
+  left: 50%;
+  list-style: none;
+}
+#paging li{
+  background-color: rgb(216, 227, 238);
+  margin-right: 10px;
+	width:20px;
+	height:20px;
+  border-radius: 50%;
+}
+#paging li.active{
+  background-color: lightslategray;
 }

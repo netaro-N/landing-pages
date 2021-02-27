@@ -11,7 +11,12 @@ class Carousel {
     // 枚数分のリストを作成／追加、さらに'.indexbtn'クラスを付与
     for (var i = 0; i < this.maxIndex; i++) {
       var li_elm = document.createElement('li');
+      if(i === 0){
+      // 最初の要素にはactiveクラスを追加
+      page.appendChild(li_elm).classList.add('indexbtn','active');
+      }else{
       page.appendChild(li_elm).classList.toggle('indexbtn');
+      }
     }
   }
 
@@ -30,6 +35,16 @@ class Carousel {
     this.$elm.children[i].scrollIntoView({ behavior: "smooth" });
   }
 
+  // インデックスボタンにactiveクラス追加
+  active(i) {
+    // indexbtn+activeクラスのactiveを除去
+    document.querySelector('#paging li.active').classList.remove('active');
+    // indexbtnクラスのi番目に、activeクラスを追加する
+// #pagingのchildren(i)に追加したほうが良い？
+document.querySelector('#paging').children[i].classList.toggle('active');
+
+  }
+
   // 次へ
   next() {
     this.goto(this.index + 1);
@@ -40,9 +55,14 @@ class Carousel {
     this.goto(this.index - 1);
   }
 
+  //スクロール⇒active()
+  scroll() {
+    var i = (this.index + this.maxIndex) % this.maxIndex;
+    this.active(i)
+  }
+
   // インデックスボタンの番号へ
   btn(btnIndex) {
-    console.log('受け継いだindex ⇒ btnIndexは'+btnIndex);
     this.goto(btnIndex);
   }
 }
@@ -62,10 +82,14 @@ window.onload = function () {
   const elms = document.querySelectorAll(".indexbtn");// elementsクラスを持つ要素をすべて取得
   let index;// クリックした要素のインデックスを格納する変数
   elms.forEach((elm) => {// elementsを持つ要素すべてに以下の処理を追加する
-    elm.addEventListener("click", () => {// クリックしたときに
+    elm.addEventListener("click", (s) => {// クリックしたときに
       index = [].slice.call(elms).indexOf(elm);// インデックスを変数indexへ格納する
-      console.log('このリストのインデックス番号は'+index);
       carousel.btn(index);
     });
   });
+  console.log(carousel.$elm);
+  // スクロールイベントを行ったとき、carousel.active()を作動
+  carousel.$elm.addEventListener('scroll', function() {
+   carousel.scroll();
+  })
 };
