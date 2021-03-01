@@ -14,12 +14,12 @@ h1 {
   font-size: 1.8rem;
 }
 
-.carousel-wrapper{
+.top-wrapper{
   /* ボタンやリストボタンのため */
   position: relative;
 }
 /* 以下カルーセルのデザイン */
-.top-wrapper{
+.carousel-item{
   height: 710px;
 }
 .top1{
@@ -27,6 +27,9 @@ h1 {
 }
 .top2{
   background-color: lightseagreen;
+}
+.top3{
+  background-color: lightblue;
 }
 /* 共通コンテナ */
 .container{
@@ -44,21 +47,21 @@ h1 {
   cursor: pointer;
 }
 
-.carousel {
+.carousel-wrapper {
   display: flex;
   overflow-x: scroll;
   /* 横軸に対して mandatory が効くようになり, 必ず scroll-snap-align で指定した位置までスクロールして止まる */
   scroll-snap-type: x mandatory;
 }
 
-.carousel .top-wrapper {
+.carousel-wrapper .carousel-item {
   flex: 1 0 auto;
   width: 100vw;
   height: 60vh;
   scroll-snap-align: start;
 }
 
-.carousel::-webkit-scrollbar {
+.carousel-wrapper::-webkit-scrollbar {
   display: none;
 }
 

@@ -69,7 +69,7 @@ document.querySelector('#paging').children[i].classList.toggle('active');
 
 window.onload = function () {
   // カルーセルを生成
-  var carousel = new Carousel('.carousel');
+  var carousel = new Carousel('.carousel-wrapper');
 
   // ボタンのセットアップ
   var $btnPrev = document.querySelector('.btn-prev');
@@ -87,7 +87,7 @@ window.onload = function () {
       carousel.btn(index);
     });
   });
-  console.log(carousel.$elm);
+
   // スクロールイベントを行ったとき、carousel.active()を作動
   carousel.$elm.addEventListener('scroll', function() {
    carousel.scroll();

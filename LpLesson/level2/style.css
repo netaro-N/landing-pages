@@ -1,5 +1,94 @@
-/* 【A Modern CSS Reset】最終更新：21/1/18（https://github.com/hankchizljaw/modern-css-reset/blob/master/dist/reset.min.css） */
-*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html:focus-within{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){html:focus-within{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+/* こちらのサイトから（https://coliss.com/articles/build-websites/operation/css/a-modern-css-reset.html） */
+
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* class属性を持つul、ol要素のリストスタイルを削除 */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* classを持たない要素はデフォルトのスタイルを取得 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* article要素内の要素に自然な流れとリズムを定義 */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* リセットCSSここまで */
 
 /* 共通コンテナ */
 .container{
@@ -30,8 +119,22 @@ ul{
 
 /* トップラッパー */
 .top-wrapper{
-  background-color: #f1dfc8;
+  /* ボタンやリストボタンのため */
+  position: relative;
+  height: 780px;
+}
+/* 以下カルーセルのデザイン */
+.carousel-item{
   height: 710px;
+}
+.top1{
+  background-color: #f1dfc8;
+}
+.top2{
+  background-color: lightseagreen;
+}
+.top3{
+  background-color: lightblue;
 }
 .circle{
   height: 710px;
@@ -41,6 +144,61 @@ ul{
   clip-path: ellipse(50% 491px at 50% 550px);
   cursor: pointer;
 }
+.carousel-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  /* 横軸に対して mandatory が効くようになり, 必ず scroll-snap-align で指定した位置までスクロールして止まる */
+  scroll-snap-type: x mandatory;
+}
+.carousel-wrapper .carousel-item {
+  flex: 1 0 auto;
+  width: 100vw;
+  /* height: 100vh; */
+  scroll-snap-align: start;
+}
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+/* prev/nextボタン */
+.btn {
+  position: absolute;
+  margin: 0px 4px;
+  padding: 8px;
+  cursor: pointer;
+}
+.btn-prev{
+  top: 45%;
+  left: 10px;
+}
+.btn-next{
+  top: 45%;
+  right: 10px;
+}
+/* インデックスボタン */
+#paging{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+	position: absolute;
+	bottom:10px;
+  left: 50%;
+  list-style: none;
+}
+#paging li{
+  background-color: rgb(216, 227, 238);
+  margin-right: 10px;
+	width:20px;
+	height:20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#paging li.active{
+  background-color: lightslategray;
+}
+
+
+
 
 /* 2020 */
 .c20-wrapper{
