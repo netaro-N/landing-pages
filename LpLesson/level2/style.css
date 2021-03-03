@@ -100,17 +100,38 @@ select {
 
 /* ヘッダー */
 header .container{
+  height: 105px;
   position: relative;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Bodoni 72','Bodoni MT','Garamond','Times New Roman',serif;
 }
 .nav-logo{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 0.2em;
 }
-.nav-left,.nav-right{
-  width: 40%;
+a.logo{
+  text-decoration: none;
+  color: rgb(43, 41, 41);
+}
+.nav-list{
+  font-size: 15px;
+  line-height: 2;
+  letter-spacing: 0.2em;
+}
+.nav-list li:not(:last-child){
+  margin-right: 45px;
+}
+.nav-left li:last-child{
+  margin-right: 100px;
+}
+.nav-right li:first-child{
+  margin-left: 100px;
 }
 ul{
   display: flex;
@@ -121,9 +142,9 @@ ul{
 .top-wrapper{
   /* ボタンやリストボタンのため */
   position: relative;
-  height: 780px;
+  padding-bottom: 123px;
 }
-/* 以下カルーセルのデザイン */
+/* ----------------------------------以下カルーセルのデザイン */
 .carousel-item{
   height: 710px;
 }
@@ -135,14 +156,6 @@ ul{
 }
 .top3{
   background-color: lightblue;
-}
-.circle{
-  height: 710px;
-  width: 388px;
-  background-color: #f4f4f4;
-  /* 上から550px下ったところを中心にして、横幅は左右50%（全体に）、縦は上に491pxのところまで引き伸ばす。中心が真ん中より下にあるので、楕円の下方あたりは存在しない。 */
-  clip-path: ellipse(50% 491px at 50% 550px);
-  cursor: pointer;
 }
 .carousel-wrapper {
   display: flex;
@@ -162,42 +175,88 @@ ul{
 /* prev/nextボタン */
 .btn {
   position: absolute;
-  margin: 0px 4px;
-  padding: 8px;
   cursor: pointer;
 }
 .btn-prev{
   top: 45%;
-  left: 10px;
+  left: 30px;
 }
 .btn-next{
   top: 45%;
-  right: 10px;
+  right: 30px;
 }
 /* インデックスボタン */
 #paging{
+  left: 50%;
+  transform: translate(-50%,0%);
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
 	position: absolute;
-	bottom:10px;
-  left: 50%;
+	bottom:80px;
   list-style: none;
 }
 #paging li{
   background-color: rgb(216, 227, 238);
-  margin-right: 10px;
-	width:20px;
-	height:20px;
+	width:11px;
+	height:11px;
   border-radius: 50%;
   cursor: pointer;
+}
+/* 擬似クラスで最後のボタン以外に余白 */
+#paging li:not(:last-child){
+  margin-right: 43px;
 }
 #paging li.active{
   background-color: lightslategray;
 }
+/* ----------------------------------カルーセルここまで */
 
 
+/* top1 >heading-box */
+.top1 .heading-box{
+  margin-top: 240px;
+  text-align: center;
+}
+.top1 .heading-box h1{
+  font-family: 'Snell Roundhand',cursive;
+  font-size: 186px;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  color: #fff;
+  transform: rotate(-5.1deg);
+}
+/* Fontサイズ以外は共通 */
+.subtitle{
+  font-family: '游明朝体+36ポかな','YuMincho +36p Kana','ヒラギノ明朝 ProN','Hiragino Mincho ProN','ＭＳ Ｐ明朝','MS PMincho','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',serif;
+}
+.h-link,.c20-heading-box h3,.c20-h-link{
+  font-family: 'Futura','Century Gothic',sans-serif;
+}
+.top1 .subtitle{
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  margin-bottom: 45px;
+}
+.top1 .h-link{
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  color: darkgrey;
+}
+/* top1 >モデルBox */
+.model-box{
+  margin-left: 80px;
+}
+.circle{
+  height: 710px;
+  width: 388px;
+  background-color: #f4f4f4;
+  /* 上から550px下ったところを中心にして、横幅は左右50%（全体に）、縦は上に491pxのところまで引き伸ばす。中心が真ん中より下にあるので、楕円の下方あたりは存在しない。 */
+  clip-path: ellipse(50% 491px at 50% 550px);
+  cursor: pointer;
+}
 
 
 /* 2020 */
@@ -220,4 +279,35 @@ ul{
   top: 50px;
   width: 700px;
   height: 700px;
+}
+/* c20ヘディングBox */
+.c20-heading-box{
+  margin-top: 60px;
+  margin-left: 85px;
+}
+.c20-heading-box h2{
+  font-family: 'Didot','Hoefler Text','Calisto MT','Garamond','Cambria Math',serif;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+.c20-heading-box h3{
+  font-weight: 100;
+  margin-bottom: 15px;
+}
+.c20-heading-box .subtitle{
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.3em;
+  margin-top: 20px;
+  margin-bottom: 45px;
+}
+.c20-h-link{
+  display: inline-block;
+  font-size: 15px;
+  color: darkgrey;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding-bottom: 5px;
+  border-bottom: 1px solid darkgrey;
 }
