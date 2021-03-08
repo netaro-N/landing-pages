@@ -35,6 +35,11 @@
 .entry-box{
   display: flex;
 }
+.btn{
+  border: 0;
+  border-radius: 100vh; /*要素いっぱいの角丸*/
+  cursor: pointer;
+}
 
 /* Whyエリア */
 .why-wrapper{

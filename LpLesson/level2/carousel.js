@@ -32,7 +32,7 @@ class Carousel {
   goto(index) {
     var i = (index + this.maxIndex) % this.maxIndex;
     // console.log('子要素i番目に跳ぶ。i= ' + i);
-    this.$elm.children[i].scrollIntoView({block:"end" , behavior: "smooth" });
+    this.$elm.children[i].scrollIntoView({block:"start" , behavior: "smooth" });
   }
 
   // インデックスボタンにactiveクラス追加
