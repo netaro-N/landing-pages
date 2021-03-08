@@ -9,6 +9,7 @@
 }
 .top-wrapper{
   height: 800px;
+  background-color: #f6f7f9;
 }
 .logo{
   position: absolute;
@@ -26,6 +27,21 @@
   position: relative;
   margin-top: 203px;
 }
+.title{
+  font-size: 110px;
+  background: linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*IEで未対応の場合は以下で背景を非表示に*/
+@media all and (-ms-high-contrast:none){
+  .title {
+    background: #fff;
+    color: rgb(255,101,170);
+  }
+}
 .backtitle{
   position: absolute;
   left: -140px;
@@ -41,23 +57,50 @@
   border: 0;
   border-radius: 100vh; /*要素いっぱいの角丸*/
   cursor: pointer;
+  background: linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
+  background: -webkit-linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
+  width: 514px;
+  height: 64px;
+  font-size: 25px;
+  color: #fff;
 }
 
 /* ------------------------------------------model-box */
 .model-box{
   margin-left: 55px;
-  margin-right: 37px;
+  margin-right: 40px;
 }
+
 .elipse{
-  height: 760px;
+  height: 800px;
   width: 382px;
-  background-color: #f4f4f4;
+  background-color: #f1dfc8;
   /* 上から500px下ったところを中心にして、横幅は左右50%（全体に）、縦は上に460pxのところまで引き伸ばす。中心が真ん中より下にあるので、楕円の下方あたりは存在しない。 */
   clip-path: ellipse(50% 460px at 50% 500px);
   cursor: pointer;
 }
 
-/* Whyエリア */
+/* ------------------------------------------縦書き */
+.text-box{
+  margin-top: 307px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.vertical{
+  /*以下縦書きの設定*/
+  -webkit-writing-mode:vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+/*幅と高さを指定*/
+  font-size: 24px;
+  /* 角度をつける */
+  transform: rotate(8deg);
+  padding-top: 1em;
+  text-indent: -1em;
+}
+
+/* ------------------------------------------Whyエリア */
 .why-wrapper{
   text-align: center;
   height: 400px;
@@ -70,5 +113,30 @@
 }
 .sales-box{
   display: flex;
+  justify-content: center;
+}
+
+/* Box */
+.outside{
+  position: relative;
+  width: 210px;
+  height: 210px;
+  background-image: -webkit-linear-gradient( -45deg, rgb(104,87,36) 0%, rgb(147,120,65) 33%, rgb(189,152,93) 51%, rgb(147,120,65) 68%, rgb(104,87,36) 99%);
+  border-radius: 50%;
+}
+.inside{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-width: 1px;
+  border-color: rgb(194, 175, 129);
+  border-style: solid;
+  border-radius: 50%;
+  width: 195px;
+  height: 195px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
