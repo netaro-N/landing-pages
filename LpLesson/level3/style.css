@@ -20,6 +20,8 @@
   top: 30px;
   right: 26px;
 }
+
+/* ------------------------------------------main-box */
 .main-box{
   position: relative;
   margin-top: 203px;
@@ -38,6 +40,20 @@
 .btn{
   border: 0;
   border-radius: 100vh; /*要素いっぱいの角丸*/
+  cursor: pointer;
+}
+
+/* ------------------------------------------model-box */
+.model-box{
+  margin-left: 55px;
+  margin-right: 37px;
+}
+.elipse{
+  height: 760px;
+  width: 382px;
+  background-color: #f4f4f4;
+  /* 上から500px下ったところを中心にして、横幅は左右50%（全体に）、縦は上に460pxのところまで引き伸ばす。中心が真ん中より下にあるので、楕円の下方あたりは存在しない。 */
+  clip-path: ellipse(50% 460px at 50% 500px);
   cursor: pointer;
 }
 
