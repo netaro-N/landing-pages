@@ -1,0 +1,53 @@
+.container{
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.top-wrapper .container{
+  display: flex;
+  justify-content: center;
+}
+.top-wrapper{
+  height: 800px;
+}
+.logo{
+  position: absolute;
+  top: 32px;
+  left: 30px;
+}
+.info-box{
+  position: absolute;
+  top: 30px;
+  right: 26px;
+}
+.main-box{
+  position: relative;
+  margin-top: 203px;
+}
+.backtitle{
+  position: absolute;
+  left: -140px;
+  top: -96px;
+  width: 774px;
+  height: 159px;
+}
+
+.entry-box{
+  display: flex;
+}
+
+/* Whyエリア */
+.why-wrapper{
+  text-align: center;
+  height: 400px;
+}
+.overtext{
+  position: absolute;
+  top: -33px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sales-box{
+  display: flex;
+  justify-content: center;
+}
