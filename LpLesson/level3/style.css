@@ -1,3 +1,11 @@
+/* 本来は"Helvetica Neue",Arial, も足すのが無難。参照⇒（https://ics.media/entry/200317/）*/
+body {
+  font-family: 
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
 .container{
   position: relative;
   max-width: 1600px;
@@ -16,10 +24,29 @@
   top: 32px;
   left: 30px;
 }
+.logo a{
+  font-size: 40px;
+  font-family: serif;
+  color: black;
+
+}
 .info-box{
   position: absolute;
   top: 30px;
   right: 26px;
+  text-align: right;
+}
+.tel{
+  font-size: 30px;
+  font-weight: 600;
+  color:rgb(255,101,170);
+}
+.reception-hours{
+  font-size: 14px;
+}
+.reception-hours span{
+  margin-left: 1em;
+  font-size: 16px;
 }
 
 /* ------------------------------------------main-box */
@@ -27,8 +54,13 @@
   position: relative;
   margin-top: 203px;
 }
+.subtitle{
+  font-size: 42px;
+  font-weight: 600;
+  color:rgb(255,101,170);
+}
 .title{
-  font-size: 110px;
+  font-size: 105px;
   background: linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
   background: -webkit-linear-gradient(0deg, rgb(246,195,20) 0%, rgb(255,101,170) 100%);
   background-clip: text;
@@ -49,9 +81,17 @@
   width: 774px;
   height: 159px;
 }
+.super-fast{
+  font-size: 23px;
+  font-weight: 600;
+}
 
 .entry-box{
   display: flex;
+}
+.two-months{
+  font-size: 33px;
+  color:rgb(255,101,170);
 }
 .btn{
   border: 0;
@@ -138,8 +178,9 @@ svg {
   -webkit-writing-mode:vertical-rl;
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
-/*幅と高さを指定*/
   font-size: 24px;
+  font-family: serif;
+  color: rgb(255,101,170);
   /* 角度をつける */
   transform: rotate(8deg);
   padding-top: 1em;
@@ -150,6 +191,7 @@ svg {
 .why-wrapper{
   text-align: center;
   height: 400px;
+  background-image: url(./img/bg.jpg);
 }
 .overtext{
   position: absolute;
@@ -157,12 +199,21 @@ svg {
   left: 50%;
   transform: translateX(-50%);
 }
+.method{
+  padding-top: 50px;
+  margin-bottom: 30px;
+  font-size: 43px;
+  font-weight: 600;
+}
+
+/* Box */
 .sales-box{
   display: flex;
   justify-content: center;
 }
-
-/* Box */
+.sales-label:not(:last-child){
+  margin-right: 110px;
+}
 .outside{
   position: relative;
   width: 210px;
@@ -185,4 +236,13 @@ svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.sub{
+  font-size: 21px;
+  color: #fff;
+}
+.main{
+  font-size: 34px;
+  color: #fff;
+  font-weight: 600;
 }
