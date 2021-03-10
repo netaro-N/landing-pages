@@ -64,6 +64,52 @@
   font-size: 25px;
   color: #fff;
 }
+/* 満足度 */
+.satisfaction-label{
+  background-color: rgb(255,101,170);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.inner{
+  height: auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.satisfaction{
+  font-size: 24px;
+  color: #fff;
+  font-weight: 600;
+}
+.percentage{
+  line-height: 1;
+  font-size: 89px;
+  font-weight: 600;
+  color: #fff;
+}
+/* 縁取り */
+svg {
+  position: absolute;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  overflow: visible;
+}
+.foreground {
+  fill: #fff;
+  font-size: 26px;
+}
+.background {
+  stroke: rgb(255,101,170);
+  stroke-width: 8;
+  stroke-linejoin: round;
+  font-size: 26px;
+
+}
 
 /* ------------------------------------------model-box */
 .model-box{
