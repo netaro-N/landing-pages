@@ -1,0 +1,103 @@
+/* 背景#fff9e0、ちぐさ#46c419、文字色4a4a4a、グレー#cccccc、ピンク#fe7988、黄色f4f121 */
+body{
+  background-color: #fff9e0;
+  font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    color: #4a4a4a;
+}
+.container{
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ------------------------------------ヘッダー */
+header{
+  margin-top: 100px;
+  height: 100px;
+}
+header .container{
+  position: relative;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-logo{
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.logo{
+  font-size: 40px;
+  color: #46c419;
+  line-height: 1;
+}
+
+/* ナビバー */
+nav.global{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 50px; */
+}
+.nav-left,.nav-right{
+  display: flex;
+}
+ul.nav-right li:first-child{
+  margin-left: 240px;
+}
+
+li.nav-list{
+  font-size: 18px;
+  line-height: 1.7;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+li.nav-list::after{
+  content: "";
+  display: inline-block;
+  border-right: #ccc dotted 3px;
+  margin-left: 20px;
+  height: 100%;
+}
+li.nav-list:first-of-type::before{
+  content: "";
+  display: inline-block;
+  border-left: #ccc dotted 3px;
+  height: 100%;
+}
+
+a.list-anchor{
+  margin-left: 20px;
+  color: #4a4a4a;
+}
+a.list-anchor::before{
+  content:"";
+  display: inline-block;
+  background-color: #ccc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transform: translateY(25%);
+  margin-right: 20px;
+}
+
+/* ------------------------------------メイン */
+/* 特徴Box */
+.features-box{
+  display: flex;
+  justify-content: center;
+}
+.feature{
+  width: 370px;
+  height: 200px;
+  background-color: #ccc;
+  border-radius: 20px;
+}
