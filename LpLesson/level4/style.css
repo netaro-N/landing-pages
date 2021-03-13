@@ -90,7 +90,49 @@ a.list-anchor::before{
 }
 
 /* ------------------------------------メイン */
-/* 特徴Box */
+/* メインビジュアル */
+.visual-box{
+  position: relative;
+  height: 570px;
+  width: 1100px;
+  margin: 0 auto;
+  /* text-align: left; */
+}
+.main-visual{
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.back-visual{
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 特徴Boxエリア */
+.discription{
+  color: #fe7988;
+  font-size: 32px;
+  margin-top: 32px;
+  margin-bottom: 80px;
+}
+h3.introduction{
+  font-size: 28px;
+  color:#46c419;
+  margin-bottom: 15px;
+}
+h3.introduction::before{
+  content:"";
+  display: block;
+  background-color: #ccc;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 auto 13px auto;
+}
 .features-box{
   display: flex;
   justify-content: center;
@@ -101,3 +143,7 @@ a.list-anchor::before{
   background-color: #ccc;
   border-radius: 20px;
 }
+.feature:not(:last-child){
+  margin-right: 47px;
+}
+
