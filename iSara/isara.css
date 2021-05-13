@@ -6,6 +6,30 @@ yellow(back):#FDF5E0
 blue:#2A6EAA
 footer&topへbotton-bg:#ECECEC
 */
+body{
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #333;
+}
+/* font-size */
+.l{
+  font-size: 28px;
+}
+.s{
+  font-size: 16px;
+}
+.xs{
+  font-size: 14px;
+  font-weight: 300;
+}
+/* color */
+.white{
+  color: #fff;
+}
+.yellow{
+  color: #EBB94D;
+}
 
 .container{
   margin: 0 auto;
@@ -36,15 +60,19 @@ header .container{
   /* position: relative; */
 }
 
-header .btn{
-  padding: 11px 40px;
-}
-
 .header-left{
   display: flex;
   align-items: flex-end;
 }
 
+.header-title{
+  padding: 3px 5px;
+  font-weight: 600;
+}
+
+header .btn{
+  padding: 11px 40px;
+}
 
 /* ヘッダーのコンテナも含めて，メディアクエリでレスポンシブ設定する */
 .spview{
@@ -104,3 +132,107 @@ header .btn{
   padding: 40px 0;
   text-align: center;
 }
+
+/* about-2 */
+.about-2-wrapper{
+  background-color: #FDF5E0;
+}
+.skills-area{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.skill{
+  text-align: center;
+}
+.skill img{
+  margin: 0 auto;
+}
+
+/* about-3 */
+.about-3-wrapper{
+  background-image: url(./img/bg-image/aboutsecondbg.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 500px;
+}
+
+/* about-4 */
+.about-4-wrapper{
+  background-color: #2A6EAA;
+  text-align: center;
+}
+
+/* learning */
+.learning-area{
+  display: flex;
+  justify-content: center;
+}
+
+/* merit */
+.merit-wrapper{
+  background-color: #FDF5E0;
+}
+.merit-area{
+  display: flex;
+  justify-content: center;
+}
+.merit{
+  max-width: calc(100%/3 - 20px);
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.free{
+  height: 180px;
+  background-image: url(./img/merit-area/learnfromfreelancer.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.projects{
+  height: 180px;
+  background-image: url(./img/merit-area/learnfromprojects.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.actual{
+  height: 180px;
+  background-image: url(./img/merit-area/actuallyfree.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* teacher */
+.teacher-wrapper{
+  background-image: url(./img/bg-image/teacherbg.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.teacher-area{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.teacher{
+  max-width: calc(100%/3 - 20px);
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.img img{
+  margin: 0 auto;
+}
+
+/* question */
+/* answer */
+/* lesson */
+/* support */
+/* flow */
+/* bangkok */
+/* specials */
+/* excuse */
+/* message */
+/* form */
+/* qa */
+
+/* フッター */
