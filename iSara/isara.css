@@ -221,11 +221,58 @@ header .btn{
 }
 .img img{
   margin: 0 auto;
+  border-radius: 50%;
 }
 
 /* question */
+.question-wrapper{
+  background-color: #EBB94D;
+  position: relative;
+}
+.qacircle{
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+}
+.question-wrapper:after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 25px solid transparent;
+  border-top-color: #ebb94d;
+  top: 100%;
+  left: 50%;
+  margin-left: -25px;
+}
+
+
 /* answer */
+.voices-area{
+  width: 800px;
+}
+.voice{
+  display: flex;
+  font-size: 18px;
+  color: #777;
+  font-style: italic;
+  font-weight: normal;
+}
+.voice-img{
+  width: 100%;
+}
+.voice-img img{
+  width: 100%;
+}
+small{
+  font-size: 15px;
+  text-decoration: underline;
+}
 /* lesson */
+
 /* support */
 /* flow */
 /* bangkok */
