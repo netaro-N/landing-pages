@@ -318,6 +318,22 @@ small{
   color: #fff;
 }
 /* specials */
+.specials-wrapper{
+  background-color: #ebb94d;
+  text-align: center;
+}
+.specials-wrapper .border-box-contents{
+  display: flex;
+}
+.special .circle{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
 /* excuse */
 /* message */
 /* form */
