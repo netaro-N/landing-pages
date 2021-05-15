@@ -292,9 +292,31 @@ small{
   background-color:#016ea9;
 }
 /* support */
-
+.support-wrapper{
+  background-color: #2A6EAA;
+  text-align: center;
+}
 /* flow */
+.flow-headding{
+  text-align: center;
+}
+.flow-img{
+  margin: 0 auto;
+}
+.flow-box{
+  display: flex;
+  background-color: #FDF5E0;
+}
+.flow-title{
+
+}
 /* bangkok */
+.bangkok-wrapper{
+  background-image: url(./img/bg-image/bangkokbg.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
 /* specials */
 /* excuse */
 /* message */
