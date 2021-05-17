@@ -12,6 +12,9 @@ body{
   letter-spacing: 1.5px;
   color: #333;
 }
+a{
+  color: #337ab7;
+}
 /* font-size */
 .l{
   font-size: 28px;
@@ -378,3 +381,25 @@ form input{
   color: #016ea9;
 }
 /* フッター */
+footer{
+  background-color: #ececec;
+  text-align: center;
+}
+.copyright{
+  font-size: 10px;
+  font-weight: 300;
+}
+/* pagetop */
+.pagetop{
+  position: fixed;
+  cursor: pointer;
+  bottom: 90px;
+  right: 50px;
+  background-color: #ececec;
+  padding: 20px;
+  font-size: 30px;
+}
+.pagetop .fas{
+  /* 親要素の高さを揃えるため */
+  display: block;
+}
