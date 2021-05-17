@@ -335,8 +335,46 @@ small{
   border-radius: 50%;
 }
 /* excuse */
+.excuse-wrapper{
+  background-image: url(./img/bg-image/specialdetail.jpg);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+.excuse-wrapper p{
+  font-weight: normal;
+}
 /* message */
+.message-wrapper{
+  margin: 0 auto;
+}
+.message-wrapper h2,.message-wrapper > p{
+  text-align: center;
+}
+.founder-box{
+  display: flex;
+  font-weight: normal;
+}
+.founder-img{
+  width: 25%;
+}
+.founder-img img{
+  width: 100%;
+}
 /* form */
+.form-wrapper{
+  background-color:#EBB94D;
+  text-align: center;
+}
+form{
+  width: 70%;
+  margin: 0 auto;
+}
+form input{
+  width: 100%;
+}
 /* qa */
-
+.fa-question-circle{
+  color: #016ea9;
+}
 /* フッター */
