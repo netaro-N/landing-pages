@@ -380,6 +380,19 @@ form input{
 .fa-question-circle{
   color: #016ea9;
 }
+.question::after{
+  content:"∨";
+}
+.question.active::after{
+  content:"∧";
+}
+.answer{
+  display: none;
+}
+/*answerとinの両方のクラス持った*/
+.answer.in{
+  display: block;
+}
 /* フッター */
 footer{
   background-color: #ececec;
