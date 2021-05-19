@@ -34,6 +34,7 @@ a{
   color: #EBB94D;
 }
 
+/*共通コンポーネント*/
 .container{
   margin: 0 auto;
   width: 1170px;
@@ -45,6 +46,13 @@ a{
   color: #fff;
   background-color: #DA6B64;
   border-radius: 25px;
+}
+.border-box-contents{
+  margin: 0 auto;
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  padding: 30px;
+  border: #EBB94D solid 2px;
 }
 
 /* ヘッダー */
@@ -139,6 +147,7 @@ header .btn{
 /* about-2 */
 .about-2-wrapper{
   background-color: #FDF5E0;
+  text-align: center;
 }
 .skills-area{
   display: flex;
@@ -160,7 +169,21 @@ header .btn{
   text-align: center;
   height: 500px;
 }
-
+.steps-area{
+  display: flex;
+  justify-content: center;
+}
+.step{
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+}
+.step+.step{
+  margin-left: 10px;
+}
+.step-title{
+  background-color: #EBB94D;
+}
 /* about-4 */
 .about-4-wrapper{
   background-color: #2A6EAA;
@@ -168,6 +191,12 @@ header .btn{
 }
 
 /* learning */
+.learning-wrapper{
+  text-align: center;
+}
+.learning-wrapper p:first-of-type{
+  font-weight: normal;
+}
 .learning-area{
   display: flex;
   justify-content: center;
@@ -176,6 +205,7 @@ header .btn{
 /* merit */
 .merit-wrapper{
   background-color: #FDF5E0;
+  text-align: center;
 }
 .merit-area{
   display: flex;
@@ -185,6 +215,7 @@ header .btn{
   max-width: calc(100%/3 - 20px);
   padding-right: 15px;
   padding-left: 15px;
+  text-align: left;
 }
 .free{
   height: 180px;
@@ -211,6 +242,7 @@ header .btn{
   background-position: center;
   background-size: cover;
   color: #fff;
+  text-align: center;
 }
 .teacher-area{
   display: flex;
@@ -231,6 +263,7 @@ header .btn{
 .question-wrapper{
   background-color: #EBB94D;
   position: relative;
+  text-align: center;
 }
 .qacircle{
   background-color: #fff;
@@ -239,6 +272,7 @@ header .btn{
   line-height: 80px;
   border-radius: 50%;
   text-align: center;
+  margin: 0 auto;
 }
 .question-wrapper:after {
   content: " ";
@@ -254,8 +288,14 @@ header .btn{
 
 
 /* answer */
+.answer-wrapper{
+  text-align: center;
+
+}
 .voices-area{
   width: 800px;
+  text-align: left;
+  margin: 0 auto;
 }
 .voice{
   display: flex;
@@ -306,10 +346,17 @@ small{
 .flow-img{
   margin: 0 auto;
 }
+.pctab-detail img{
+  margin: 0 auto;
+}
 .flow-box{
   display: flex;
   background-color: #FDF5E0;
 }
+.flow-title{
+  text-align: center;
+}
+
 /* 下でレスポンシブ */
 .sp-detail{
   display: none;
@@ -323,12 +370,26 @@ small{
 }
 /* specials */
 .specials-wrapper{
-  background-color: #ebb94d;
+  background-color: #f7c23c;
   text-align: center;
 }
-.specials-wrapper .border-box-contents{
-  display: flex;
+.specials-wrapper h3{
+  position: relative;
+  bottom: -20px;
+  width: 45%;
+  margin: 0 auto;
+  background-color: #f7c23c;
 }
+.specials-box{
+  display: flex;
+  justify-content: space-evenly;
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 30px;
+  border: solid #fff 2px;
+}
+
 .special .circle{
   display: flex;
   flex-direction: column;
@@ -380,6 +441,9 @@ form input{
 /* qa */
 .fa-question-circle{
   color: #016ea9;
+}
+.qa-wrapper h2{
+  text-align: center;
 }
 .question::after{
   display: inline-block; /*忘れない！*/
