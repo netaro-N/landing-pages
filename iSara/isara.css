@@ -310,8 +310,9 @@ small{
   display: flex;
   background-color: #FDF5E0;
 }
-.flow-title{
-
+/* 下でレスポンシブ */
+.sp-detail{
+  display: none;
 }
 /* bangkok */
 .bangkok-wrapper{
@@ -429,4 +430,54 @@ footer{
 .pagetop .fas{
   /* 親要素の高さを揃えるため */
   display: block;
+}
+
+/* レスポンシブデザイン */
+/* スマホのdetailフロー */
+@media screen and (max-width: 768px) {
+  .flow-img, .pctab-detail{
+    display: none;
+  }
+  .sp-detail{
+    display: block;
+  }
+  .flow-box-sp{
+    background-color: #fef5e0 ;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+  }
+  .flow-box-sp+.flow-box-sp{
+    margin-top: 5px;
+  }
+  .flow-title-sp{
+    display: flex;
+    align-items: center; /*疑似要素も中央に寄せてくれるね*/
+  }
+  .flow-title-sp img{
+    width: 35px;
+    height: 35px;
+  }
+  .flow-title-sp::after{
+    display: inline-block; /*忘れない！*/
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(./img/angle-down-solid.png); /*背景にすることでサイジング可能*/
+    background-size: contain;/*縦横比維持＋要素サイズ（今回なら20px*20px）いっぱい*/
+    background-repeat: no-repeat;/*繰り返して変な感じにしない*/
+  }
+  .flow-title-sp.active::after{
+    display: inline-block; /*忘れない！*/
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(./img/angle-up-solid.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .flow-txt-sp{
+    display: none;
+  }
+  .flow-txt-sp.in{
+    display: block;
+  }
 }
