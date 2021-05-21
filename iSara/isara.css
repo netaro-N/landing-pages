@@ -9,7 +9,7 @@ footer&topへbotton-bg:#ECECEC
 /* ==========================================================================
    ベース
    ========================================================================== */
-*{
+body{
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1.5px;
@@ -159,12 +159,6 @@ header .btn{
 .main-wrapper{
   padding-top: 75px;
 }
-@media screen and (max-width:768px){
-  .main-wrapper{
-    padding-top: 62px;
-  }
-  
-}
 .main-fluid{
   background-image: url(./img/bg-image/main.jpg);
   background-size: cover;
@@ -175,7 +169,15 @@ header .btn{
   align-items: center;
   justify-content: center;
 }
-
+@media screen and (max-width:768px){
+  .main-wrapper{
+    padding-top: 62px;
+  }
+  .main-fluid{
+    background-image: url(./img/sp-img/mainsp.jpg);
+    height: 312px;
+  }
+}
 /* info */
 .info-wrapper{
   background-color: #EBB94D;
@@ -245,6 +247,13 @@ header .btn{
 .step-title{
   background-color: #EBB94D;
 }
+@media screen and (max-width:768px){
+  .about-3-wrapper{
+    background-image: url(./img/sp-img/aboutsecondbgsp.jpg);
+  }
+}
+
+
 /* about-4 */
 .about-4-wrapper{
   background-color: #2A6EAA;
@@ -260,9 +269,20 @@ header .btn{
 }
 .learning-area{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-
+.learning{
+  max-width: 20%;
+}
+.learning img{
+  width: 180px;
+  max-width: 100%;
+}
+@media screen and (max-width:768px){
+  .learning img{
+    width: 120px;
+  }
+}
 /* merit */
 .merit-wrapper{
   background-color: #FDF5E0;
@@ -319,6 +339,11 @@ header .btn{
   margin: 0 auto;
   border-radius: 50%;
 }
+@media screen and (max-width:768px){
+  .teacher-wrapper{
+    background-image: url(./img/sp-img/teacherbgsp.jpg);
+  }
+}
 
 /* question */
 .question-wrapper{
@@ -354,27 +379,43 @@ header .btn{
 
 }
 .voices-area{
-  width: 800px;
+  max-width: 1170px;
   text-align: left;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .voice{
   display: flex;
+  justify-content: space-evenly;
   font-size: 18px;
   color: #777;
   font-style: italic;
   font-weight: normal;
 }
 .voice-img{
-  width: 100%;
+  width: 30%;
 }
 .voice-img img{
   width: 100%;
+}
+.voice-detail{
+  width: 60%;
 }
 small{
   font-size: 15px;
   text-decoration: underline;
 }
+@media screen and (max-width:992px) {
+  .voices-area{
+    width: 750px;
+  }
+}
+@media screen and (max-width:768px) {
+  .voices-area{
+    width: auto;
+  }
+}
+
 /* lesson */
 .lesson-wrapper{
   background-image: url(./img/bg-image/classbg.jpg);
@@ -395,6 +436,12 @@ small{
 .lesson p {
   background-color:#016ea9;
 }
+@media screen and (max-width:768px){
+  .lesson-wrapper{
+    background-image: url(./img/sp-img/classbgsp.jpg);
+  }
+}
+
 /* support */
 .support-wrapper{
   background-color: #2A6EAA;
@@ -406,6 +453,7 @@ small{
 }
 .flow-img{
   margin: 0 auto;
+  max-width: 90%;
 }
 .pctab-detail img{
   margin: 0 auto;
@@ -429,6 +477,14 @@ small{
   background-position: center;
   color: #fff;
 }
+@media screen and (max-width:768px){
+  .bangkok-wrapper{
+    background-image: url(./img/sp-img/bangkokbgsp.jpg);
+  }
+}
+
+
+
 /* specials */
 .specials-wrapper{
   background-color: #f7c23c;
@@ -460,6 +516,11 @@ small{
   height: 250px;
   border-radius: 50%;
 }
+@media screen and (max-width:992px){
+  .specials-box{
+    flex-direction: column;
+  }
+}
 /* excuse */
 .excuse-wrapper{
   background-image: url(./img/bg-image/specialdetail.jpg);
@@ -469,6 +530,11 @@ small{
 }
 .excuse-wrapper p{
   font-weight: normal;
+}
+@media screen and (max-width:768px){
+  .excuse-wrapper{
+    background-image: url(./img/sp-img/specialdetailsp.jpg);
+  }
 }
 /* message */
 .message-wrapper{
