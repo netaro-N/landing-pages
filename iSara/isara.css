@@ -38,7 +38,7 @@ a{
 }
 /* レスポンシブ */
 @media screen and (max-width: 1190px){
-  *{
+  body{
     font-size: 16px;
   }
   .l{
@@ -52,7 +52,7 @@ a{
   }
 }
 @media screen and (max-width:768px){
-  *{
+  body{
     font-size: 15px;
   }
   .l{
@@ -86,6 +86,7 @@ a{
   max-width: calc(100% - 40px);
   padding: 30px;
   border: #EBB94D solid 2px;
+  background-color: #fff;
 }
 
 /* ヘッダー */
@@ -231,6 +232,7 @@ header .btn{
   background-position: center;
   text-align: center;
   height: 500px;
+  padding: 30px;
 }
 .steps-area{
   display: flex;
@@ -240,6 +242,7 @@ header .btn{
   background-color: #fff;
   border-radius: 4px;
   padding: 20px;
+  width: 60%;
 }
 .step+.step{
   margin-left: 10px;
@@ -247,9 +250,20 @@ header .btn{
 .step-title{
   background-color: #EBB94D;
 }
+@media screen and (max-width:1190px){
+  .steps-area{
+    flex-direction: column;
+  }
+  .step,.step+.step{
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width:768px){
   .about-3-wrapper{
     background-image: url(./img/sp-img/aboutsecondbgsp.jpg);
+  }
+  .step{
+    width: 100%;
   }
 }
 
@@ -287,13 +301,14 @@ header .btn{
 .merit-wrapper{
   background-color: #FDF5E0;
   text-align: center;
+  padding: 30px;
 }
 .merit-area{
   display: flex;
   justify-content: center;
 }
 .merit{
-  max-width: calc(100%/3 - 20px);
+  width: calc(100%/3 - 20px);
   padding-right: 15px;
   padding-left: 15px;
   text-align: left;
@@ -316,7 +331,27 @@ header .btn{
   background-position: center;
   background-size: cover;
 }
-
+@media screen and (max-width:991px){
+  .merit-area{
+    flex-direction: column;
+  }
+  .merit{
+    width: 100%;
+  }
+  .merit .yellow{
+    text-align: center;
+  }
+  .free,.projects,.actual{
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width:768px){
+  .free,.projects,.actual{
+    height: 120px;
+    width: auto;
+  }
+}
 /* teacher */
 .teacher-wrapper{
   background-image: url(./img/bg-image/teacherbg.jpg);
@@ -324,6 +359,7 @@ header .btn{
   background-size: cover;
   color: #fff;
   text-align: center;
+  padding: 50px;
 }
 .teacher-area{
   display: flex;
@@ -331,7 +367,7 @@ header .btn{
   text-align: center;
 }
 .teacher{
-  max-width: calc(100%/3 - 20px);
+  width: calc(100%/3 - 20px);
   padding-right: 15px;
   padding-left: 15px;
 }
@@ -339,9 +375,26 @@ header .btn{
   margin: 0 auto;
   border-radius: 50%;
 }
+.detail{
+  font-weight: normal;
+}
+.txtleft{
+  text-align: left;
+}
+@media screen and (max-width:991px){
+  .teacher-area{
+    flex-direction: column;
+  }
+  .teacher{
+    width: 100%;
+  }
+}
 @media screen and (max-width:768px){
   .teacher-wrapper{
     background-image: url(./img/sp-img/teacherbgsp.jpg);
+  }
+  .teacher-img img{
+    width: 120px;
   }
 }
 
@@ -400,6 +453,8 @@ header .btn{
 }
 .voice-detail{
   width: 60%;
+  /* 文章を折り返す */
+  overflow-wrap: break-word;
 }
 small{
   font-size: 15px;
@@ -519,6 +574,9 @@ small{
 @media screen and (max-width:992px){
   .specials-box{
     flex-direction: column;
+  }
+  .circle{
+    margin: 0 auto;
   }
 }
 /* excuse */
