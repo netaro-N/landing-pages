@@ -544,6 +544,7 @@ small{
 .specials-wrapper{
   background-color: #f7c23c;
   text-align: center;
+  padding: 50px;
 }
 .specials-wrapper h3{
   position: relative;
@@ -552,7 +553,7 @@ small{
   margin: 0 auto;
   background-color: #f7c23c;
 }
-.specials-box{
+.specials-box-pc{
   display: flex;
   justify-content: space-evenly;
   width: 1170px;
@@ -561,8 +562,7 @@ small{
   padding: 30px;
   border: solid #fff 2px;
 }
-
-.special .circle{
+.circle{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -571,12 +571,47 @@ small{
   height: 250px;
   border-radius: 50%;
 }
+.specials-box-sp{
+  display: none;
+}
 @media screen and (max-width:992px){
-  .specials-box{
+  .specials-box-pc{
     flex-direction: column;
   }
   .circle{
     margin: 0 auto;
+  }
+}
+@media screen and (max-width:768px){
+  .specials-wrapper{
+    padding: 10px;
+  }
+  .specials-box-pc{
+    display: none;
+  }
+  .specials-box-sp{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border: solid #fff 2px;
+  }
+  .special{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: #fff;
+  }
+  .circle{
+    margin: 0;
+    height: 60px;
+    font-size: 12px;
+    flex-shrink: 0;/*こうすると，固定幅になる！*/
+    flex-basis: 60px;/*widthいらん*/
+  }
+  .sp-txt{
+    padding-left: 5px;
+    flex-basis: auto;
+    text-align: left;
   }
 }
 /* excuse */
