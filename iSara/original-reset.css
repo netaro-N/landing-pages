@@ -67,12 +67,12 @@ article > * + * {
 
 /* Inherit fonts for inputs and buttons */
 /* inputやbuttonなどのフォントは継承を定義 */
-input,
+/* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */
 
 /* Remove all animations and transitions for people that prefer not to see them */
 /* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
