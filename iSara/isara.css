@@ -87,6 +87,7 @@ a{
   padding: 30px;
   border: #EBB94D solid 2px;
   background-color: #fff;
+  border-radius: 5px;
 }
 .brackets{
   position: relative;
@@ -248,12 +249,29 @@ header .btn{
   padding: 40px 0;
   text-align: center;
 }
-
+.about-1-wrapper p{
+  font-weight: 300;
+}
 /* about-2 */
 .about-2-wrapper{
   background-color: #FDF5E0;
   text-align: center;
 }
+.aboutcircle{
+  position: relative;
+  top: -40px;
+  background-color: #EBB94D;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .skills-area{
   display: flex;
   justify-content: center;
@@ -284,6 +302,10 @@ header .btn{
   border-radius: 4px;
   padding: 20px;
   width: 60%;
+}
+.step .xs{
+  font-weight: 600;
+
 }
 .step+.step{
   margin-left: 10px;
@@ -354,6 +376,9 @@ header .btn{
   padding-left: 15px;
   text-align: left;
 }
+.merit .s{
+  font-weight: 300;
+}
 .free{
   height: 180px;
   background-image: url(./img/merit-area/learnfromfreelancer.jpg);
@@ -412,12 +437,19 @@ header .btn{
   padding-right: 15px;
   padding-left: 15px;
 }
+.teacher-img{
+  position:relative;
+  bottom: -35px;
+  
+}
 .teacher-img img{
   margin: 0 auto;
   border-radius: 50%;
 }
 .detail{
   font-weight: normal;
+  padding: 40px;
+  border: 3px solid #fff;
 }
 .txtleft{
   text-align: left;
@@ -453,6 +485,8 @@ header .btn{
   border-radius: 50%;
   text-align: center;
   margin: 0 auto;
+  font-size: 14px;
+  font-weight: 300;
 }
 .question-wrapper:after {
   content: " ";
