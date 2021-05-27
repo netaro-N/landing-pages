@@ -524,6 +524,7 @@ header .btn{
 }
 .voice-img img{
   width: 100%;
+  border: solid #EBB94D 3px;
 }
 .voice-detail{
   width: 60%;
@@ -568,6 +569,11 @@ small{
 }
 .lesson p {
   background-color:#016ea9;
+  padding: 15px;
+}
+.lesson li{
+  padding: 10px;
+  border-bottom: 1px dotted #e5e5e5;
 }
 @media screen and (max-width:992px){
   .lessons-box{
@@ -608,9 +614,13 @@ small{
 .flow-box{
   display: flex;
   background-color: #FDF5E0;
+  padding: 20px 35px;
+  border-radius: 10px;
 }
 .flow-title{
   text-align: center;
+  padding: 20px;
+  width: 200px;
 }
 
 /* 下でレスポンシブ */
@@ -762,6 +772,14 @@ form{
 }
 form input,textarea{
   width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+form textarea{
+  height: 100px;
 }
 form .btn{
   width: 100%;
@@ -783,10 +801,42 @@ form .btn{
 .fa-question-circle{
   color: #016ea9;
 }
+.qa-wrapper{
+  padding: 40px 10%;
+}
 .qa-wrapper h2{
   text-align: center;
 }
+.qa-wrapper ul{
+  max-width: 100%;
+  margin: 0 auto;
+}
+.qa-wrapper li{
+  box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+}
+.qa-wrapper li+li{
+  margin-top: 5px;
+}
+.question{
+  position: relative;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.question:hover , .question:focus{
+  text-decoration: underline;
+}
+.question , .answer{
+  padding: 20px;
+  color: #000;
+}
+.question i{
+  margin: 5px;
+}
 .question::after{
+  position: absolute;
+  right: 10px;
   display: inline-block; /*忘れない！*/
   width: 20px;
   height: 20px;
@@ -813,6 +863,21 @@ form .btn{
 .answer.in{
   display: block;
 }
+@media screen and (max-width: 1190px) {
+  .qa-wrapper{
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .qa-wrapper{
+    padding: 20px 5px;
+
+  }
+  .question{
+    padding: 10px;
+  }
+}
+
 /* フッター */
 footer{
   background-color: #ececec;
