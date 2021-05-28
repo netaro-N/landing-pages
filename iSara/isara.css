@@ -283,8 +283,12 @@ header .btn{
 }
 .about-1-wrapper p{
   font-weight: 300;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
+.underline {
+  font-weight: bold;
+  background: linear-gradient(transparent 70%, #ebb94d 0%);
+  }
 /* about-2 */
 .about-2-wrapper{
   background-color: #FDF5E0;
@@ -327,7 +331,6 @@ header .btn{
   background-size: cover;
   background-position: center;
   text-align: center;
-  height: 500px;
   padding: 30px;
 }
 .steps-area{
