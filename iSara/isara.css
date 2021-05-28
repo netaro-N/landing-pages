@@ -24,6 +24,16 @@ a{
 .yellow{
   color: #EBB94D;
 }
+code{
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+p{
+  padding: 10px 0;
+}
 /* Font
    ========================================================================== */
 .l{
@@ -78,7 +88,6 @@ a{
   cursor: pointer;
   color: #fff;
   background-color: #DA6B64;
-  border-radius: 25px;
 }
 .border-box-contents{
   margin: 0 auto;
@@ -91,7 +100,7 @@ a{
 }
 .brackets{
   position: relative;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   width: 860px;
   max-width: calc(100% - 40px);
   padding: 30px 0;
@@ -117,6 +126,9 @@ a{
 .question-wrapper .brackets::after,.question-wrapper .brackets::before ,.excuse-wrapper .brackets::after,.excuse-wrapper .brackets::before{
   border-color: #fff;
 }
+.brsp{
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .brackets{
     position: relative;
@@ -128,6 +140,9 @@ a{
   .brackets::before,.brackets::after{
     width: 30px;
     height: 30px;
+  }
+  .brsp{
+    display: block;
   }
 }
 
@@ -158,6 +173,7 @@ header .container{
 
 header .btn{
   padding: 11px 40px;
+  border-radius: 25px;
 }
 
 /* ヘッダーのコンテナも含めて，メディアクエリでレスポンシブ設定する */
@@ -212,6 +228,7 @@ header .btn{
   align-items: center;
   justify-content: center;
 }
+
 @media screen and (max-width:768px){
   .main-wrapper{
     padding-top: 62px;
@@ -229,7 +246,9 @@ header .btn{
 }
 .info-wrapper .btn{
   max-width: 1020px;
-  margin: 0 auto;
+  margin: 45px auto;
+  padding: 30px 120px;
+  border-radius: 50px;
 }
 .sns{
   display: flex;
@@ -238,6 +257,19 @@ header .btn{
 /* 仮 */
 .sns li{
   background-color: aquamarine;
+}
+@media screen  and (min-width: 768px) and (max-width: 1190px){
+  .info-wrapper .btn{
+    padding: 25px 50px;
+    margin: 10px 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info-wrapper .btn{
+    padding: 15px 20px;
+    margin: 10px 20px;
+  }
+  
 }
 
 /* about-1 */
@@ -251,11 +283,13 @@ header .btn{
 }
 .about-1-wrapper p{
   font-weight: 300;
+  margin-bottom: 14px;
 }
 /* about-2 */
 .about-2-wrapper{
   background-color: #FDF5E0;
   text-align: center;
+  padding-bottom: 40px;
 }
 .aboutcircle{
   position: relative;
@@ -274,8 +308,11 @@ header .btn{
 
 .skills-area{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: baseline;
+  max-width: 80%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 .skill{
   text-align: center;
@@ -786,6 +823,8 @@ form .btn{
   border: none;
   padding: 10px 80px;
   font-size: 23px;
+  border-radius: 50px;
+
 }
 @media screen and (max-width:1190px){
   form{
