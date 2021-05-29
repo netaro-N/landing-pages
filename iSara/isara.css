@@ -529,6 +529,7 @@ header .btn{
   background-color: #EBB94D;
   position: relative;
   text-align: center;
+  padding: 20px 0;
 }
 .qacircle{
   background-color: #fff;
@@ -542,7 +543,7 @@ header .btn{
   font-weight: 300;
 }
 .question-wrapper:after {
-  content: " ";
+  content: "";
   height: 0;
   position: absolute;
   width: 0;
@@ -556,13 +557,12 @@ header .btn{
 /* answer */
 .answer-wrapper{
   text-align: center;
-
+  padding: 40px 0;
 }
 .voices-area{
-  max-width: 1170px;
+  max-width: 820px;
   text-align: left;
   margin: 0 auto;
-  padding: 0 15px;
 }
 .voice{
   display: flex;
@@ -571,6 +571,7 @@ header .btn{
   color: #777;
   font-style: italic;
   font-weight: normal;
+  padding: 20px 0;
 }
 .voice-img{
   width: 30%;
@@ -605,6 +606,7 @@ small{
   background-position: center;
   background-size: cover;
   text-align: center;
+  padding: 40px 0;
 }
 .lessons-box{
   display: flex;
@@ -619,6 +621,7 @@ small{
   border-radius: 5px;
   margin: 15px;
   width: 50%;
+  height: 100%; /*これしないと，高さが違うとバグる*/
 }
 .lesson p {
   background-color:#016ea9;
@@ -652,8 +655,13 @@ small{
 .support-wrapper{
   background-color: #2A6EAA;
   text-align: center;
+  padding: 40px 0;
 }
 /* flow */
+.flow-wrapper{
+  padding: 40px 0;
+
+}
 .flow-headding{
   text-align: center;
 }
@@ -675,11 +683,75 @@ small{
   padding: 20px;
   width: 200px;
 }
-
-/* 下でレスポンシブ */
 .sp-detail{
   display: none;
 }
+/* レスポンシブデザイン */
+/* スマホのdetailフロー */
+@media only screen and (min-width: 768px) and (max-width:1190px){
+  .flow-wrapper {
+    padding: 20px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flow-wrapper{
+    padding: 20px 0;
+  }
+  .flow-img, .pctab-detail{
+    display: none;
+  }
+  .sp-detail{
+    display: block;
+    padding: 20px 15px;
+  }
+  .flow-box-sp{
+    background-color: #fef5e0 ;
+    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
+    border-radius: 4px;
+  }
+  .flow-box-sp+.flow-box-sp{
+    margin-top: 5px;
+  }
+  .flow-title-sp{
+    display: flex;
+    align-items: center; /*疑似要素も中央に寄せてくれるね*/
+    padding: 10px 15px;
+    position: relative;
+  }
+  .flow-title-sp img{
+    width: 35px;
+    height: 35px;
+  }
+  .flow-title-sp::after{
+    position: absolute;
+    right: 10px;
+    display: inline-block; /*忘れない！*/
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(./img/angle-down-solid-bk.png); /*背景にすることでサイジング可能*/
+    background-size: contain;/*縦横比維持＋要素サイズ（今回なら20px*20px）いっぱい*/
+    background-repeat: no-repeat;/*繰り返して変な感じにしない*/
+  }
+  .flow-title-sp.active::after{
+    display: inline-block; /*忘れない！*/
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(./img/angle-up-solid-bk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .flow-txt-sp{
+    display: none;
+    padding: 15px;
+  }
+  .flow-txt-sp.in{
+    display: block;
+  }
+}
+
+
 /* bangkok */
 .bangkok-wrapper{
   background-image: url(./img/bg-image/bangkokbg.jpg);
@@ -957,52 +1029,3 @@ footer{
   display: block;
 }
 
-/* レスポンシブデザイン */
-/* スマホのdetailフロー */
-@media screen and (max-width: 768px) {
-  .flow-img, .pctab-detail{
-    display: none;
-  }
-  .sp-detail{
-    display: block;
-  }
-  .flow-box-sp{
-    background-color: #fef5e0 ;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 5%);
-  }
-  .flow-box-sp+.flow-box-sp{
-    margin-top: 5px;
-  }
-  .flow-title-sp{
-    display: flex;
-    align-items: center; /*疑似要素も中央に寄せてくれるね*/
-  }
-  .flow-title-sp img{
-    width: 35px;
-    height: 35px;
-  }
-  .flow-title-sp::after{
-    display: inline-block; /*忘れない！*/
-    width: 20px;
-    height: 20px;
-    content: "";
-    background: url(./img/angle-down-solid.png); /*背景にすることでサイジング可能*/
-    background-size: contain;/*縦横比維持＋要素サイズ（今回なら20px*20px）いっぱい*/
-    background-repeat: no-repeat;/*繰り返して変な感じにしない*/
-  }
-  .flow-title-sp.active::after{
-    display: inline-block; /*忘れない！*/
-    width: 20px;
-    height: 20px;
-    content: "";
-    background: url(./img/angle-up-solid.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  .flow-txt-sp{
-    display: none;
-  }
-  .flow-txt-sp.in{
-    display: block;
-  }
-}
