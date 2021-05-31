@@ -666,7 +666,7 @@ small{
   text-align: center;
 }
 .flow-img{
-  margin: 0 auto;
+  margin: 40px auto;
   max-width: 90%;
 }
 .pctab-detail img{
@@ -687,10 +687,12 @@ small{
   display: none;
 }
 /* レスポンシブデザイン */
-/* スマホのdetailフロー */
 @media only screen and (min-width: 768px) and (max-width:1190px){
   .flow-wrapper {
     padding: 20px 40px;
+  }
+  .flow-line{
+    width: calc(100% - 300px);
   }
 }
 @media screen and (max-width: 768px) {
