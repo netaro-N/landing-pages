@@ -204,6 +204,21 @@ header .btn{
     max-width: 100%;
     height: 62px;
   }
+  .header-left{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .header-logo img{
+    width: 90px;
+  }
+  .header-left .xs{
+    font-size: 10px;
+    padding: 0;
+    letter-spacing: 0;
+  }
   .spview{
     display: block;
     position: absolute;
@@ -227,6 +242,9 @@ header .btn{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.logo{
+  margin: 20px;
 }
 
 @media screen and (max-width:768px){
@@ -762,7 +780,7 @@ small{
   color: #fff;
   padding: 80px 100px;
 }
-@media screen and (min-width:768px) and (max-width:1090px){
+@media screen and (min-width:768px) and (max-width:1190px){
   .bangkok-wrapper{
     padding: 40px 60px;
   }
@@ -817,6 +835,9 @@ small{
   .specials-box-pc{
     flex-direction: column;
   }
+  .special{
+    margin: 15px 0;
+  }
   .circle{
     margin: 0 auto;
   }
@@ -855,6 +876,7 @@ small{
 }
 /* excuse */
 .excuse-wrapper{
+  padding: 40px 0;
   background-image: url(./img/bg-image/specialdetail.jpg);
   background-size: cover;
   background-position: center;
@@ -863,21 +885,28 @@ small{
 .excuse-wrapper p{
   font-weight: normal;
 }
+@media screen and (min-width:768px) and (max-width:1190px){
+  .excuse-wrapper{
+    padding: 40px;
+  }
+}
 @media screen and (max-width:768px){
   .excuse-wrapper{
+    padding: 50px 10px;
     background-image: url(./img/sp-img/specialdetailsp.jpg);
   }
 }
 /* message */
 .message-wrapper{
   margin: 0 auto;
+  padding: 40px 0;
 }
 .message-wrapper h2,.message-wrapper > p{
   text-align: center;
 }
 .founder-box{
   margin: 0 auto;
-  width: 1000px;
+  width: 890px;
   max-width: calc(100% - 40px);
   display: flex;
   font-weight: normal;
@@ -885,10 +914,16 @@ small{
 }
 .founder-img{
   width: 25%;
+  padding: 20px;
 }
 .founder-img img{
   width: 100%;
 }
+.founder-message{
+  width: 75%;
+  padding: 20px;
+}
+
 @media screen and (max-width:992px){
   .founder-box{
     flex-direction: column;
@@ -897,11 +932,19 @@ small{
     width: 100%;
   }
 }
+@media screen and (max-width:768px){
+  .founder-box{
+  max-width: calc(100% - 20px);
+
+  }
+}
+
 
 /* form */
 .form-wrapper{
   background-color:#EBB94D;
   text-align: center;
+  padding: 40px 0;
 }
 form{
   width: 60%;
@@ -941,13 +984,13 @@ form .btn{
   color: #016ea9;
 }
 .qa-wrapper{
-  padding: 40px 10%;
+  padding: 40px 0;
 }
 .qa-wrapper h2{
   text-align: center;
 }
 .qa-wrapper ul{
-  max-width: 100%;
+  max-width: 95%;
   margin: 0 auto;
 }
 .qa-wrapper li{
@@ -1021,11 +1064,19 @@ form .btn{
 footer{
   background-color: #ececec;
   text-align: center;
+  padding: 40px;
 }
 .copyright{
   font-size: 10px;
   font-weight: 300;
 }
+@media screen and (max-width: 768px){
+  footer{
+    padding: 20px;
+  }
+}
+
+
 /* pagetop */
 .pagetop{
   position: fixed;
@@ -1039,5 +1090,13 @@ footer{
 .pagetop .fas{
   /* 親要素の高さを揃えるため */
   display: block;
+}
+@media screen and (max-width: 768px){
+  .pagetop{
+    bottom: 20px;
+    right: 10px;
+    padding: 15px;
+    font-size: 15px;
+  }
 }
 
