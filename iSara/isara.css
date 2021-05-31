@@ -760,10 +760,20 @@ small{
   background-size: cover;
   background-position: center;
   color: #fff;
+  padding: 80px 100px;
+}
+@media screen and (min-width:768px) and (max-width:1090px){
+  .bangkok-wrapper{
+    padding: 40px 60px;
+  }
 }
 @media screen and (max-width:768px){
   .bangkok-wrapper{
     background-image: url(./img/sp-img/bangkokbgsp.jpg);
+    padding: 20px 30px;
+  }
+  .bangkok-wrapper h2{
+    text-align: center;
   }
 }
 
