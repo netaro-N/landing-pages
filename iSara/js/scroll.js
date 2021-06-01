@@ -1,7 +1,7 @@
 $(function () {
 
   //フォームへ飛ぶ機能
-  $('.pcview,spview').click(function () {
+  $('.pcview,.spview').click(function () {
     // ヘッダーが固定なので40くらい余裕を持つ
     var contactPadding = 40;
     var targetTop = $('#contactform').offset().top;
