@@ -179,11 +179,13 @@ header .btn{
 /* ヘッダーのコンテナも含めて，メディアクエリでレスポンシブ設定する */
 .spview{
   display: none;
+  cursor: pointer;
 }
-.spview a{
+.spview p{
   font-size: 12px;
   font-weight: normal;
   color: #fff;
+  padding: 0;
 }
 .contact-btn{
   display: flex;
@@ -274,7 +276,8 @@ header .btn{
 }
 /* 仮 */
 .sns li{
-  background-color: aquamarine;
+  display: flex;
+  margin: 5px;
 }
 @media screen  and (min-width: 768px) and (max-width: 1190px){
   .info-wrapper .btn{
