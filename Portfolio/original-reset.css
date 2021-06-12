@@ -1,5 +1,8 @@
-/* 今回は自分なりに工夫、というか簡略化 */
-/* こちらのサイトから（https://coliss.com/articles/build-websites/operation/css/a-modern-css-reset.html） */
+/* （2021/06/12版） */
+/* こちらのサイトから
+  （https://coliss.com/articles/build-websites/operation/css/a-modern-css-reset.html）
+  font-weightなどはReseter.css参考（https://coliss.com/articles/build-websites/operation/css/reset-and-normalizer-reseter-css.html）
+  */
 
 /* Box sizing rules */
 /* Box sizingの定義 */
@@ -19,6 +22,8 @@ h1,
 h2,
 h3,
 h4,
+h5,/*追加*/
+h6,/*追加*/
 p,
 ul,
 ol,
@@ -32,6 +37,16 @@ dd {
   padding: 0;
 }
 
+/* 追加：font-weight*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
 /* Set core body defaults */
 /* bodyのデフォルトを定義 */
 body {
@@ -39,7 +54,7 @@ body {
   scroll-behavior: smooth;/*スムーズなアンカースクロール*/
   text-rendering: optimizeSpeed;
   line-height: 1.6; /*0.1増,1.5 ~ 2がbetter*/
-  letter-spacing: 0.05em; /*追記,0.05em ~ 0.1emがbetter*/
+  letter-spacing: 0.08em; /*追記,0.05em ~ 0.1emがbetter*/
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -52,9 +67,11 @@ ol {
 /* デコレーションと，訪問済みの色を不変に */
 a {
   text-decoration: none;
-  color: blue;
+  color: #33a5cb; /*テックアカデミー参考*/
 }
-
+a:hover{
+  color: #24738e;
+}
 /* Make images easier to work with */
 /* img要素の扱いを簡単にする */
 img{

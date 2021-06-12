@@ -5,7 +5,7 @@
   }
   body {
     font-size: 1.6rem;
-    line-height: 2;
+    font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Meiryo", sans-serif;
   }
   h2{
     font-size: 2.0rem;
@@ -15,8 +15,14 @@
   }
 /* 全体 */
 body{
-  background: #C3C3C3;
-  /* line-height: 2; */
+  /* この背景色とボーダーはこのサイト参考（https://bitsofco.de/my-css-reset-base/） */
+  background: #f5f5f5;
+  border: 5px solid #ffdb3a;
+}
+@media (max-width:519px){
+  body{
+    border-width: 3px;
+  }
 }
 /* コンテナ内 */
 .container{
