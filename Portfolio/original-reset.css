@@ -67,10 +67,14 @@ ol {
 /* デコレーションと，訪問済みの色を不変に */
 a {
   text-decoration: none;
-  color: #33a5cb; /*テックアカデミー参考*/
+  cursor: pointer;
+  /* テックアカデミー参考 */
+  /* color: #33a5cb;  */
+  color: #157FC0;
+  /* color: #24738e; */
 }
 a:hover{
-  color: #24738e;
+  color: #014896;
 }
 /* Make images easier to work with */
 /* img要素の扱いを簡単にする */
