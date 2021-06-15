@@ -1,4 +1,4 @@
-/* （2021/06/12 版） */
+/* （2021/06/15~版）ver1.2と言える */
 /* こちらのサイトから
   （https://coliss.com/articles/build-websites/operation/css/a-modern-css-reset.html）
   font-weightなどはReseter.css参考（https://coliss.com/articles/build-websites/operation/css/reset-and-normalizer-reseter-css.html）
@@ -72,9 +72,9 @@ a {
   /* color: #33a5cb;  */
   /* medium参考 */
   color:#137ec0;
-  
 }
 a:hover{
+  /* マドリーブルー */
   color: #014896;
   /* テックアカデミー参考 */
   /* color: #24738e; */
@@ -86,28 +86,11 @@ img{
   display: block;
 }
 
-/* Natural flow and rhythm in articles by default */
-/* article要素内の要素に自然な流れとリズムを定義 */
-/* article > * + * {
-  margin-top: 1em;
-} */
-
 /* Inherit fonts for inputs and buttons */
 /* inputやbuttonなどのフォントは継承を定義 */
-/* input,
+input,
 button,
 textarea,
 select {
   font: inherit;
-} */
-
-/* Remove all animations and transitions for people that prefer not to see them */
-/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
-/* @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-} */
+}

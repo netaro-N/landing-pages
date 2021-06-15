@@ -17,6 +17,7 @@
 body{
   /* この背景色とボーダーはこのサイト参考（https://bitsofco.de/my-css-reset-base/） */
   background: #f5f5f5;
+  /* マドリーイエロ */
   border: 5px solid #fcbf00;    /*こっちは少し明るい #ffdb3a*/
 }
 @media (max-width:519px){
