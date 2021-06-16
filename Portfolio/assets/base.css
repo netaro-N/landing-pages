@@ -23,6 +23,7 @@ header{
   width: calc(100% - 10px);
   z-index: 10;
   border-top: 5px solid #fcbf00;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2);
 }
 @media (max-width:519px){
   header{
@@ -40,5 +41,5 @@ header{
 
 .main-wrapper{
   margin-top: 80px;
-  height: 1000px;
+  height: 500px;
 }
