@@ -1,7 +1,21 @@
 /* ==========================================================================
    ベース
    ========================================================================== */
-
+html {
+  font-size: 15px;
+}
+/* 520px以降（Tabサイズ）から、88pxごとに1px大きくなる */
+@media (min-width: 520px) {
+  html{
+    font-size: calc(93.75% + 5 * (100vw - 520px) / 440);
+  }
+}
+/* 960px以上（PCサイズ）は、20pxに */
+@media (min-width: 960px) {
+  html{
+    font-size: calc(125%);
+  }
+}
 body {
   /* 「BIZ UDPゴシック」をWindowsで指定 */
   font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic","Meiryo", sans-serif;
@@ -22,6 +36,7 @@ header{
   top: 0;
   width: calc(100% - 10px);
   z-index: 10;
+  background:inherit;
   border-top: 5px solid #fcbf00;
   box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2);
 }
