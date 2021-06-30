@@ -22,7 +22,41 @@
     </div>
   </header>
   <div class="main-wrapper">
-    <div class="">ここにカルーセル</div>
+    <div class='carousel-wrapper'>
+      <div class="carousel-item top1">
+        <div class="carousel-container">
+          <div class="heading-box">
+            <h1>①トップ画像</h1>
+            <p class="subtitle">これはユルキのポートフォリオページです</p>
+            <div class="h-link">テキスト</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item top2">
+        <div class="carousel-container">
+          <div class="heading-box">
+            <h1>②リンク</h1>
+            <p class="subtitle">SNSやクラウドソーシングのリンク</p>
+            <div class="h-link">多分ここリンク</div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item top3">
+        <div class="carousel-container">
+          <div class="heading-box">
+            <h1>③プロフィール</h1>
+            <p class="subtitle">ユルキのプロフィール</p>
+            <div class="h-link">スキルセットなど</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class='btn-prev'>前</button>
+    <button class='btn-next'>次</button>
+    <ul id="paging"></ul>
+
   </div>
   <div class="model-wrapper">
     <h2>ポートフォリオ一覧</h2>
@@ -61,6 +95,8 @@
   <div id="pagetop" class="pagetop">
     <i class="fas fa-chevron-up" aria-hidden="true"></i>
   </div>
+
+  <script src="./assets/js/carousel.js"></script>
 </body>
 
 </html>
