@@ -1,6 +1,9 @@
 /* ==========================================================================
    ベース
    ========================================================================== */
+   
+/* フォントサイズ
+   ========================================================================== */
 html {
   font-size: 15px;
 }
@@ -16,6 +19,17 @@ html {
     font-size: calc(125%);
   }
 }
+/* mediaクエリの下に書くことで，レスポンシブ対応 */
+.l{
+  font-size: 1.4rem;
+}
+.s{
+  font-size: 0.8rem;
+}
+.xs{
+  font-size: 0.7rem;
+}
+
 body {
   /* 「BIZ UDPゴシック」をWindowsで指定 */
   font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic","Meiryo", sans-serif;
