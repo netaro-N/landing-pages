@@ -175,9 +175,23 @@ button {
 }
 
 /* ==========================================================================
-   
+   コンタクト＆privacyポリシー
    ========================================================================== */
+.others-wrapper{
+  padding: 80px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #fcbf00;
+}
+.other-box{
 
+}
+.btn-box{
+  border: #000 1px solid;
+  padding: 16px 70px 16px 30px;
+  display: block;
+}
 
 /* ==========================================================================
    footer
