@@ -163,15 +163,44 @@ button {
    ========================================================================== */
 .model-wrapper{
   text-align: center;
+  padding: 30px;
 }
 .link-area{
   display: flex;
   justify-content: space-evenly;
+  margin: 20px;
 }
 .link-box{
   border: #fcbf00 solid 2px;
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
+}
+@media (max-width: 959px){
+  .model-wrapper{
+    padding: 20px 0;
+  }
+  .link-area{
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .link-box{
+    height: 160px;
+    width: 160px;
+  }
+}
+@media (max-width: 520px){
+  .model-wrapper{
+    padding: 20px 10px;
+  }
+  .link-area{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .link-box{
+    height: 50px;
+    width: 100%;
+  }
 }
 
 /* ==========================================================================
