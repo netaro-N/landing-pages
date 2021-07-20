@@ -171,6 +171,8 @@ button {
   margin: 20px;
 }
 .link-box{
+  /* Flexアイテムにはなるが，念のために */
+  display: block;
   border: #fcbf00 solid 2px;
   height: 250px;
   width: 250px;
@@ -188,9 +190,9 @@ button {
     width: 160px;
   }
 }
-@media (max-width: 520px){
+@media (max-width: 519px){
   .model-wrapper{
-    padding: 20px 10px;
+    padding: 20px;
   }
   .link-area{
     flex-direction: column;
@@ -213,13 +215,22 @@ button {
   justify-content: space-evenly;
   background-color: #fcbf00;
 }
-.other-box{
-
-}
 .btn-box{
   border: #000 1px solid;
   padding: 16px 70px 16px 30px;
   display: block;
+}
+@media (max-width:959px) {
+  .others-wrapper{
+    padding: 60px 20px;
+    justify-content: space-around;
+  }
+}
+@media (max-width:519px){
+  .others-wrapper{
+    padding: 20px;
+    flex-direction: column;
+  }
 }
 
 /* ==========================================================================
