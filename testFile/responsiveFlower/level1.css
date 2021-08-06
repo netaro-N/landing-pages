@@ -1,0 +1,9 @@
+.canvas-container{
+  max-width: 1000px;
+  height: 500px;
+}
+canvas { 
+  width: 100%;
+  background:url(http://www.otwo.jp/blog/demo/canvas/images/web/bg.jpg);
+  background-size: 100% 100%;
+}
