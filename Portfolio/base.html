@@ -25,7 +25,12 @@
   </header>
   <div class="main-wrapper">
     <div class='carousel-wrapper'>
-      <div id="canvas-container" class="carousel-item top1">
+      <div id="canvas-container" class="carousel-item">
+        <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
+          <canvas id="cvs" ></canvas>
+      </div>
+
+      <div class="carousel-item top1">
         <div class="carousel-container">
           <div class="heading-box">
             <h1>①トップ画像</h1>
@@ -128,6 +133,7 @@
 
   <script src="./assets/js/carousel.js"></script>
   <script src="./assets/js/scroll.js"></script>
+  <script src="./assets/js/step1-2.js"></script>
 </body>
 
 </html>
