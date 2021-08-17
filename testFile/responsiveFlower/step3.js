@@ -8,6 +8,8 @@ var aspectMax = 1.5;      // アスペクト比計算時の最大値
 var aspectMin = 0.5;      // アスペクト比計算時の最小値
 var speedMax = 2;         // 落下速度の最大値
 var speedMin = 0.5;       // 落下速度の最小値
+// step3
+var angleAdd = 4;         // 画像角度への加算値
 
 // 画像用の親要素幅高取得 clientWidth要勉
 // キャンバス幅と高さを初期設定 キャンバスの幅canvas.width要勉
@@ -43,7 +45,8 @@ function setImagas(){
       "sizew": imgBaseSizeW*aspect, // 画像の幅
       "sizeh": imgBaseSizeH*aspect, // 画像の高さ
       "aspect": aspect, //念の為アスペクト比保持
-      "speedy": Math.random()*(speedMax-speedMin)+speedMin// 画像が落ちていく速度
+      "speedy": Math.random()*(speedMax-speedMin)+speedMin, // 画像が落ちていく速度
+      "angle": Math.random()*360   // 角度
     });
   }
 
@@ -61,7 +64,27 @@ function flow(){
       aryImg[idx].posy = -aryImg[idx].sizeh;
     }
   }
-
+}
+// 描画、パラメーターの更新
+var idx = 0;
+var cos = 0;
+var sin = 0;
+var rad = Math.PI / 180;
+function flow(){
+  ctx.clearRect(0,0,cvsw,cvsh);
+  for(idx = 0;idx < imgCnt;idx++){
+    aryImg[idx].posy += aryImg[idx].speedy;
+    aryImg[idx].angle += Math.random()*angleAdd;
+    cos = Math.cos(aryImg[idx].angle * rad);
+    sin = Math.sin(aryImg[idx].angle * rad);
+    ctx.setTransform(cos, sin, sin, cos, aryImg[idx].posx, aryImg[idx].posy);
+    ctx.drawImage(img, 0, 0 , aryImg[idx].sizew , aryImg[idx].sizeh);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    // 範囲外に描画された画像を上に戻す
+    if(aryImg[idx].posy >= cvsh){
+      aryImg[idx].posy = -aryImg[idx].sizeh;
+    }
+  }
 }
 
 function flow_start(){
