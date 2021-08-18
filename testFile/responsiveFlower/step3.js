@@ -54,19 +54,6 @@ function setImagas(){
 
 // 描画、パラメーターの更新
 var idx = 0;
-function flow(){
-  ctx.clearRect(0,0,cvsw,cvsh);
-  for(idx = 0;idx < imgCnt;idx++){
-    aryImg[idx].posy += aryImg[idx].speedy;
-    ctx.drawImage(img, aryImg[idx].posx, aryImg[idx].posy, aryImg[idx].sizew , aryImg[idx].sizeh);
-    // 範囲外に描画された画像を上に戻す
-    if(aryImg[idx].posy >= cvsh){
-      aryImg[idx].posy = -aryImg[idx].sizeh;
-    }
-  }
-}
-// 描画、パラメーターの更新
-var idx = 0;
 var cos = 0;
 var sin = 0;
 var rad = Math.PI / 180;
