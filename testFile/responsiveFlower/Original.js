@@ -11,6 +11,7 @@ var speedMin = 0.5;       // 落下速度の最小値
 // step3
 var angleAdd = 4;         // 画像角度への加算値
 // Ori
+var aryCloud = []; //雲画像の情報を格納
 var wind = 30;
 var newWind = 0;
 var windMax = 60;
@@ -87,14 +88,14 @@ function flow(){
       }
     }
   }
-  // //以下，雲アニメなので一旦外す
-  // for(idxc = 0;idxc < aryCloud.length;idxc++){
-  //   ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , aryCloud[idxc].img.width , aryCloud[idxc].img.height);
-  //   aryCloud[idxc].posx += aryCloud[idxc].speed / 15;
-  //   if(aryCloud[idxc].posx > cvsw){
-  //     aryCloud[idxc].posx = -aryCloud[idxc].img.width;
-  //   }
-  // }
+  //以下，雲アニメなので一旦外す
+  for(idxc = 0;idxc < aryCloud.length;idxc++){
+    ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , aryCloud[idxc].img.width , aryCloud[idxc].img.height);
+    aryCloud[idxc].posx += aryCloud[idxc].speed / 15;
+    if(aryCloud[idxc].posx > cvsw){
+      aryCloud[idxc].posx = -aryCloud[idxc].img.width;
+    }
+  }
 }
 
 // 風のスピード
@@ -107,55 +108,57 @@ function windowChange(){
   },10);
 }
 
-function flow_start(){
-  setImagas();
-  setInterval(windowChange,3000);
-  setInterval(flow,dropspeed);
-}
+// function flow_start(){
+//   setImagas();
+//   setInterval(windowChange,3000);
+//   setInterval(flow,dropspeed);
+// }
 
 // 雲の描画があるので一旦外す
-// function flow_start(){
-//   var cnt = cWidth = cHeight = 0;
-//   clouds = ["http://www.otwo.jp/blog/demo/canvas/images/web/cloud_01.png","http://www.otwo.jp/blog/demo/canvas/images/web/cloud_02.png","http://www.otwo.jp/blog/demo/canvas/images/web/cloud_03.png"];
-//   for(var cl = 0;cl < clouds.length;cl++){
-//     var img2 = new Image;
-//     img2.src = clouds[cl];
-//     switch (cl) {
-//       case 0:
-//         cWidth = 150;
-//         cHeight = -10;
-//       break;
-//       case 1:
-//         cWidth = 300;
-//         cHeight = 400;
-//       break;
-//       case 2:
-//         cWidth = -300;
-//         cHeight = 100;
-//       break;
-//     }
-//     aryCloud[cl] = {
-//       "img" : img2,
-//       "posx" : cWidth,
-//       "posy" : cHeight,
-//       "speed" : Math.random(),
-//     };
-//     aryCloud[cl].img.onload = function(){
-//       cnt++;
-//       if(cnt == clouds.length){
-//         setImagas();
-//         setInterval(windowChange,3000);
-//         setInterval(flow,dropspeed);
-//       }
-//     }
-//   }
-// }
+function flow_start(){
+  var cnt = cWidth = cHeight = 0;
+  clouds = ["./cloud_01.png","./cloud_02.png","./cloud_03.png"];
+  for(var cl = 0;cl < clouds.length;cl++){
+    var img2 = new Image;
+    img2.src = clouds[cl];
+    switch (cl) {
+      case 0:
+        cWidth = 150;
+        cHeight = -10;
+      break;
+      case 1:
+        cWidth = 300;
+        cHeight = 400;
+      break;
+      case 2:
+        cWidth = -300;
+        cHeight = 100;
+      break;
+    }
+    aryCloud[cl] = {
+      "img" : img2,
+      "posx" : cWidth,
+      "posy" : cHeight,
+      "speed" : Math.random(),
+    };
+    aryCloud[cl].img.onload = function(){
+      cnt++;
+      if(cnt == clouds.length){
+        setImagas();
+        setInterval(windowChange,3000);
+        setInterval(flow,dropspeed);
+      }
+    }
+  }
+}
 
 // リサイズ時
 window.onresize = function(){
-
+  // canvas.width = container.clientWidth;   // 【可変】親要素の幅
+  // canvas.height = container.clientHeight;   // 【準固定】親要素の高さ
   var cvsw = container.clientWidth;   
   var imgBaseSizeW = 15/1000*cvsw;
+  console.log(imgBaseSizeW);
   var imgBaseSizeH = imgBaseSizeW*1.25;
   for(idx = 0;idx < imgCnt;idx++){
     aryImg[idx].sizew = imgBaseSizeW * aryImg[idx].aspect;
