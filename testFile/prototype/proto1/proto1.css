@@ -1,9 +1,9 @@
 .canvas-container{
-  max-width: 1500px;
+  background-color: cornflowerblue;
   /* 高さはメディアクエリでレスポンシブに */
   height: 500px;
 }
-@media (max-width:800px){
+@media (max-width:1000px){
   .canvas-container{
     height: 300px;
   }
@@ -14,6 +14,4 @@ canvas {
   width: 100%;
   /* 高さは固定することで，カルーセルなどで幅だけ可変 */
   height: 100%;
-  background:url(http://www.otwo.jp/blog/demo/canvas/images/web/bg.jpg);
-  background-size: 100% 100%;
 }

@@ -17,12 +17,19 @@ var newWind = 0;
 var windMax = 60;
 var windMin = 5;
 
+var cvsSize = []; //キャンバスのサイズを格納（幅，高さ）
+
 // 画像用の親要素幅高取得 clientWidth要勉
 // キャンバス幅と高さを初期設定 キャンバスの幅canvas.width要勉
 canvas.width = container.clientWidth;   // 【可変】親要素の幅
 canvas.height = container.clientHeight;   // 【準固定】親要素の高さ(ここもビューポートによってレスポンシブなのでリサイズ時に常に取得)
 var cvsw = canvas.width;   // キャンバスの幅canvas.width要勉
 var cvsh = canvas.height;   // キャンバスの高さ
+cvsSize.push({
+  "cvsw" : cvsw,
+  "cvsh" : cvsh
+});
+console.log(cvsSize[0]);
 var imgBaseSizeW = 15/1000*cvsw;    // 画像の基本サイズ横幅(1000のとき15)
 var imgBaseSizeH = imgBaseSizeW*1.25;  // 画像の基本サイズ立幅(幅1000のとき18.5)
 
@@ -46,8 +53,8 @@ function setImagas(){
     // 画像サイズに掛けるアスペクト比を0.5~1.5倍でランダムで生成
     aspect = Math.random()*(aspectMax-aspectMin)+aspectMin;
     aryImg.push({
-      "posx": Math.random()*cvsw,   // 初期表示位置x
-      "posy": Math.random()*cvsh,   // 初期表示位置y
+      "posx": Math.random()*cvsSize[0].cvsw,   // 初期表示位置x
+      "posy": Math.random()*cvsSize[0].cvsh,   // 初期表示位置y
       "sizew": imgBaseSizeW*aspect, // 画像の幅
       "sizeh": imgBaseSizeH*aspect, // 画像の高さ
       "aspect": aspect, //念の為アスペクト比保持
@@ -65,7 +72,7 @@ var cos = 0;
 var sin = 0;
 var rad = Math.PI / 180;
 function flow(){
-  ctx.clearRect(0,0,cvsw,cvsh);
+  ctx.clearRect(0,0,cvsSize[0].cvsw,cvsSize[0].cvsh);
   for(idx = 0;idx < imgCnt;idx++){
     aryImg[idx].posx += wind/aryImg[idx].sizew;
     aryImg[idx].posy += aryImg[idx].speedy;
@@ -75,13 +82,13 @@ function flow(){
     ctx.setTransform(cos, sin, sin, cos, aryImg[idx].posx, aryImg[idx].posy);
     ctx.drawImage(img, 0, 0 , aryImg[idx].sizew , aryImg[idx].sizeh);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    if(aryImg[idx].posy >= cvsh){
+    if(aryImg[idx].posy >= cvsSize[0].cvsh){
       aryImg[idx].posy = -aryImg[idx].sizeh;
       if(imgCnt < idx){
         aryImg.splice(idx, 1);
       }
     }
-    if(aryImg[idx].posx >= cvsw){
+    if(aryImg[idx].posx >= cvsSize[0].cvsw){
       aryImg[idx].posx = -aryImg[idx].sizew;
       if(imgCnt < idx){
         aryImg.splice(idx, 1);
@@ -92,7 +99,7 @@ function flow(){
   for(idxc = 0;idxc < aryCloud.length;idxc++){
     ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , aryCloud[idxc].img.width , aryCloud[idxc].img.height);
     aryCloud[idxc].posx += aryCloud[idxc].speed / 15;
-    if(aryCloud[idxc].posx > cvsw){
+    if(aryCloud[idxc].posx > cvsSize[0].cvsw){
       aryCloud[idxc].posx = -aryCloud[idxc].img.width;
     }
   }
@@ -139,7 +146,8 @@ function flow_start(){
       "img" : img2,
       "posx" : cWidth,
       "posy" : cHeight,
-      "speed" : Math.random(),
+      // "speed" : Math.random(),
+      "speed" : 1,
     };
     aryCloud[cl].img.onload = function(){
       cnt++;
@@ -154,11 +162,11 @@ function flow_start(){
 
 // リサイズ時
 window.onresize = function(){
-  // canvas.width = container.clientWidth;   // 【可変】親要素の幅
-  // canvas.height = container.clientHeight;   // 【準固定】親要素の高さ
-  var cvsw = container.clientWidth;   
-  var imgBaseSizeW = 15/1000*cvsw;
-  console.log(imgBaseSizeW);
+  canvas.width = container.clientWidth;   // 【可変】親要素の幅
+  canvas.height = container.clientHeight;   // 【準固定】親要素の高さ
+  cvsSize[0].cvsw = canvas.width;
+  cvsSize[0].cvsh = canvas.height;
+  var imgBaseSizeW = 15/1000*cvsSize[0].cvsw;
   var imgBaseSizeH = imgBaseSizeW*1.25;
   for(idx = 0;idx < imgCnt;idx++){
     aryImg[idx].sizew = imgBaseSizeW * aryImg[idx].aspect;
