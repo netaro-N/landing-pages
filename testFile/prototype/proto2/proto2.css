@@ -1,0 +1,17 @@
+.canvas-container{
+  background-color: cornflowerblue;
+  /* 高さはメディアクエリでレスポンシブに */
+  height: 500px;
+}
+@media (max-width:1000px){
+  .canvas-container{
+    height: 300px;
+  }
+}
+
+canvas { 
+  /* canvasをhtml要素として高幅を指定することによって背景をレスポンシブにする */
+  width: 100%;
+  /* 高さは固定することで，カルーセルなどで幅だけ可変 */
+  height: 100%;
+}
