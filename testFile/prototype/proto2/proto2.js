@@ -29,7 +29,7 @@ cvsSize.push({
   "cvsw" : cvsw,
   "cvsh" : cvsh
 });
-console.log(cvsSize[0]);
+// console.log(cvsSize[0]);
 var imgBaseSizeW = 15/1000*cvsw;    // 画像の基本サイズ横幅(1000のとき15)
 var imgBaseSizeH = imgBaseSizeW*1.25;  // 画像の基本サイズ立幅(幅1000のとき18.5)
 
@@ -97,10 +97,12 @@ function flow(){
   }
   //以下，雲アニメなので一旦外す
   for(idxc = 0;idxc < aryCloud.length;idxc++){
-    ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , aryCloud[idxc].img.width , aryCloud[idxc].img.height);
+    // ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , aryCloud[idxc].img.width , aryCloud[idxc].img.height);
+    ctx.drawImage(aryCloud[idxc].img, aryCloud[idxc].posx, aryCloud[idxc].posy , cvsSize[0].cvsw * 0.4 , (cvsSize[0].cvsw * 0.4) * (aryCloud[idxc].img.height / aryCloud[idxc].img.width) );
     aryCloud[idxc].posx += aryCloud[idxc].speed / 15;
     if(aryCloud[idxc].posx > cvsSize[0].cvsw){
-      aryCloud[idxc].posx = -aryCloud[idxc].img.width;
+      // aryCloud[idxc].posx = -aryCloud[idxc].img.width;
+      aryCloud[idxc].posx = -cvsSize[0].cvsw * 0.4;
     }
   }
 }
@@ -114,12 +116,6 @@ function windowChange(){
     }
   },10);
 }
-
-// function flow_start(){
-//   setImagas();
-//   setInterval(windowChange,3000);
-//   setInterval(flow,dropspeed);
-// }
 
 // 雲の描画があるので一旦外す
 function flow_start(){
@@ -172,5 +168,7 @@ window.onresize = function(){
     aryImg[idx].sizew = imgBaseSizeW * aryImg[idx].aspect;
     aryImg[idx].sizeh = aryImg[idx].sizew *1.25;
   }
-
+  // for(idxc = 0;idxc < aryCloud.length;idxc++){
+  //   aryCloud[idxc].img.width = cvsSize[0].cvsw * 0.3;
+  // }
 }
