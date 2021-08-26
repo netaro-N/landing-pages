@@ -126,16 +126,19 @@ function flow_start(){
     img2.src = clouds[cl];
     switch (cl) {
       case 0:
-        cWidth = 150;
+        // cWidth = 150;
+        cWidth = canvas.width/4;
         cHeight = -10;
       break;
       case 1:
-        cWidth = 300;
-        cHeight = 400;
+        // cWidth = 300;
+        cWidth = canvas.width/2;
+        cHeight = canvas.height * 3/5;
       break;
       case 2:
-        cWidth = -300;
-        cHeight = 100;
+        // cWidth = -300;
+        cWidth = -canvas.width * 0.4 /2;
+        cHeight = canvas.height * 1/5;
       break;
     }
     aryCloud[cl] = {
