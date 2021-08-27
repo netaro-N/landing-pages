@@ -77,19 +77,26 @@ header{
   margin-top: 40px;
 }
 /* アニメ */
+#canvas-container{
+  background-color: midnightblue;
+}
 canvas { 
   /* canvasをhtml要素として高幅を指定することによって背景をレスポンシブにする */
   width: 100%;
   /* 高さは固定することで，カルーセルなどで幅だけ可変 */
   height: 100%;
-  background:url(http://www.otwo.jp/blog/demo/canvas/images/web/bg.jpg);
-  background-size: 100% 100%;
+  /* background:url(http://www.otwo.jp/blog/demo/canvas/images/web/bg.jpg);
+  background-size: 100% 100%; */
 }
 
 /* 以下カルーセルのデザイン */
 .carousel-item{
-  /* max-width: 1300px; */
-  height: 400px;
+  height: 500px;
+}
+@media (max-width:1279px){
+  .carousel-item{
+    height: 400px;
+  }
 }
 @media (max-width:519px){
   .carousel-item{
