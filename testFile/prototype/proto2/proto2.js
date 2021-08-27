@@ -120,7 +120,7 @@ function windowChange(){
 // 雲の描画があるので一旦外す
 function flow_start(){
   var cnt = cWidth = cHeight = 0;
-  clouds = ["./cloud_01.png","./cloud_02.png","./cloud_03.png"];
+  clouds = ["./cloud_1.png","./cloud_2.png","./cloud_3.png"];
   for(var cl = 0;cl < clouds.length;cl++){
     var img2 = new Image;
     img2.src = clouds[cl];
@@ -133,7 +133,7 @@ function flow_start(){
       case 1:
         // cWidth = 300;
         cWidth = canvas.width/2;
-        cHeight = canvas.height * 3/5;
+        cHeight = canvas.height * 2/5;
       break;
       case 2:
         // cWidth = -300;
