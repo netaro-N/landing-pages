@@ -79,6 +79,11 @@ header{
 /* アニメ */
 #canvas-container{
   background-color: midnightblue;
+  position: relative;
+}
+#canvas-container p{
+  position: absolute;
+  color: #fcbf00;
 }
 canvas { 
   /* canvasをhtml要素として高幅を指定することによって背景をレスポンシブにする */
