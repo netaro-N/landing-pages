@@ -67,6 +67,9 @@ header{
   /* このheightを指定しないと，transitionが適用されない */
   height: 70px;
 }
+header.scroll-nav{
+  opacity: 0.7;
+}
 header.scroll-nav .logo{
   height: 30px;
 }
@@ -86,7 +89,7 @@ header.scroll-nav .logo{
    ========================================================================== */
 .main-wrapper{
   position: relative;
-  margin-top: 40px;
+  margin-top: 70px;
   padding-bottom: 50px;
 }
 /* アニメ */
