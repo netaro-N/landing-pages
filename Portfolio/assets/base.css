@@ -76,6 +76,7 @@ header.scroll-nav .logo{
 .header-container{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   width: 1170px;
   max-width: calc(100% - 20px);
@@ -84,12 +85,30 @@ header.scroll-nav .logo{
   display: flex;
   align-items: center;
 }
+.header-right ul{
+  display: flex;
+
+}
+.nav-list{
+  border: #fcbf00 solid 2px;
+}
+.nav-list:not(:last-child){
+  margin-right: 1.5rem;
+}
+.nav-list a{
+  transition: 0.5s;
+  display: inline-block;
+  padding: 1rem 0;
+}
+header.scroll-nav a{
+  padding: 0;
+}
 /* ==========================================================================
    メイン，カルーセル
    ========================================================================== */
 .main-wrapper{
   position: relative;
-  margin-top: 70px;
+  margin-top: 72px;
   padding-bottom: 50px;
 }
 /* アニメ */

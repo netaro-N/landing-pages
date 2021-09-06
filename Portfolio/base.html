@@ -26,13 +26,19 @@
         <img class="logo" src="./images/site-tile-70x70.png" alt="ロゴ">
         <p class="s">ユルキのポートフォリオ</p>
       </div>
-      <div class="header-right">メニュー</div>
+      <div class="header-right">
+        <ul>
+          <li class="nav-list"><a href="">Twitter</a></li>
+          <li class="nav-list"><a href="">ブログ</a></li>
+          <li class="nav-list"><a href="">コンタクト</a></li>
+        </ul>
+      </div>
     </div>
   </header>
   <div class="main-wrapper">
     <div class='carousel-wrapper'>
       <div id="canvas-container" class="carousel-item">
-        <p>このアニメーションは</p>
+        <p>このアニメーションは，htmlのcanvasによって描画されています。動画ファイルではありません。</p>
         <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
         <canvas id="cvs"></canvas>
       </div>
