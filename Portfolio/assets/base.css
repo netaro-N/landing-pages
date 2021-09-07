@@ -120,7 +120,7 @@ header.scroll-nav ul{
 }
 /* アニメ */
 #canvas-container{
-  background-color: steelblue;
+  background-color: lightslategray;
   position: relative;
 }
 #canvas-container p{
