@@ -63,7 +63,7 @@ header{
   }
 }
 .logo{
-  transition: 0.5s;
+  transition: 0.3s;
   /* このheightを指定しないと，transitionが適用されない */
   height: 70px;
 }
@@ -87,21 +87,28 @@ header.scroll-nav .logo{
 }
 .header-right ul{
   display: flex;
-
-}
-.nav-list{
-  border: #fcbf00 solid 2px;
+  height: 60px;
 }
 .nav-list:not(:last-child){
   margin-right: 1.5rem;
 }
 .nav-list a{
-  transition: 0.5s;
-  display: inline-block;
-  padding: 1rem 0;
+  transition: 0.3s;
+  display: block;
+  padding: 1rem;
+  color: rgba(0,0,0,.5);
+}
+.nav-list:hover{
+  border-bottom: #fcbf00 solid 2px;
+}
+.nav-list:hover a{
+  color: rgba(0,0,0,.9);
 }
 header.scroll-nav a{
   padding: 0;
+}
+header.scroll-nav ul{
+  height: 25px;
 }
 /* ==========================================================================
    メイン，カルーセル
@@ -113,7 +120,7 @@ header.scroll-nav a{
 }
 /* アニメ */
 #canvas-container{
-  background-color: midnightblue;
+  background-color: steelblue;
   position: relative;
 }
 #canvas-container p{

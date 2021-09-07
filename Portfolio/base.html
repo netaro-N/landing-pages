@@ -27,7 +27,7 @@
         <p class="s">ユルキのポートフォリオ</p>
       </div>
       <div class="header-right">
-        <ul>
+        <ul class="s">
           <li class="nav-list"><a href="">Twitter</a></li>
           <li class="nav-list"><a href="">ブログ</a></li>
           <li class="nav-list"><a href="">コンタクト</a></li>
@@ -157,8 +157,10 @@
     window.addEventListener("scroll", function () {
       var header = document.querySelector("header");
       var logo = document.querySelector("header p");
+      var li = document.querySelector("header ul");
       header.classList.toggle("scroll-nav", window.scrollY > 0);
       logo.classList.toggle("xs", window.scrollY > 0);
+      li.classList.toggle("xs", window.scrollY > 0);
     });
   </script>
 </body>
