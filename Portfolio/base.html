@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ユルキのポートフォリオ</title>
+  <!-- ウェブフォントとして，Googleのマテリアルアイコンを用いる（https://google.github.io/material-design-icons/#icon-font-for-the-web） -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- favicon -->
   <link rel="icon" href="./images/favicon/favicon.ico" id="favicon">
   <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon-180x180.png">
@@ -13,6 +15,7 @@
   <link rel="stylesheet" href="assets/reset.css">
   <!-- スタイルシート -->
   <link rel="stylesheet" href="assets/base.css">
+  <link rel="stylesheet" href="assets/header.css">
   <!-- jQuery Google CDN（2021/05/08時点） -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- font-awesome (2021/05/08時点，製作者のアカウントKIT使用) -->
@@ -21,20 +24,39 @@
 
 <body>
   <header>
-    <div class="header-container">
-      <div class="header-left">
-        <img class="logo" src="./images/site-tile-70x70.png" alt="ロゴ">
-        <p class="s">ユルキのポートフォリオ</p>
-      </div>
-      <div class="header-right">
+
+    <div class="header-left">
+      <img class="logo" src="./images/site-tile-70x70.png" alt="ロゴ">
+      <h1>ユルキのポートフォリオ</h1>
+    </div>
+    <div class="pc-menu">
+      <nav>
         <ul class="s">
           <li class="nav-list"><a href="">Twitter</a></li>
           <li class="nav-list"><a href="">ブログ</a></li>
           <li class="nav-list"><a href="">コンタクト</a></li>
         </ul>
-      </div>
+      </nav>
+    </div>
+
+    <div class="sp-menu">
+      <span class="material-icons" id="open">menu</span>
     </div>
   </header>
+
+
+  <div class="overlay">
+    <span class="material-icons" id="close">close</span>
+    <nav>
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Menu</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
   <div class="main-wrapper">
     <div class='carousel-wrapper'>
       <div id="canvas-container" class="carousel-item">
@@ -66,7 +88,8 @@
     <!-- <button class='btn-prev'>前</button>
     <button class='btn-next'>次</button> -->
     <div class="btn btn-prev">
-      <svg class="car-btn" version="1.0" xmlns="http://www.w3.org/2000/svg" width="18.000000pt" height="35.000000pt" viewBox="0 0 18.000000 35.000000" preserveAspectRatio="xMidYMid meet">
+      <svg class="car-btn" version="1.0" xmlns="http://www.w3.org/2000/svg" width="18.000000pt" height="35.000000pt"
+        viewBox="0 0 18.000000 35.000000" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,35.000000) scale(0.100000,-0.100000)">
           <path d="M87 262 l-87 -87 92 -90 93 -90 -83 85 c-45 47 -82 90 -82 95 0 5 37
 47 82 92 46 46 80 83 78 83 -3 0 -45 -39 -93 -88z" />
@@ -74,7 +97,8 @@
       </svg>
     </div>
     <div class="btn btn-next">
-      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="36.000000pt" viewBox="0 0 20.000000 36.000000" preserveAspectRatio="xMidYMid meet">
+      <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="20.000000pt" height="36.000000pt"
+        viewBox="0 0 20.000000 36.000000" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,36.000000) scale(0.100000,-0.100000)">
           <path d="M90 271 l95 -91 -95 -91 c-73 -70 -79 -77 -25 -31 39 33 83 74 99 91
      l30 31 -30 31 c-16 17 -60 58 -99 91 -54 46 -48 39 25 -31z" />
@@ -152,17 +176,8 @@
 
   <script src="./assets/js/carousel.js"></script>
   <script src="./assets/js/scroll.js"></script>
-  <script src="./assets/js/blow.js"></script>
-  <script>
-    window.addEventListener("scroll", function () {
-      var header = document.querySelector("header");
-      var logo = document.querySelector("header p");
-      var li = document.querySelector("header ul");
-      header.classList.toggle("scroll-nav", window.scrollY > 0);
-      logo.classList.toggle("xs", window.scrollY > 0);
-      li.classList.toggle("xs", window.scrollY > 0);
-    });
-  </script>
+  <script src="./assets/js/header.js"></script>
+  <!-- <script src="./assets/js/blow.js"></script> -->
 </body>
 
 </html>
