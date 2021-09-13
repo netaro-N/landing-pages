@@ -27,8 +27,10 @@
 
 //ヘッダーアニメーション
   window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
+    const header = document.querySelector("header");
+    const main = document.querySelector(".main-wrapper");
     header.classList.toggle("scroll-nav", window.scrollY > 0);
     close.classList.toggle("scroll-nav", window.scrollY > 0);
+    main.classList.toggle("scroll", window.scrollY > 0);
   });
 }

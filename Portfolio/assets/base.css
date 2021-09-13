@@ -116,8 +116,13 @@ header.scroll-nav ul{
    ========================================================================== */
 .main-wrapper{
   position: relative;
-  margin-top: 72px;
+  margin-top: 65px;
   padding-bottom: 50px;
+  transition: margin-top .3s;
+
+}
+.main-wrapper.scroll{
+  margin-top: 33px;
 }
 /* アニメ */
 #canvas-container{

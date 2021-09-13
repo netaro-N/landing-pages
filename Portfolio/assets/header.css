@@ -28,7 +28,7 @@ header img {
 
 }
 header.scroll-nav img{
-  height: 20px;
+  height: 25px;
 }
 
 header h1{
@@ -53,7 +53,7 @@ header.scroll-nav h1{
   transition: line-height .3s, font-size .3s;
 }
 header.scroll-nav .sp-menu #open {
-  font-size: 16px;
+  font-size: 25px;
   line-height: 32px;
 }
 
@@ -84,16 +84,16 @@ header.scroll-nav .sp-menu #open {
 
 .overlay #close {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 19px;
+  right: 19px;
   font-size: 32px;
   cursor: pointer;
   transition: line-height .3s, font-size .3s;
 }
 .overlay #close.scroll-nav {
   top: 8px;
-  right: 16px;
-  font-size: 16px;
+  right: 19px;
+  font-size: 25px;
 }
 
 .overlay ul {
@@ -153,12 +153,12 @@ header.scroll-nav .sp-menu #open {
   }
   header.scroll-nav .pc-menu a {
     line-height: 32px;
-    font-size: 10px;
+    font-size: 14px;
     text-align: center;
   }
 
   .pc-menu a:hover {
-    background: #f2f2f2;
+    background: #cbcbcb;
   }
 
   .sp-menu {
