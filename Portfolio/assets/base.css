@@ -34,7 +34,8 @@ body {
   /* 「BIZ UDPゴシック」をWindowsで指定 */
   font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic","Meiryo", sans-serif;
   /* この背景色とボーダーはこのサイト参考（https://bitsofco.de/my-css-reset-base/） */
-  background: #f5f5f5;
+  /* background: #f5f5f5; */
+  background-color: #fff;
   /* マドリーイエロ */
   border: 5px solid #fcbf00;
 }
@@ -45,71 +46,9 @@ body {
   }
 }
 /* ==========================================================================
-   ヘッダー
+   ヘッダー(=>header.css
    ========================================================================== */
-/* 
-header{
-  position: fixed;
-  top: 0;
-  width: calc(100% - 10px);
-  z-index: 10;
-  background:inherit;
-  border-top: 5px solid #fcbf00;
-  box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2);
-}
-@media (max-width:519px){
-  header{
-    border-width: 3px;
-    width: calc(100% - 6px);
-  }
-}
-.logo{
-  transition: 0.3s;
-  height: 70px;
-}
-header.scroll-nav{
-  opacity: 0.7;
-}
-header.scroll-nav .logo{
-  height: 30px;
-}
-.header-container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  width: 1170px;
-  max-width: calc(100% - 20px);
-}
-.header-left{
-  display: flex;
-  align-items: center;
-}
-.header-right ul{
-  display: flex;
-  height: 60px;
-}
-.nav-list:not(:last-child){
-  margin-right: 1.5rem;
-}
-.nav-list a{
-  transition: 0.3s;
-  display: block;
-  padding: 1rem;
-  color: rgba(0,0,0,.5);
-}
-.nav-list:hover{
-  border-bottom: #fcbf00 solid 2px;
-}
-.nav-list:hover a{
-  color: rgba(0,0,0,.9);
-}
-header.scroll-nav a{
-  padding: 0;
-}
-header.scroll-nav ul{
-  height: 25px;
-} */
+
 
 /* ==========================================================================
    メイン，カルーセル
@@ -188,6 +127,7 @@ canvas {
   margin-top: -80px; */
   flex: 1 0 auto;
   width: 100%;
+  /* min-width: 100vw; */
   scroll-snap-align: start;
 }
 

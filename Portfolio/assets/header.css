@@ -4,7 +4,7 @@ header {
   top: 0;
   z-index: 10;
   background-color: inherit;
-  opacity: 0.9;
+  /* opacity: 0.9; */
   border-top: 5px solid #fcbf00;
   width: calc(100% - 10px);
   box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2);
@@ -16,6 +16,10 @@ header {
     border-width: 3px;
     width: calc(100% - 6px);
   }
+}
+
+header.scroll-nav{
+  opacity: 0.9;
 }
 
 header .header-left{
@@ -160,6 +164,10 @@ header.scroll-nav .sp-menu #open {
   .pc-menu a:hover {
     background: #cbcbcb;
   }
+
+  /* .nav-list:not(:last-child){
+    margin-right: 1.5rem;
+  } */
 
   .sp-menu {
     display: none;
