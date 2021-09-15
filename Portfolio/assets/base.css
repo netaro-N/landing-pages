@@ -92,14 +92,11 @@ canvas {
 }
 @media (max-width:519px){
   .carousel-item{
-    height: 300px;
+    height: 330px;
   }
 }
 .top1{
   background-color: #f1dfc8;
-}
-.top2{
-  background-color: lightseagreen;
 }
 .top3{
   background-color: lightblue;
@@ -183,6 +180,24 @@ svg{
 #paging li.active{
   background-color: lightslategray;
 }
+/* ==========================================================================
+リンク一覧.top2 */
+.top2{
+  background-color: lightseagreen;
+  overflow-y: scroll;
+}
+.top2 .carousel-container{
+  flex-direction: column;
+
+}
+
+.link-box{
+  border: 2px solid black;
+}
+.link-list li{
+  padding: 20px;
+}
+
 
 
 /* ==========================================================================
@@ -192,12 +207,12 @@ svg{
   text-align: center;
   padding: 30px;
 }
-.link-area{
+.model-area{
   display: flex;
   justify-content: space-evenly;
   margin: 20px;
 }
-.link-box{
+.model-box{
   /* Flexアイテムにはなるが，念のために */
   display: block;
   border: #fcbf00 solid 2px;
@@ -208,11 +223,11 @@ svg{
   .model-wrapper{
     padding: 20px 0;
   }
-  .link-area{
+  .model-area{
     justify-content: space-around;
     margin: 20px 0;
   }
-  .link-box{
+  .model-box{
     height: 160px;
     width: 160px;
   }
@@ -221,12 +236,12 @@ svg{
   .model-wrapper{
     padding: 20px;
   }
-  .link-area{
+  .model-area{
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
-  .link-box{
+  .model-box{
     height: 50px;
     width: 100%;
   }
