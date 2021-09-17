@@ -32,7 +32,8 @@
     <div class="pc-menu">
       <nav>
         <ul class="s">
-          <li class="nav-list"><a href="https://twitter.com/WEB_YulukiTaiga" target="_blank" rel="noopener">Twitter</a></li>
+          <li class="nav-list"><a href="https://twitter.com/WEB_YulukiTaiga" target="_blank" rel="noopener">Twitter</a>
+          </li>
           <li class="nav-list"><a href="#">ブログ</a></li>
           <li class="nav-list"><a href="./contact.html">コンタクト</a></li>
         </ul>
@@ -57,9 +58,18 @@
 
   <div class="main-wrapper">
     <div class='carousel-wrapper'>
+      
+      <div id="canvas-container" class="carousel-item">
+        <p>このアニメーションは，htmlのcanvasによって描画されています。動画ファイルではありません。
+          <br>また，カルーセルのシステムはjQuery等のライブラリを用いず，CSSとJavaScriptのみで実現していますので，高速です。
+        </p>
+        <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
+        <canvas id="cvs"></canvas>
+      </div>
+      
       <div class="carousel-item top2">
         <div class="carousel-container">
-            <h1>リンク一覧</h1>
+          <h1>リンク一覧</h1>
           <div class="box-area">
             <div class="link-box">
               <h3 class="link-title">SNS</h3>
@@ -88,13 +98,6 @@
           </div>
         </div>
       </div>
-      <div id="canvas-container" class="carousel-item">
-        <p>このアニメーションは，htmlのcanvasによって描画されています。動画ファイルではありません。
-        <br>また，カルーセルのシステムはjQuery等のライブラリを用いず，CSSとJavaScriptのみで実現していますので，高速です。</p>
-        <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
-        <canvas id="cvs"></canvas>
-      </div>
-
       <div class="carousel-item top3">
         <div class="carousel-container">
           <div class="heading-box">
@@ -198,7 +201,7 @@
   <script src="./assets/js/carousel.js"></script>
   <script src="./assets/js/scroll.js"></script>
   <script src="./assets/js/header.js"></script>
-  <!-- <script src="./assets/js/blow.js"></script> -->
+  <script src="./assets/js/blow.js"></script>
 </body>
 
 </html>
