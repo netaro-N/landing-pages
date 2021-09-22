@@ -185,7 +185,10 @@ svg{
 /* ==========================================================================
 リンク一覧.top2 */
 .top2{
-  background-color: lightseagreen;
+  /* repeat:no-repeat,position:center */
+  background: url(../images/bgimg/meido.png) no-repeat center; 
+  /* 横いっぱい，縦固定 */
+  background-size: 100% 800px;
   overflow-y: scroll;
   text-align: center;
   -ms-overflow-style: none;    /* IE, Edge 対応 */
@@ -208,7 +211,7 @@ svg{
   justify-content: space-evenly;
 }
 .link-box{
-  background-color: #fcbf00;
+  background-color: #fff;
   border: 2px solid black;
   flex-basis: 30%;
   border-radius: 4px;
