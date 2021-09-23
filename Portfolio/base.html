@@ -58,6 +58,15 @@
 
   <div class="main-wrapper">
     <div class='carousel-wrapper'>
+
+      <div id="canvas-container" class="carousel-item">
+        <p>このアニメーションは，htmlのcanvasによって描画されています。動画ファイルではありません。
+          <br>また，カルーセルのシステムはjQuery等のライブラリを用いず，CSSとJavaScriptのみで実現していますので，高速です。
+        </p>
+        <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
+        <canvas id="cvs"></canvas>
+      </div>
+
       <div class="carousel-item top2">
         <div class="carousel-container">
           <h1>リンク一覧</h1>
@@ -66,15 +75,17 @@
               <h3 class="link-title">SNS</h3>
               <ul class="link-list">
                 <li><a href="" class="twitter">
-                  <img class="link-icon" src="./images/link-icon/Twitter.png" alt="twitter"> Twitter</a></li>
-                <li><a href="" class="facebook"><img class="link-icon" src="./images/link-icon/Facebook.png" alt="facebook">Facebook</a></li>
+                    <img class="link-icon" src="./images/link-icon/Twitter.png" alt="twitter"> Twitter</a></li>
+                <li><a href="" class="facebook"><img class="link-icon" src="./images/link-icon/Facebook.png"
+                      alt="facebook">Facebook</a></li>
                 <li><a href="">YouTube</a></li>
               </ul>
             </div>
             <div class="link-box">
               <h3 class="link-title">クラウドソーシング</h3>
               <ul class="link-list">
-                <li><a href="" class="cw"><img class="link-icon" src="./images/link-icon/CW.png" alt="CW">クラウドワークス</a></li>
+                <li><a href="" class="cw"><img class="link-icon" src="./images/link-icon/CW.png" alt="CW">クラウドワークス</a>
+                </li>
               </ul>
             </div>
             <div class="link-box">
@@ -87,23 +98,12 @@
           </div>
         </div>
       </div>
-      
-      <div id="canvas-container" class="carousel-item">
-        <p>このアニメーションは，htmlのcanvasによって描画されています。動画ファイルではありません。
-          <br>また，カルーセルのシステムはjQuery等のライブラリを用いず，CSSとJavaScriptのみで実現していますので，高速です。
-        </p>
-        <!-- canvasの属性値としてのw,hでCSS指定ではない。このことによって，canvas内部が1000*500と認識される -->
-        <canvas id="cvs"></canvas>
-      </div>
-      
+
       <div class="carousel-item top3">
         <div class="carousel-container">
-          <div class="heading-box">
-            <h1>③プロフィール</h1>
-            <img src="./images/pr_img.png" alt="image">
-            <p class="subtitle">ユルキのプロフィール</p>
-            <div class="h-link">スキルセットなど</div>
-          </div>
+          <h1>③プロフィール</h1>
+          <img src="./images/pr_img.png" alt="image">
+          <p class="subtitle">ユルキのプロフィール</p>
         </div>
       </div>
     </div>

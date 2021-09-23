@@ -98,9 +98,7 @@ canvas {
 .top1{
   background-color: #f1dfc8;
 }
-.top3{
-  background-color: lightblue;
-}
+
 /* 共通コンテナ */
 .carousel-container{
   max-width: 1000px;
@@ -291,6 +289,11 @@ svg{
   .link-box{
     margin-bottom: 10px;
   }
+}
+/* ==========================================================================
+プロフィール.top3 */
+.top3{
+  background: url(../images/bgimg/bg-color.png) no-repeat center/cover;
 }
 
 
