@@ -330,7 +330,7 @@ svg{
 }
 @media (max-width:519px){
   .top3 .carousel-container{
-    justify-content: space-evenly;
+    justify-content:flex-start;
   }
   .prof-box{
     width: 70%;
