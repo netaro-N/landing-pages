@@ -159,6 +159,17 @@ main {
   justify-content: center;
   align-items: center;
 }
+.sp-banner{
+  display: none;
+}
+@media (max-width:800px){
+  .pc-banner{
+    display: none;
+  }
+  .sp-banner{
+    display: block;
+  }
+}
 
 /* footer */
 
