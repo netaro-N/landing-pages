@@ -1,0 +1,87 @@
+/* （2021/10現在) */
+
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,/*追加*/
+h6,/*追加*/
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  min-height: 100vh;/*コンテンツが空の場合でもビューポートを満たすのに役立つ*/
+  scroll-behavior: smooth;/*スムーズなアンカースクロール*/
+  text-rendering: optimizeSpeed;
+  line-height: 1.6; /*0.1増,1.5 ~ 2がbetter*/
+  letter-spacing: 0.08em; /*追記,0.05em ~ 0.1emがbetter*/
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* class属性を持つul、ol要素のリストスタイルを削除 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* デコレーションと，訪問済みの色を不変に */
+a {
+  font-size: 100%;
+  text-decoration: none;
+  cursor: pointer;
+  color:#137ec0;
+}
+a:hover{
+  color: #014896;
+}
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img{
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

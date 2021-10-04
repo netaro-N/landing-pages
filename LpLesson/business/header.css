@@ -1,0 +1,146 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 30;
+  background: linear-gradient(#1d63b5 0%, #0f325b 100%);
+  color: #fff;
+  opacity: 0.9;
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2);
+  display: flex;
+  padding: 0 60px;
+}
+
+header .logo{
+  display: flex;
+  align-items: center;
+}
+
+header h1{
+  margin: 0;
+  font-size: 22px;
+  line-height: 64px;
+}
+
+.sp-menu {
+  margin-left: auto;
+}
+
+
+.sp-menu #open {
+  font-size: 32px;
+  line-height: 64px;
+  cursor: pointer;
+  transition: line-height .3s, font-size .3s;
+}
+
+.sp-menu #open.hide {
+  display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 60px;
+  font-size: 32px;
+  cursor: pointer;
+  transition: line-height .3s, font-size .3s;
+}
+
+.overlay ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay: .1s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay: .2s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay: .3s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay: .4s;
+}
+.overlay.show li:nth-child(5) {
+  transition-delay: .5s;
+}
+.overlay.show li:nth-child(6) {
+  transition-delay: .6s;
+}
+.overlay.show li:nth-child(7) {
+  transition-delay: .7s;
+}
+
+.pc-menu {
+  display: none;
+}
+
+@media (min-width: 1300px) {
+  .pc-menu {
+    display: block;
+    margin-left: auto;
+  }
+
+  .pc-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 18px;
+  }
+
+  .pc-menu a {
+    display: block;
+    line-height: 64px;
+    text-align: center;
+    transition: line-height .3s, font-size .3s;
+    margin-left: 22px;
+    color: #fff;
+  }
+
+  .pc-menu a:hover {
+    background: #a2a2a2;
+  }
+
+  .sp-menu {
+    display: none;
+  }
+}
+
