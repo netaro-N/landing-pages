@@ -138,12 +138,26 @@ main {
   text-align: left;
   color: #fff;
 }
+.sp-list{
+  display: none;
+  width: 480px;
+  margin: 0 auto;
+}
+.sp-list-after{
+  display: none;
+}
 @media (max-width:800px){
   .knowledge{
     padding: 25px;
   }
   .knowledge-visual{
     display: none;
+  }
+  .pc-list{
+    display: none;
+  }
+  .sp-list{
+    display: block;
   }
 }
 
@@ -239,4 +253,36 @@ main {
   flex-direction: column;
   justify-content: center;
 }
+.icon-area{
+  display: flex;
+  justify-content: center;
+}
+.icon-area img{
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
 
+
+/* pagetop */
+.pagetop{
+  position: fixed;
+  cursor: pointer;
+  bottom: 90px;
+  right: 50px;
+  background-color: #ececec;
+  padding: 20px;
+  font-size: 30px;
+}
+.pagetop .fas{
+  /* 親要素の高さを揃えるため */
+  display: block;
+}
+@media screen and (max-width: 768px){
+  .pagetop{
+    bottom: 20px;
+    right: 10px;
+    padding: 15px;
+    font-size: 15px;
+  }
+}

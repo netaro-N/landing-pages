@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./header.css">
+  <!-- jQuery Google CDN（2021/05/08時点） -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- font-awesome (2021/05/08時点，製作者のアカウントKIT使用) -->
+  <script src="https://kit.fontawesome.com/940545e56d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -102,7 +106,7 @@
       </div>
       <div class="knowledge-text">
         <h2>経験者だからわかること</h2>
-        <ul>
+        <ul class="pc-list">
           <li>- 日本のビジネスとのシナジー効果は期待しない</li>
           <li>- 経営に日本流を持ち込まない</li>
           <li>- ローカルルールは尊重する</li>
@@ -116,6 +120,25 @@
           <li>- 現地のスタッフも喜ばせましょう</li>
           <li>- M&Aを社長の道楽と思われないようにしましょう</li>
         </ul>
+        <div class="sp-list">
+          <ul class="sp-list-first">
+            <li>- 日本のビジネスとのシナジー効果は期待しない</li>
+            <li>- 経営に日本流を持ち込まない</li>
+            <li>- ローカルルールは尊重する</li>
+            <li>- 任せるところは任せる但し丸投げはしない</li>
+          </ul>
+          <div class="accordion">⋮</div>
+          <ul class="sp-list-after">
+            <li>- 実績のあるローカル企業をM&Aする方がリスクが低い</li>
+            <li>- 英語への不安はチームで解消</li>
+            <li>- 出口戦略も考えましょう</li>
+            <li>- 展開【ハワイ → 日本】【ハワイ → 西海岸】</li>
+            <li>- ビザ取得のサポート</li>
+            <li>- 日本の社員を喜ばせましょう</li>
+            <li>- 現地のスタッフも喜ばせましょう</li>
+            <li>- M&Aを社長の道楽と思われないようにしましょう</li>
+          </ul>
+        </div>
       </div>
     </div>
     <div class="service">
@@ -178,14 +201,24 @@
 
     <div class="sns">
       <p>公式SNSアカウント</p>
-      <div class="icon-area"></div>
+      <div class="icon-area">
+        <img src="./assets/facebook.png" alt="" class="facebook">
+        <img src="./assets/twitter.png" alt="" class="twitter">
+        <i class="fab fa-instagram fa-2x"></i>
+      </div>
       <h2 class="footer-title">ハワイビジネス情報館</h2>
       <p class="copy"> Copyright &copy; hawaii business Information center</p>
     </div>
   </footer>
 
+  <!-- 固定のpagetopボタン -->
+  <div id="pagetop" class="pagetop">
+    <i class="fas fa-chevron-up" aria-hidden="true"></i>
+  </div>
+
   <script src="./main.js"></script>
   <script src="./carousel.js"></script>
+  <script src="./jquery.js"></script>
 </body>
 
 </html>
