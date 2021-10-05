@@ -1,7 +1,6 @@
 class Carousel {
   // 初期化
   constructor(query) {
-    console.log("作ったよ");
     this.$elm = document.querySelector(query);
     this.maxIndex = Math.round(this.$elm.scrollWidth / this.$elm.clientWidth);
 
@@ -21,7 +20,6 @@ class Carousel {
     }
   }
 
-  // このシステムで言うindexとは、画像の両端に振った番号と捉える？
   // 今の index を取得
   get index() {
     var index = Math.round(this.$elm.scrollLeft / this.$elm.clientWidth);
@@ -32,8 +30,6 @@ class Carousel {
   // 指定した場所に移動
   goto(index) {
     var i = (index + this.maxIndex) % this.maxIndex;
-    console.log('子要素i番目に跳ぶ。i= ' + i);
-    console.log(this.$elm.children[i]);
     // this.$elm.children[i].scrollIntoView({ behavior: "smooth",block:"end" });
     this.$elm.children[i].scrollIntoView({ behavior: "smooth", block: "nearest" });
   }

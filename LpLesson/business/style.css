@@ -13,7 +13,7 @@ main {
   margin-top: 64px;
 }
 .content-title{
-  text-align-last: left;
+  text-align: left;
 }
 .filter{
   position: absolute;
@@ -29,15 +29,11 @@ main {
   overflow-x: scroll;
   /* 横軸に対して mandatory が効くようになり, 必ず scroll-snap-align で指定した位置までスクロールして止まる */
   scroll-snap-type: x mandatory;
-  /* padding-top: 80px;
-  margin-top: -80px; */
   -ms-overflow-style: none;    /* IE, Edge 対応 */
   scrollbar-width: none; /* Firefox */
 }
 
-.carousel-wrapper .carousel-item,.carousel-wrapper2 .carousel-item {
-  /* padding-top: 80px;
-  margin-top: -80px; */
+.carousel-item {
   flex: 1 0 auto;
   width: 100%;
   /* min-width: 100vw; */
@@ -71,7 +67,7 @@ main {
   margin: 0;
   display: flex;
 	position: absolute;
-	bottom:350px;
+	bottom:30px;
   left: 50%;
   transform: translate(-50%,0%);
   list-style: none;
@@ -110,6 +106,12 @@ main {
   align-items: center;
 }
 
+@media(max-width:800px){
+  .top{
+    height: 130px;
+  }
+}
+
 /* special */
 .special{
   position: relative;
@@ -136,6 +138,14 @@ main {
   text-align: left;
   color: #fff;
 }
+@media (max-width:800px){
+  .knowledge{
+    padding: 25px;
+  }
+  .knowledge-visual{
+    display: none;
+  }
+}
 
 /* service */
 .service{
@@ -153,9 +163,31 @@ main {
 .service .filter{
   background: linear-gradient(#1d63b5 0%, #0f325b 100%);
 }
+@media (max-width:800px){
+  .special,.service{
+    margin: 30px 0;
+  }
+  .carousel-item{
+    margin: 0 10px;
+    width: 80%;
+    scroll-snap-align: center;
+    height: 270px;
+  }
+  .carousel-item:first-child{
+    margin-left: 10%;
+  }
+  .carousel-item:last-child{
+    margin-right: 10%;
+  }
+}
+
+/* banner */
+.banner{
+  margin-bottom: 110px;
+}
 .price-banner{
-  margin-top: 130px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -170,6 +202,9 @@ main {
     display: block;
   }
 }
+
+
+
 
 /* footer */
 
